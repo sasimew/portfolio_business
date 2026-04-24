@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SASI.ASIA | Strategic Advisory</title>
+<meta name="description" content="SASI.ASIA is a strategic advisory portfolio for founders, platforms, gaming, tokenomics, valuation, and business growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b0b0c'/%3E%3Cpath d='M76 24H42Q28 24 28 38Q28 52 42 52H60Q74 52 74 66Q74 80 60 80H24' fill='none' stroke='%23d71c30' stroke-width='15' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f3f0eb;
+  --surface:#ffffff;
+  --surface-soft:rgba(255,255,255,0.75);
+  --surface-muted:#faf7f2;
+  --ink:#161412;
+  --ink-soft:#3c3833;
+  --muted:#736e67;
+  --line:#e8e0d7;
+  --line-strong:#d9cec3;
+  --accent:#d71c30;
+  --accent-2:#ff5a4a;
+  --accent-soft:rgba(215,28,48,0.07);
+  --shadow-sm:0 10px 24px rgba(22,20,18,0.06);
+  --shadow-md:0 24px 60px rgba(22,20,18,0.10);
+  --shadow-red:0 18px 40px rgba(215,28,48,0.24);
+  --radius-xl:34px;
+  --radius-lg:26px;
+  --radius-md:20px;
+  --radius-sm:14px;
+  --max:1220px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Outfit",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(215,28,48,0.08), transparent 32%),
+    radial-gradient(circle at 88% 82%, rgba(215,28,48,0.05), transparent 28%);
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+.orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(80px);
+  pointer-events:none;
+  opacity:.55;
+  z-index:0;
+  animation:float 18s ease-in-out infinite;
+}
+.orb.one{width:300px;height:300px;background:rgba(215,28,48,0.10);top:-90px;left:-70px}
+.orb.two{width:240px;height:240px;background:rgba(215,28,48,0.08);bottom:-70px;right:-50px;animation-delay:-8s}
+@keyframes float{
+  0%,100%{transform:translate(0,0)}
+  50%{transform:translate(22px,18px)}
+}
+
+.page{
+  width:min(var(--max), calc(100% - 28px));
+  margin:0 auto;
+  padding:12px 0 72px;
+  position:relative;
+  z-index:1;
+}
+
+.topbar-wrap{
+  position:sticky;
+  top:12px;
+  z-index:30;
+  margin-bottom:20px;
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:12px 14px 12px 24px;
+  background:rgba(255,255,255,0.86);
+  border:1px solid rgba(255,255,255,0.95);
+  border-radius:999px;
+  backdrop-filter:blur(28px);
+  box-shadow:var(--shadow-sm);
+}
+.brand{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:2rem;
+  letter-spacing:.04em;
+}
+.brand span{color:var(--accent)}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.nav a{
+  padding:9px 14px;
+  border-radius:999px;
+  color:var(--muted);
+  font-size:.92rem;
+  font-weight:700;
+  transition:.2s ease;
+}
+.nav a:hover,
+.nav a.active{
+  background:rgba(22,20,18,0.06);
+  color:var(--accent);
+}
+.nav-cta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.menu-btn{
+  display:none;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#fff;
+  font-size:1.05rem;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 24px;
+  border-radius:999px;
+  border:1px solid transparent;
+  font-weight:800;
+  font-size:.88rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  transition:.22s ease;
+}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:var(--shadow-red);
+}
+.btn.primary:hover{transform:translateY(-2px);background:var(--accent-2)}
+.btn.secondary{
+  background:rgba(255,255,255,0.72);
+  border-color:rgba(22,20,18,0.16);
+  color:var(--ink);
+}
+.btn.secondary:hover{transform:translateY(-2px);background:#fff}
+
+.panel{
+  background:var(--surface-soft);
+  border:1px solid rgba(255,255,255,0.92);
+  backdrop-filter:blur(24px);
+  border-radius:var(--radius-xl);
+  box-shadow:var(--shadow-md);
+  overflow:hidden;
+}
+
+.hero{
+  padding:38px 36px 28px;
+  margin-bottom:18px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  gap:28px;
+  align-items:center;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:.75rem;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.eyebrow::before,.eyebrow::after{
+  content:"";
+  width:34px;
+  height:1px;
+  background:rgba(215,28,48,0.5);
+}
+.hero h1,
+.section-title{
+  font-family:"Bebas Neue",sans-serif;
+  letter-spacing:.02em;
+  line-height:.9;
+}
+.hero h1{
+  font-size:clamp(4rem,8vw,7.4rem);
+  margin-bottom:14px;
+}
+.hero h1 .accent{color:var(--accent)}
+.hero p.lead{
+  max-width:590px;
+  color:var(--ink-soft);
+  font-size:1.05rem;
+  line-height:1.75;
+  margin-bottom:24px;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:24px;
+}
+.chip-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 16px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  font-size:.82rem;
+  font-weight:800;
+  color:var(--ink-soft);
+  box-shadow:0 6px 16px rgba(22,20,18,0.05);
+}
+.chip::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--accent);
+}
+
+.hero-visual{
+  position:relative;
+  min-height:560px;
+}
+.hero-card{
+  position:absolute;
+  inset:0;
+  border-radius:34px;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.72)),
+    radial-gradient(circle at 30% 30%, rgba(215,28,48,0.08), transparent 40%);
+  border:1px solid rgba(255,255,255,0.95);
+}
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:24px;
+  border-radius:28px;
+  border:1px solid rgba(215,28,48,0.12);
+}
+.hero-metric{
+  position:absolute;
+  top:26px;
+  right:26px;
+  width:230px;
+  padding:20px;
+  border-radius:26px;
+  background:#fff;
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--line);
+}
+.hero-metric strong{
+  display:block;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:3rem;
+  line-height:.9;
+  color:var(--accent);
+}
+.hero-metric span{
+  display:block;
+  margin-top:8px;
+  font-size:.86rem;
+  line-height:1.55;
+  color:var(--muted);
+}
+.hero-handshake{
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:22px;
+  border-radius:28px;
+  overflow:hidden;
+  background:#f1ece6;
+  box-shadow:var(--shadow-sm);
+}
+.hero-handshake img{
+  width:100%;
+  aspect-ratio:1.08/1;
+  object-fit:cover;
+}
+.hero-label{
+  position:absolute;
+  left:26px;
+  top:26px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(22,20,18,0.74);
+  color:#fff;
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:22px;
+}
+.metric{
+  padding:20px 22px;
+  border-radius:24px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.metric strong{
+  display:block;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:2.6rem;
+  line-height:.9;
+}
+.metric span{
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:.84rem;
+  line-height:1.5;
+}
+
+.section{
+  margin-bottom:18px;
+}
+.section-head{
+  padding:34px 34px 0;
+  text-align:center;
+}
+.section-title{
+  font-size:clamp(3.2rem,6vw,5.5rem);
+}
+.section-title .accent{color:var(--accent)}
+.section-copy{
+  max-width:720px;
+  margin:16px auto 0;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:18px;
+  padding:28px 28px 34px;
+}
+.about-card,
+.quote-card{
+  border-radius:30px;
+  overflow:hidden;
+}
+.about-card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:30px;
+}
+.about-lead{
+  font-size:1.15rem;
+  line-height:1.75;
+  color:var(--ink-soft);
+  margin-bottom:24px;
+}
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.info{
+  padding:18px;
+  border-radius:22px;
+  background:var(--surface-muted);
+  border:1px solid var(--line);
+}
+.info b{
+  display:block;
+  margin-bottom:6px;
+  font-size:.92rem;
+}
+.info span{
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.6;
+}
+.quote-card{
+  position:relative;
+  min-height:100%;
+  padding:30px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1), transparent 28%),
+    linear-gradient(140deg, #171311, #23100e 42%, #b01126 100%);
+}
+.quote-card::after{
+  content:"";
+  position:absolute;
+  inset:auto -70px -70px auto;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+}
+.quote-mark{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:5rem;
+  line-height:.9;
+  color:rgba(255,255,255,0.3);
+}
+.quote-card h3{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:3rem;
+  line-height:.92;
+  letter-spacing:.02em;
+  margin:8px 0 16px;
+  max-width:440px;
+}
+.quote-card p{
+  max-width:460px;
+  color:rgba(255,255,255,0.78);
+  line-height:1.75;
+}
+
+.services-hero{
+  padding:0 28px 34px;
+}
+.services-stage{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:54px 38px 0;
+  overflow:hidden;
+}
+.services-copy{
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
+}
+.services-copy h2{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(4rem,7vw,7rem);
+  line-height:.88;
+  letter-spacing:.02em;
+}
+.services-copy h2 span{color:var(--accent)}
+.services-copy p{
+  max-width:630px;
+  margin:20px auto 24px;
+  color:var(--ink-soft);
+  font-size:1.05rem;
+  line-height:1.8;
+}
+.services-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+.services-badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:34px;
+}
+
+.trex-wrap{
+  position:relative;
+  margin:0 -38px;
+  padding:58px 0 0;
+}
+.trex-pill{
+  position:relative;
+  min-height:360px;
+  margin:0 38px;
+  border-radius:200px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 34% 42%, rgba(255,255,255,0.24), transparent 17%),
+    radial-gradient(circle at 80% 58%, rgba(255,255,255,0.16), transparent 8%),
+    linear-gradient(135deg, #a20617 0%, #d50c22 45%, #c61127 100%);
+  box-shadow:var(--shadow-red);
+}
+.trex-pill::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size:140px 140px;
+  opacity:.12;
+}
+.trex-pill::after{
+  content:"";
+  position:absolute;
+  left:10%;
+  top:10%;
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.18);
+  opacity:.4;
+}
+.portal{
+  position:absolute;
+  left:34%;
+  bottom:-10px;
+  width:160px;
+  height:290px;
+  border-radius:40px;
+  border:10px solid rgba(255,255,255,0.95);
+  box-shadow:
+    0 0 0 6px rgba(255,90,74,0.85),
+    0 0 34px rgba(255,255,255,0.9),
+    0 0 64px rgba(255,90,74,0.6);
+}
+.portal::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border-radius:26px;
+  background:rgba(255,255,255,0.05);
+}
+.pixel-dino{
+  position:absolute;
+  left:9%;
+  bottom:14%;
+  font-family:monospace;
+  font-size:42px;
+  line-height:1;
+  color:#181313;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.18));
+}
+.trex-burst{
+  position:absolute;
+  left:41.3%;
+  top:50%;
+  width:200px;
+  height:200px;
+  transform:translate(-50%,-50%);
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.92) 0 1.5px, transparent 2px);
+  background-size:12px 12px;
+  mask-image:radial-gradient(circle, rgba(0,0,0,1) 0, rgba(0,0,0,.7) 42%, transparent 74%);
+  opacity:.95;
+}
+.trex-image{
+  position:absolute;
+  right:1%;
+  bottom:-18px;
+  width:min(62%, 760px);
+  pointer-events:none;
+  filter:drop-shadow(-10px 16px 24px rgba(0,0,0,0.2));
+}
+
+.service-strip{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:0;
+  background:#fff;
+  border-top:1px solid var(--line);
+}
+.service-card{
+  position:relative;
+  min-height:340px;
+  padding:34px 22px 24px;
+  border-right:1px solid var(--line);
+  transition:.22s ease;
+}
+.service-card:last-child{border-right:none}
+.service-card:hover{background:rgba(215,28,48,0.03)}
+.service-card.featured{
+  background:linear-gradient(180deg, rgba(215,28,48,0.04), rgba(255,255,255,0.7));
+}
+.service-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  opacity:.7;
+}
+.service-vert{
+  position:absolute;
+  top:24px;
+  right:8px;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  color:rgba(22,20,18,0.45);
+  font-size:.62rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.service-illo{
+  min-height:150px;
+  display:grid;
+  place-items:center;
+}
+.service-illo svg{
+  width:96px;
+  height:96px;
+  overflow:visible;
+}
+.service-card h3{
+  font-size:1.02rem;
+  margin-bottom:8px;
+}
+.service-card p{
+  color:var(--muted);
+  font-size:.83rem;
+  line-height:1.7;
+}
+.service-arrow{
+  margin-top:18px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line-strong);
+  color:var(--accent);
+}
+
+.insight-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding:28px 28px 34px;
+}
+.insight{
+  padding:26px;
+  border-radius:28px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.insight .num{
+  display:inline-grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-family:"Bebas Neue",sans-serif;
+  font-size:1.3rem;
+  margin-bottom:14px;
+}
+.insight h3{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:2rem;
+  line-height:.95;
+  margin-bottom:12px;
+}
+.insight p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.portfolio-wrap{
+  padding:22px 28px 34px;
+}
+.portfolio-featured{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:18px;
+  margin-bottom:18px;
+}
+.feature-story,
+.feature-metrics{
+  border-radius:30px;
+  overflow:hidden;
+}
+.feature-story{
+  padding:30px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(255,255,255,0.12), transparent 24%),
+    linear-gradient(140deg, #171311 0%, #260f0f 42%, #be1027 100%);
+}
+.story-tag{
+  display:inline-flex;
+  padding:9px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.1);
+  font-size:.74rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.feature-story h3{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:4.1rem;
+  line-height:.88;
+  margin:18px 0 14px;
+}
+.feature-story p{
+  max-width:580px;
+  color:rgba(255,255,255,0.8);
+  line-height:1.8;
+}
+.story-points{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:22px;
+}
+.story-point{
+  padding:14px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.08);
+}
+.story-point strong{
+  display:block;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:2rem;
+  line-height:.9;
+}
+.story-point span{
+  display:block;
+  margin-top:4px;
+  font-size:.78rem;
+  color:rgba(255,255,255,0.7);
+  line-height:1.5;
+}
+
+.feature-metrics{
+  padding:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  display:grid;
+  gap:12px;
+}
+.mini-metric{
+  padding:20px;
+  border-radius:22px;
+  background:var(--surface-muted);
+  border:1px solid var(--line);
+}
+.mini-metric strong{
+  display:block;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:2.3rem;
+  line-height:.9;
+  color:var(--accent);
+}
+.mini-metric span{
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  line-height:1.55;
+  font-size:.84rem;
+}
+
+.case-list{
+  display:grid;
+  gap:16px;
+}
+.case-card{
+  display:grid;
+  grid-template-columns:78px 250px 1fr;
+  gap:24px;
+  padding:26px;
+  border-radius:30px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+}
+.case-no{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:3.6rem;
+  color:#d7cec6;
+  line-height:.85;
+}
+.case-visual{
+  position:relative;
+  min-height:260px;
+  border-radius:24px;
+  background:#f6f2ed;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.case-visual::before{
+  content:"";
+  position:absolute;
+  inset:16px;
+  border:1px solid rgba(22,20,18,0.08);
+  border-radius:18px;
+}
+.case-tag{
+  display:inline-flex;
+  margin-bottom:10px;
+  color:var(--accent);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.case-card h3{
+  font-size:1.5rem;
+  line-height:1.25;
+  margin-bottom:12px;
+}
+.case-card > div:last-child > p{
+  color:var(--muted);
+  line-height:1.75;
+  margin-bottom:18px;
+}
+.case-cols{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.case-cols h4{
+  color:var(--accent);
+  font-size:.76rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.case-cols ul{
+  padding-left:18px;
+  color:var(--ink-soft);
+  line-height:1.75;
+  font-size:.92rem;
+}
+
+.visual-platform .red-pill,
+.visual-token .red-pill,
+.visual-valuation .red-pill{
+  position:absolute;
+  background:var(--accent);
+}
+.visual-platform .red-pill{
+  width:26px;
+  height:160px;
+  border-radius:999px;
+  top:50px;
+  left:102px;
+  box-shadow:44px 0 0 var(--accent);
+}
+.visual-token .red-pill{
+  width:86px;
+  height:150px;
+  left:84px;
+  top:56px;
+}
+.visual-valuation .red-pill{
+  width:22px;
+  height:156px;
+  top:56px;
+  left:114px;
+  box-shadow:42px 0 0 var(--accent);
+}
+.visual-game .red-disc{
+  position:absolute;
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  background:var(--accent);
+  left:58px;
+  top:60px;
+}
+.line-art{
+  position:absolute;
+  inset:0;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:76%;
+}
+.visual-platform .line-art{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23161412' stroke-width='2.1'%3E%3Cpath d='M55 148l75-40 75 40-75 40z'/%3E%3Cpath d='M55 112l75-40 75 40'/%3E%3Cpath d='M55 184l75-40 75 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+.visual-game .line-art{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23161412' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M76 144c11-32 101-32 112 0l8 40c2 13-14 18-24 8l-14-14h-62l-14 14c-10 10-26 5-24-8z'/%3E%3Cpath d='M92 145h26M105 132v26M156 145h3M178 145h3M167 133h3'/%3E%3Cpath d='M60 198v24M92 202v20M198 200v22M220 188v34'/%3E%3C/g%3E%3C/svg%3E");
+}
+.visual-token .line-art{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23161412' stroke-width='2'%3E%3Cpath d='M86 110l36-20 36 20-36 20zM86 110v42l36 20 36-20v-42M122 130v42'/%3E%3Cpath d='M138 154l36-20 36 20-36 20zM174 174v42M138 154v42l36 20 36-20v-42' stroke='%23d71c30'/%3E%3C/g%3E%3C/svg%3E");
+}
+.visual-valuation .line-art{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23161412' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M56 190h148M76 176v-32M114 176v-66M152 176v-94M190 176v-120'/%3E%3Cpath d='M70 140l36-28 40 18 46-66'/%3E%3Cpath d='M188 60h16v16'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:18px;
+  padding:28px;
+}
+.contact-main,
+.contact-side{
+  border-radius:30px;
+  overflow:hidden;
+}
+.contact-main{
+  padding:32px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255,255,255,0.12), transparent 24%),
+    linear-gradient(135deg, #180f0f 0%, #341110 46%, #c21329 100%);
+}
+.contact-main h3{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:4rem;
+  line-height:.9;
+  margin-bottom:14px;
+}
+.contact-main p{
+  max-width:560px;
+  color:rgba(255,255,255,0.8);
+  line-height:1.8;
+}
+.contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
+}
+.contact-actions .btn.secondary{
+  background:rgba(255,255,255,0.12);
+  color:#fff;
+  border-color:rgba(255,255,255,0.18);
+}
+.contact-side{
+  padding:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  display:grid;
+  gap:12px;
+}
+.contact-item{
+  padding:18px 18px 20px;
+  border-radius:22px;
+  background:var(--surface-muted);
+  border:1px solid var(--line);
+}
+.contact-item b{
+  display:block;
+  font-size:.78rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:8px;
+}
+.contact-item span{
+  display:block;
+  color:var(--ink-soft);
+  line-height:1.7;
+}
+
+.footer{
+  padding:18px 8px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media (max-width: 1120px){
+  .hero-grid,
+  .about-grid,
+  .portfolio-featured,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+  .service-strip{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .case-card{
+    grid-template-columns:64px 220px 1fr;
+  }
+}
+
+@media (max-width: 860px){
+  .topbar{
+    align-items:flex-start;
+    flex-wrap:wrap;
+    border-radius:30px;
+  }
+  .menu-btn{display:grid}
+  .nav{
+    width:100%;
+    display:none;
+    flex-wrap:wrap;
+    padding-top:8px;
+  }
+  .nav.open{display:flex}
+  .nav-cta{
+    margin-left:auto;
+  }
+  .metrics,
+  .insight-grid,
+  .service-strip,
+  .story-points{
+    grid-template-columns:1fr 1fr;
+  }
+  .case-card{
+    grid-template-columns:1fr;
+  }
+  .case-no{
+    font-size:3rem;
+  }
+  .case-visual{
+    min-height:220px;
+  }
+  .case-cols{
+    grid-template-columns:1fr;
+  }
+  .hero{
+    padding:30px 22px 22px;
+  }
+  .services-stage{
+    padding:42px 22px 0;
+  }
+  .trex-wrap{
+    margin:0 -22px;
+  }
+  .trex-pill{
+    margin:0 22px;
+    min-height:300px;
+  }
+  .portal{
+    left:34%;
+    width:110px;
+    height:220px;
+  }
+  .trex-image{
+    width:72%;
+  }
+}
+
+@media (max-width: 620px){
+  .page{width:min(var(--max), calc(100% - 16px))}
+  .topbar{padding:12px 12px 12px 18px}
+  .brand{font-size:1.7rem}
+  .hero h1,
+  .services-copy h2,
+  .section-title,
+  .feature-story h3,
+  .contact-main h3{
+    font-size:clamp(3rem,16vw,4.2rem);
+  }
+  .hero-visual{min-height:420px}
+  .hero-metric{
+    position:relative;
+    top:auto;
+    right:auto;
+    width:auto;
+    margin:20px 20px 0;
+  }
+  .hero-handshake{
+    left:18px;
+    right:18px;
+  }
+  .metrics,
+  .insight-grid,
+  .service-strip,
+  .info-grid,
+  .story-points{
+    grid-template-columns:1fr;
+  }
+  .section-head,
+  .portfolio-wrap,
+  .contact-grid,
+  .about-grid,
+  .services-hero{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .service-card{
+    min-height:auto;
+  }
+  .trex-pill{
+    border-radius:42px;
+    min-height:250px;
+  }
+  .portal{
+    left:28%;
+    bottom:0;
+    width:78px;
+    height:160px;
+    border-width:7px;
+  }
+  .pixel-dino{
+    left:8%;
+    bottom:10%;
+    font-size:28px;
+  }
+  .trex-burst{
+    width:120px;
+    height:120px;
+    left:37%;
+  }
+  .trex-image{
+    width:74%;
+    bottom:-4px;
+  }
+  .hero-actions,
+  .services-actions,
+  .contact-actions{
+    flex-direction:column;
+  }
+  .btn{
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="orb one"></div>
+<div class="orb two"></div>
+
+<div class="page">
+  <div class="topbar-wrap">
+    <header class="topbar">
+      <a class="brand" href="#home">SASI.<span>ASIA</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#insights">Insights</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn primary" href="#contact">Work With Me</a>
+      </div>
+    </header>
+  </div>
+
+  <section class="hero panel reveal" id="home">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Strategic Advisory Portfolio</div>
+        <h1>BUILD THE BUSINESS <span class="accent">BEHIND</span> THE NEXT BIG MOVE</h1>
+        <p class="lead">
+          I work with founders, operators, and investors to shape sharper strategy across platforms, monetization, tokenomics, valuation, and market expansion. The focus is not just on ideas, but on decisions that can actually move a business forward.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#portfolio">View Case Studies</a>
+          <a class="btn secondary" href="#services">Explore Services</a>
+        </div>
+        <div class="chip-row">
+          <div class="chip">Platform Strategy</div>
+          <div class="chip">Game Growth</div>
+          <div class="chip">Tokenomics</div>
+          <div class="chip">Valuation</div>
+          <div class="chip">IPO / M&amp;A Readiness</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card"></div>
+        <div class="hero-metric">
+          <strong>8+</strong>
+          <span>Years navigating digital products, partnerships, growth strategy, and board-level decision framing.</span>
+        </div>
+        <div class="hero-handshake">
+          <div class="hero-label">Partnership-first approach</div>
+          <img src="assets/handshake-top.png" alt="Strategic partnership visual">
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <strong>58M+</strong>
+        <span>Revenue growth context turned into structured business decisions.</span>
+      </div>
+      <div class="metric">
+        <strong>299K+</strong>
+        <span>Peak ecosystem scale translated into monetization and retention strategy.</span>
+      </div>
+      <div class="metric">
+        <strong>100M</strong>
+        <span>Funding-readiness framing with valuation logic and investor narrative support.</span>
+      </div>
+      <div class="metric">
+        <strong>Cross-Vertical</strong>
+        <span>Experience spanning gaming, digital platforms, partnerships, and Web3 business design.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel section reveal" id="about">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2 class="section-title">A STRATEGIC PARTNER <span class="accent">FOR FOUNDERS WHO MOVE FAST</span></h2>
+      <p class="section-copy">
+        This portfolio is designed as a business-facing presentation of how strategy work can look when it is grounded in execution, commercial logic, and measurable outcomes.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <p class="about-lead">
+          I help translate complex business situations into clearer decisions. That may mean redesigning a platform model, improving monetization mechanics, building investor-ready valuation logic, or clarifying where the next phase of growth should actually come from.
+        </p>
+        <div class="info-grid">
+          <div class="info">
+            <b>What I optimize for</b>
+            <span>Clarity, speed, and strategic confidence that leaders can act on.</span>
+          </div>
+          <div class="info">
+            <b>Typical engagements</b>
+            <span>Strategy shaping, market positioning, economics design, and transaction readiness.</span>
+          </div>
+          <div class="info">
+            <b>Working style</b>
+            <span>Commercially sharp, highly practical, and tailored to the real constraints of the business.</span>
+          </div>
+          <div class="info">
+            <b>Best fit</b>
+            <span>Companies at inflection points: launch, scale, fundraising, restructuring, or strategic repositioning.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">“</div>
+        <h3>STRATEGY SHOULD CREATE MOMENTUM, NOT JUST SLIDES.</h3>
+        <p>
+          The best advisory work creates alignment between vision, numbers, product reality, and market timing. When those pieces connect, execution starts getting easier.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel section reveal" id="services">
+    <div class="section-head">
+      <div class="eyebrow">Services</div>
+      <h2 class="section-title">TRANSFORM YOUR BUSINESS <span class="accent">INTO WHAT'S NEXT</span></h2>
+      <p class="section-copy">
+        The service section takes its visual tone from your reference and adapts it into the broader home-page design language, so it feels premium and consistent rather than like a separate template.
+      </p>
+    </div>
+
+    <div class="services-hero">
+      <div class="services-stage">
+        <div class="services-copy">
+          <div class="eyebrow">Strategic Advisory Services</div>
+          <h2>TRANSFORM YOUR BUSINESS <span>INTO WHAT'S NEXT</span></h2>
+          <p>
+            I partner with founders and executives to build bold strategies across AI, platforms, token design, gaming growth, valuation, and high-stakes strategic transactions.
+          </p>
+          <div class="services-actions">
+            <a class="btn primary" href="#contact">Book A Consultation</a>
+            <a class="btn secondary" href="#portfolio">Discuss Your Project</a>
+          </div>
+          <div class="services-badges">
+            <div class="chip">AI Strategy</div>
+            <div class="chip">Platforms</div>
+            <div class="chip">Tokenomics</div>
+            <div class="chip">Game Growth</div>
+            <div class="chip">Valuation</div>
+            <div class="chip">IPO / M&amp;A</div>
+          </div>
+        </div>
+
+        <div class="trex-wrap">
+          <div class="trex-pill">
+            <div class="portal"></div>
+            <div class="pixel-dino">🦖</div>
+            <div class="trex-burst"></div>
+            <img class="trex-image" src="assets/services-trex.png" alt="Futuristic dinosaur coming through a red portal">
+          </div>
+        </div>
+
+        <div class="service-strip">
+          <article class="service-card">
+            <div class="service-dot"></div>
+            <div class="service-vert">AI Strategy</div>
+            <div class="service-illo">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                <circle cx="50" cy="50" r="18" stroke="#d71c30" stroke-width="4"/>
+                <rect x="38" y="38" width="24" height="24" fill="#d71c30" opacity=".14" stroke="#d71c30" stroke-width="3"/>
+                <path d="M50 12v14M50 74v14M12 50h14M74 50h14M24 24l10 10M66 66l10 10M24 76l10-10M66 34l10-10" stroke="#161412" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3>AI Strategy</h3>
+            <p>Identify where AI can create real operational leverage, not just presentation value.</p>
+            <div class="service-arrow">→</div>
+          </article>
+
+          <article class="service-card featured">
+            <div class="service-dot"></div>
+            <div class="service-vert">Platform Strategy</div>
+            <div class="service-illo">
+              <svg viewBox="0 0 100 100" fill="none">
+                <path d="M20 58 50 40 80 58 50 76 20 58Z" stroke="#161412" stroke-width="2.4"/>
+                <path d="M20 42 50 24 80 42" stroke="#161412" stroke-width="2.4"/>
+                <path d="M32 12v76M50 12v76" stroke="#d71c30" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Platform Strategy</h3>
+            <p>Design monetization, incentives, and scalable platform structures that can actually compound.</p>
+            <div class="service-arrow">→</div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-dot"></div>
+            <div class="service-vert">Tokenomics</div>
+            <div class="service-illo">
+              <svg viewBox="0 0 100 100" fill="none">
+                <rect x="38" y="24" width="24" height="30" fill="#d71c30" opacity=".16"/>
+                <path d="M28 38 50 26 72 38 50 50 28 38ZM28 38v24l22 12 22-12V38M50 50v24" stroke="#161412" stroke-width="2.3"/>
+              </svg>
+            </div>
+            <h3>Tokenomics</h3>
+            <p>Align token utility, investor expectations, and ecosystem behavior into one coherent system.</p>
+            <div class="service-arrow">→</div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-dot"></div>
+            <div class="service-vert">Game Strategy</div>
+            <div class="service-illo">
+              <svg viewBox="0 0 100 100" fill="none">
+                <circle cx="60" cy="55" r="22" fill="#d71c30" opacity=".18"/>
+                <path d="M26 56c5-15 43-15 48 0l4 15c1 6-6 9-11 4l-6-6H43l-6 6c-5 5-12 2-11-4l0-1 0-14Z" stroke="#161412" stroke-width="2.2"/>
+                <path d="M41 56h10M46 51v10M62 55h1M70 55h1" stroke="#161412" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Game Growth</h3>
+            <p>Build retention, monetization, and live-ops logic that strengthens the player economy.</p>
+            <div class="service-arrow">→</div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-dot"></div>
+            <div class="service-vert">Valuation</div>
+            <div class="service-illo">
+              <svg viewBox="0 0 100 100" fill="none">
+                <path d="M20 74h60" stroke="#161412" stroke-width="2.4"/>
+                <path d="M32 74V52M48 74V38M64 74V28" stroke="#161412" stroke-width="3" stroke-linecap="round"/>
+                <path d="M24 58 41 44 56 49 76 22" stroke="#161412" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M47 28v46M63 18v56" stroke="#d71c30" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Valuation</h3>
+            <p>Turn financial assumptions into clear valuation stories and sharper investor conversations.</p>
+            <div class="service-arrow">→</div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-dot"></div>
+            <div class="service-vert">IPO / M&amp;A</div>
+            <div class="service-illo">
+              <svg viewBox="0 0 100 100" fill="none">
+                <rect x="30" y="44" width="40" height="24" fill="#d71c30" opacity=".16"/>
+                <path d="M28 60c8-8 16-8 22 0 6 8 14 8 22 0 8-8 12-10 16-8M20 44l12 14M80 44 68 58" stroke="#161412" stroke-width="2.3" stroke-linecap="round"/>
+                <path d="M34 26v10M50 22v14M66 26v10" stroke="#d71c30" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="3 5"/>
+              </svg>
+            </div>
+            <h3>IPO &amp; M&amp;A</h3>
+            <p>Prepare positioning, deal logic, and investor-grade materials for higher-stakes transactions.</p>
+            <div class="service-arrow">→</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel section reveal" id="insights">
+    <div class="section-head">
+      <div class="eyebrow">Insights</div>
+      <h2 class="section-title">HOW I <span class="accent">THINK</span></h2>
+      <p class="section-copy">
+        The strongest strategy work usually comes from combining structure, market sense, and a realistic understanding of what a team can actually execute.
+      </p>
+    </div>
+    <div class="insight-grid">
+      <article class="insight">
+        <div class="num">1</div>
+        <h3>BUSINESS MODEL FIRST</h3>
+        <p>Advice should start with how value is created, captured, and defended. If the economic engine is unclear, everything else becomes fragile.</p>
+      </article>
+      <article class="insight">
+        <div class="num">2</div>
+        <h3>EXECUTION IS PART OF STRATEGY</h3>
+        <p>A good strategy is not just conceptually strong. It has to survive timelines, internal capability, market constraints, and investor scrutiny.</p>
+      </article>
+      <article class="insight">
+        <div class="num">3</div>
+        <h3>CLARITY CREATES SPEED</h3>
+        <p>When leaders can see tradeoffs clearly, teams move faster. The goal is to reduce ambiguity and increase confidence in the next move.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel section reveal" id="portfolio">
+    <div class="section-head">
+      <div class="eyebrow">Portfolio</div>
+      <h2 class="section-title">SELECTED WORK <span class="accent">AND CASE STUDIES</span></h2>
+      <p class="section-copy">
+        The portfolio page is expanded beyond a simple grid. It now has a featured story layer, stronger business framing, and anonymized case studies that feel closer to an executive portfolio than a generic gallery.
+      </p>
+    </div>
+
+    <div class="portfolio-wrap">
+      <div class="portfolio-featured">
+        <div class="feature-story">
+          <div class="story-tag">Featured Case Direction</div>
+          <h3>FROM FRAGMENTED OPPORTUNITY TO A COMMERCIAL STRATEGY PEOPLE CAN ACT ON</h3>
+          <p>
+            Whether the challenge is monetization, retention, token incentives, or investor positioning, the work starts by simplifying complexity. The output should make leaders more decisive, not more dependent on slides.
+          </p>
+          <div class="story-points">
+            <div class="story-point">
+              <strong>Strategy</strong>
+              <span>Sharper direction for products, platforms, and market positioning.</span>
+            </div>
+            <div class="story-point">
+              <strong>Economics</strong>
+              <span>Clear monetization, unit logic, and scenario framing.</span>
+            </div>
+            <div class="story-point">
+              <strong>Execution</strong>
+              <span>Decision-ready outputs that teams can operationalize quickly.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-metrics">
+          <div class="mini-metric">
+            <strong>58M+</strong>
+            <span>Commercial traction context captured in strategy and operating design.</span>
+          </div>
+          <div class="mini-metric">
+            <strong>38%</strong>
+            <span>Retention-oriented thinking reflected in game and platform growth systems.</span>
+          </div>
+          <div class="mini-metric">
+            <strong>299K+</strong>
+            <span>Scale-sensitive planning across ecosystems, not just early experimentation.</span>
+          </div>
+          <div class="mini-metric">
+            <strong>100M</strong>
+            <span>Funding-readiness and valuation framing for strategic discussions.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-list">
+        <article class="case-card">
+          <div class="case-no">01</div>
+          <div class="case-visual visual-platform">
+            <div class="red-pill"></div>
+            <div class="line-art"></div>
+          </div>
+          <div>
+            <div class="case-tag">Platform Strategy</div>
+            <h3>Designing a scalable marketplace model from early concept into commercial traction</h3>
+            <p>A digital platform needed a strategy to reduce transaction friction, improve trust, and create a business model that could scale without breaking its economics.</p>
+            <div class="case-cols">
+              <div>
+                <h4>Approach</h4>
+                <ul>
+                  <li>Mapped supply and demand imbalances across the customer journey.</li>
+                  <li>Defined monetization layers, take-rate logic, and trust mechanics.</li>
+                  <li>Built KPIs for conversion, repeat usage, and value capture.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Impact</h4>
+                <ul>
+                  <li>Created a clearer commercial model and growth roadmap.</li>
+                  <li>Improved business confidence around how the platform should scale.</li>
+                  <li>Turned abstract ambition into an executable structure.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-no">02</div>
+          <div class="case-visual visual-game">
+            <div class="red-disc"></div>
+            <div class="line-art"></div>
+          </div>
+          <div>
+            <div class="case-tag">Game Economy</div>
+            <h3>Optimizing monetization and retention logic for a growing game ecosystem</h3>
+            <p>A game business needed a more structured way to connect player behavior, live-ops design, pricing, and long-term revenue quality.</p>
+            <div class="case-cols">
+              <div>
+                <h4>Approach</h4>
+                <ul>
+                  <li>Segmented users by spending behavior and retention patterns.</li>
+                  <li>Reframed pricing and offer architecture around ARPPU logic.</li>
+                  <li>Designed engagement loops that linked community activity to monetization.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Impact</h4>
+                <ul>
+                  <li>Improved strategic clarity on where monetization should come from.</li>
+                  <li>Built a stronger retention narrative for product and business teams.</li>
+                  <li>Created a more repeatable live-ops growth playbook.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-no">03</div>
+          <div class="case-visual visual-token">
+            <div class="red-pill"></div>
+            <div class="line-art"></div>
+          </div>
+          <div>
+            <div class="case-tag">Tokenomics</div>
+            <h3>Designing a token model and fundraising narrative for market entry</h3>
+            <p>A Web3 ecosystem needed a token structure that balanced growth incentives, stakeholder alignment, and long-term sustainability.</p>
+            <div class="case-cols">
+              <div>
+                <h4>Approach</h4>
+                <ul>
+                  <li>Defined token utility across users, investors, and platform activity.</li>
+                  <li>Structured supply, rewards, vesting, and incentive mechanics.</li>
+                  <li>Connected the token design to launch positioning and investor messaging.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Impact</h4>
+                <ul>
+                  <li>Improved incentive alignment across key stakeholders.</li>
+                  <li>Made the fundraising story more coherent and defensible.</li>
+                  <li>Built a stronger foundation for long-term ecosystem health.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-no">04</div>
+          <div class="case-visual visual-valuation">
+            <div class="red-pill"></div>
+            <div class="line-art"></div>
+          </div>
+          <div>
+            <div class="case-tag">Valuation &amp; Deal Strategy</div>
+            <h3>Building investor-ready valuation logic for strategic planning and deal conversations</h3>
+            <p>A growing digital business needed a structured financial story that could support fundraising, internal decisions, and external investor communication.</p>
+            <div class="case-cols">
+              <div>
+                <h4>Approach</h4>
+                <ul>
+                  <li>Built scenario-based revenue, cash flow, and valuation logic.</li>
+                  <li>Translated assumptions into a decision-making framework.</li>
+                  <li>Connected financial modeling to market narrative and strategic options.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Impact</h4>
+                <ul>
+                  <li>Improved clarity in investor and leadership conversations.</li>
+                  <li>Made tradeoffs easier to evaluate under uncertainty.</li>
+                  <li>Strengthened the business case behind future strategic moves.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel section reveal" id="contact">
+    <div class="contact-grid">
+      <div class="contact-main">
+        <div class="eyebrow">Contact</div>
+        <h3>LET'S BUILD THE NEXT STRATEGIC MOVE TOGETHER</h3>
+        <p>
+          If you want this portfolio turned into the live `sasi.asia` website, the structure here is already set up as a clean standalone project. It can be extended into a multi-page site, connected to a CMS, or deployed as a static landing page.
+        </p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:sasi.esports@gmail.com">sasi.esports@gmail.com</a>
+          <a class="btn secondary" href="#home">Back To Top</a>
+        </div>
+      </div>
+      <div class="contact-side">
+        <div class="contact-item">
+          <b>Project Use</b>
+          <span>Standalone portfolio site, ready to keep evolving independently from the dashboard project.</span>
+        </div>
+        <div class="contact-item">
+          <b>Recommended Next Step</b>
+          <span>Connect this folder to its own repository if you want branding, commits, and deployment to stay fully separate.</span>
+        </div>
+        <div class="contact-item">
+          <b>Current Structure</b>
+          <span>`index.html` with local assets, mobile-ready layout, premium service hero, and upgraded portfolio case-study section.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">SASI.ASIA Portfolio Concept • Separate standalone project folder</div>
+</div>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+const links = Array.from(document.querySelectorAll(".nav a"));
+const sections = links.map(link => document.querySelector(link.getAttribute("href")));
+
+menuBtn?.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
+
+links.forEach(link => {
+  link.addEventListener("click", () => nav.classList.remove("open"));
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+window.addEventListener("scroll", () => {
+  let current = "#home";
+  sections.forEach((section) => {
+    if (!section) return;
+    const top = section.offsetTop - 160;
+    if (window.scrollY >= top) current = "#" + section.id;
+  });
+  links.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === current);
+  });
+});
+</script>
+</body>
+</html>
