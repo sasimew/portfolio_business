@@ -159,11 +159,11 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 .core-services-title .spark{display:inline-block;color:var(--accent);font-family:"Outfit",sans-serif;font-weight:900;font-size:0.62em;margin-left:10px;transform:translateY(-0.08em);}
 .core-services-copy{max-width:820px;margin:16px 0 0;color:var(--muted);font-size:0.95rem;line-height:1.68;}
 .core-services-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;text-align:left;perspective:1400px;}
-.core-service-card{position:relative;min-height:260px;border:0;background:transparent;outline:0;perspective:inherit;}
+.core-service-card{position:relative;min-height:292px;border:0;background:transparent;outline:0;perspective:inherit;}
 .core-service-card:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:18px;}
-.core-service-inner{position:relative;width:100%;height:100%;min-height:260px;transform-style:preserve-3d;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1);}
+.core-service-inner{position:relative;width:100%;height:100%;min-height:292px;transform-style:preserve-3d;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1);}
 .core-service-card:hover .core-service-inner,.core-service-card:focus .core-service-inner,.core-service-card:focus-within .core-service-inner{transform:rotateY(180deg);}
-.core-service-face{position:absolute;inset:0;border:1.5px solid var(--line);border-radius:18px;background:rgba(255,255,255,0.78);box-shadow:var(--shadow-sm);backface-visibility:hidden;overflow:hidden;padding:22px 18px;display:flex;flex-direction:column;background-image:linear-gradient(180deg,rgba(255,255,255,0.86),rgba(255,255,255,0.58));}
+.core-service-face{position:absolute;inset:0;border:1.5px solid var(--line);border-radius:18px;background:rgba(255,255,255,0.78);box-shadow:var(--shadow-sm);backface-visibility:hidden;overflow:hidden;padding:22px 18px 72px;display:flex;flex-direction:column;background-image:linear-gradient(180deg,rgba(255,255,255,0.86),rgba(255,255,255,0.58));}
 .core-service-card:hover .core-service-face,.core-service-card.featured .core-service-front{border-color:var(--accent);}
 .core-service-card:hover .core-service-face{box-shadow:var(--shadow-md);}
 .core-service-back{transform:rotateY(180deg);background:var(--accent);border-color:var(--accent);color:#fff;}
@@ -172,20 +172,20 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 .core-service-label{position:absolute;top:22px;right:16px;writing-mode:vertical-rl;text-transform:uppercase;letter-spacing:0.25em;color:var(--muted);font-size:0.54rem;font-weight:900;}
 .core-service-back .core-service-label{color:rgba(255,255,255,0.74);}
 .core-service-badge{position:absolute;top:16px;right:16px;padding:5px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:0.6rem;font-weight:900;letter-spacing:0.07em;text-transform:uppercase;z-index:2;}
-.core-service-visual{height:92px;margin:34px 0 16px;display:grid;place-items:center;color:var(--text);}
+.core-service-visual{height:96px;margin:38px 0 18px;display:grid;place-items:center;color:var(--text);}
 .core-service-visual svg{width:82px;height:82px;overflow:visible;}
 .core-service-visual .red{fill:var(--accent);stroke:var(--accent);}
 .core-service-visual .soft{fill:rgba(200,37,58,0.12);}
 .core-service-visual .none{fill:none;}
 .core-service-visual .dark{stroke:var(--text);}
 .core-service-visual .thin{stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
-.core-service-face h3{font-size:1rem;line-height:1.18;margin:0 0 8px;color:var(--text);}
-.core-service-face p{margin:0;color:var(--muted);font-size:0.8rem;line-height:1.5;}
+.core-service-face h3{font-size:1rem;line-height:1.18;margin:0 0 10px;color:var(--text);}
+.core-service-face p{margin:0;color:var(--muted);font-size:0.8rem;line-height:1.46;}
 .core-service-back h3{color:#fff;margin-top:52px;}
 .core-service-back p{color:rgba(255,255,255,0.86);}
-.core-service-arrow{width:36px;height:36px;border:1.5px solid var(--line);border-radius:50%;display:grid;place-items:center;margin-top:auto;color:var(--text);font-weight:900;font-size:1rem;transition:all 0.22s ease;}
+.core-service-arrow{position:absolute;left:18px;bottom:18px;width:36px;height:36px;border:1.5px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--text);font-weight:900;font-size:1rem;transition:all 0.22s ease;background:rgba(255,255,255,0.68);}
 .core-service-card:hover .core-service-arrow,.core-service-card.featured .core-service-arrow{background:var(--accent);border-color:var(--accent);color:#fff;}
-.core-service-back .core-service-arrow{border-color:rgba(255,255,255,0.45);color:#fff;transform:rotate(180deg);}
+.core-service-back .core-service-arrow{border-color:rgba(255,255,255,0.45);color:#fff;transform:rotate(180deg);background:rgba(255,255,255,0.08);}
 
 /* ── PASSION ── */
 .passion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 34px 34px;}
@@ -357,8 +357,8 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   .core-services-head{margin-bottom:24px;}
   .core-services-title{font-size:clamp(1.9rem,10vw,3.1rem);}
   .core-services-copy{font-size:0.93rem;}
-  .core-service-card,.core-service-inner{min-height:250px;}
-  .core-service-visual{height:84px;margin:34px 0 16px;}
+  .core-service-card,.core-service-inner{min-height:286px;}
+  .core-service-visual{height:86px;margin:34px 0 16px;}
   h1{font-size:3.8rem;}
   .fcopy,.clist{padding:26px 18px;}
   .fbase{padding:13px 18px;}
@@ -701,7 +701,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 
   <!-- EXPERTISE -->
   <section class="card mb14">
-    <div class="section-head"><span class="sub sub-rule">Core Expertise</span><h2>WHAT I DO BEST</h2></div>
+    <div class="section-head"><span class="sub sub-rule">Featured Case Studies</span><h2>High-Impact Strategic Work</h2></div>
     <div class="expert-grid">
       <div class="exp-card glass-inner fade-in"><div class="exp-ico">⚡</div><h3>Business Strategy &amp; GTM</h3><p>Multi-year roadmaps, feasibility analyses, and go-to-market execution for fintech and digital platform initiatives.</p></div>
       <div class="exp-card glass-inner fade-in" style="transition-delay:0.08s;"><div class="exp-ico">💳</div><h3>Payments &amp; Platform Ops</h3><p>Payment architecture, reconciliation, settlement, refunds, and scalable operational workflows for online and offline environments.</p></div>
