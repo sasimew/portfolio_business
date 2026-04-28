@@ -35,13 +35,13 @@ rsync -avz \
   /Users/sasi/Desktop/crypto_bot/home/index.html \
   /Users/sasi/Desktop/crypto_bot/home/DEPLOY_HOME.md \
   /Users/sasi/Desktop/crypto_bot/home/assets \
-  root@187.77.144.27:/home/crypto_bot/home/
+  root@<server-ip>:/home/crypto_bot/home/
 ```
 
 Restart after upload:
 
 ```bash
-ssh root@187.77.144.27
+ssh root@<server-ip>
 cd /home/crypto_bot
 docker compose restart
 ```
@@ -49,7 +49,7 @@ docker compose restart
 If the server uses the older Compose command:
 
 ```bash
-ssh root@187.77.144.27
+ssh root@<server-ip>
 cd /home/crypto_bot
 docker-compose restart
 ```
@@ -57,7 +57,7 @@ docker-compose restart
 One-line restart version:
 
 ```bash
-ssh root@187.77.144.27 "cd /home/crypto_bot && docker compose restart"
+ssh root@<server-ip> "cd /home/crypto_bot && docker compose restart"
 ```
 
 ## Production deploy note
@@ -75,7 +75,7 @@ rsync -avz \
   --exclude 'data/' \
   --exclude 'export/' \
   --exclude 'home/' \
-  ~/Desktop/crypto_bot/ root@187.77.144.27:/home/crypto_bot/
+  ~/Desktop/crypto_bot/ root@<server-ip>:/home/crypto_bot/
 ```
 
 Use that command for the existing app deploy only. For Home, deploy the public static files separately so dashboard, bot, API, logs, data, and secrets stay out of the upload.
@@ -88,7 +88,7 @@ rsync -avz \
   /Users/sasi/Desktop/crypto_bot/home/index.html \
   /Users/sasi/Desktop/crypto_bot/home/DEPLOY_HOME.md \
   /Users/sasi/Desktop/crypto_bot/home/assets \
-  root@187.77.144.27:/home/crypto_bot/home/
+  root@<server-ip>:/home/crypto_bot/home/
 ```
 
 If the web server serves `/home.html` or `/index.html` from another document root, change only the destination path. Do not remove the backend deploy excludes unless the deploy target is meant to receive the Home folder.
@@ -96,7 +96,7 @@ If the web server serves `/home.html` or `/index.html` from another document roo
 Restart the running service after deploy using the project's normal restart command on the server, for example:
 
 ```bash
-ssh root@187.77.144.27
+ssh root@<server-ip>
 cd /home/crypto_bot
 docker compose restart
 ```
