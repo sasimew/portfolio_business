@@ -23,6 +23,43 @@ Then open:
 http://localhost:8080/home.html
 ```
 
+## Copy-paste Home deploy
+
+Upload only the public Home files:
+
+```bash
+rsync -avz \
+  --exclude '.git/' \
+  --exclude '.DS_Store' \
+  /Users/sasi/Desktop/crypto_bot/home/home.html \
+  /Users/sasi/Desktop/crypto_bot/home/index.html \
+  /Users/sasi/Desktop/crypto_bot/home/DEPLOY_HOME.md \
+  /Users/sasi/Desktop/crypto_bot/home/assets \
+  root@187.77.144.27:/home/crypto_bot/home/
+```
+
+Restart after upload:
+
+```bash
+ssh root@187.77.144.27
+cd /home/crypto_bot
+docker compose restart
+```
+
+If the server uses the older Compose command:
+
+```bash
+ssh root@187.77.144.27
+cd /home/crypto_bot
+docker-compose restart
+```
+
+One-line restart version:
+
+```bash
+ssh root@187.77.144.27 "cd /home/crypto_bot && docker compose restart"
+```
+
 ## Production deploy note
 
 The normal backend deploy command excludes `home/`, so it will not publish the Home redesign:
@@ -38,7 +75,7 @@ rsync -avz \
   --exclude 'data/' \
   --exclude 'export/' \
   --exclude 'home/' \
-  ~/Desktop/crypto_bot/ root@<server-ip>:/home/crypto_bot/
+  ~/Desktop/crypto_bot/ root@187.77.144.27:/home/crypto_bot/
 ```
 
 Use that command for the existing app deploy only. For Home, deploy the public static files separately so dashboard, bot, API, logs, data, and secrets stay out of the upload.
@@ -51,7 +88,7 @@ rsync -avz \
   /Users/sasi/Desktop/crypto_bot/home/index.html \
   /Users/sasi/Desktop/crypto_bot/home/DEPLOY_HOME.md \
   /Users/sasi/Desktop/crypto_bot/home/assets \
-  root@<server-ip>:/home/crypto_bot/home/
+  root@187.77.144.27:/home/crypto_bot/home/
 ```
 
 If the web server serves `/home.html` or `/index.html` from another document root, change only the destination path. Do not remove the backend deploy excludes unless the deploy target is meant to receive the Home folder.
@@ -59,7 +96,7 @@ If the web server serves `/home.html` or `/index.html` from another document roo
 Restart the running service after deploy using the project's normal restart command on the server, for example:
 
 ```bash
-ssh root@<server-ip>
+ssh root@187.77.144.27
 cd /home/crypto_bot
 docker compose restart
 ```
