@@ -5,6 +5,7 @@ Standalone portfolio project for `sasi.asia`.
 Files:
 
 - `index.html` — main landing page
+- `services.html` — strategic consulting services page
 - `assets/services-trex.png` — services hero visual
 - `assets/handshake-top.png` — partnership visual
 
