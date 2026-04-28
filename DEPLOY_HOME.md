@@ -23,6 +23,49 @@ Then open:
 http://localhost:8080/home.html
 ```
 
+## Production deploy note
+
+The normal backend deploy command excludes `home/`, so it will not publish the Home redesign:
+
+```bash
+rsync -avz \
+  --exclude '.env' \
+  --exclude 'env' \
+  --exclude '.htpasswd' \
+  --exclude '.git/' \
+  --exclude '.DS_Store' \
+  --exclude '__pycache__/' \
+  --exclude 'data/' \
+  --exclude 'export/' \
+  --exclude 'home/' \
+  ~/Desktop/crypto_bot/ root@<server-ip>:/home/crypto_bot/
+```
+
+Use that command for the existing app deploy only. For Home, deploy the public static files separately so dashboard, bot, API, logs, data, and secrets stay out of the upload.
+
+```bash
+rsync -avz \
+  --exclude '.git/' \
+  --exclude '.DS_Store' \
+  /Users/sasi/Desktop/crypto_bot/home/home.html \
+  /Users/sasi/Desktop/crypto_bot/home/index.html \
+  /Users/sasi/Desktop/crypto_bot/home/DEPLOY_HOME.md \
+  /Users/sasi/Desktop/crypto_bot/home/assets \
+  root@<server-ip>:/home/crypto_bot/home/
+```
+
+If the web server serves `/home.html` or `/index.html` from another document root, change only the destination path. Do not remove the backend deploy excludes unless the deploy target is meant to receive the Home folder.
+
+Restart the running service after deploy using the project's normal restart command on the server, for example:
+
+```bash
+ssh root@<server-ip>
+cd /home/crypto_bot
+docker compose restart
+```
+
+If the server uses the older Compose command, use `docker-compose restart` instead.
+
 ## Safety check before commit
 
 Run these checks from `home/` before committing:
