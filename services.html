@@ -35,15 +35,21 @@ body{
   min-height:100vh;
   font-family:"Outfit",sans-serif;
   color:var(--text);
-  background:
-    radial-gradient(ellipse 52% 38% at 8% 4%,rgba(200,37,58,0.07),transparent 60%),
-    radial-gradient(ellipse 45% 36% at 92% 78%,rgba(200,37,58,0.055),transparent 56%),
-    var(--bg);
+  background:var(--bg);
   overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:radial-gradient(ellipse 55% 45% at 8% 8%,rgba(200,37,58,0.065),transparent 55%),
+             radial-gradient(ellipse 45% 38% at 92% 88%,rgba(200,37,58,0.05),transparent 50%);
 }
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:8px 0 64px;position:relative}
+.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:8px 0 64px;position:relative;z-index:1}
 .glass{
   background:var(--surface);
   backdrop-filter:blur(22px) saturate(180%);
@@ -333,11 +339,11 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
             <h2 style="font-family:Outfit,sans-serif;font-size:1.9rem;letter-spacing:-0.04em;">Services Connected to Real Outcomes</h2>
           </div>
           <div class="result-grid">
-            <article class="result-card reveal"><div class="result-kicker">Growth Strategy</div><h3>Digital Platform Scaling</h3><p>Transformed fragmented growth into THB 250M+ GMV run-rate with sustainable unit economics.</p><div class="tags"><span class="tag">Gaming</span><span class="tag">Marketplace</span></div><a class="card-link" href="home.html#portfolio-page">View Case Study <span class="arrow">-></span></a></article>
-            <article class="result-card reveal"><div class="result-kicker">Token Economy</div><h3>$8M GameFi Capital Raise</h3><p>Structured tokenomics supporting $8M raise in 24 hours with long-term ecosystem sustainability.</p><div class="tags"><span class="tag">Web3</span><span class="tag">GameFi</span></div><a class="card-link" href="home.html#portfolio-page">View Case Study <span class="arrow">-></span></a></article>
-            <article class="result-card reveal"><div class="result-kicker">Monetization</div><h3>ARPPU Optimization</h3><p>Increased ARPPU by +43% through pricing strategy and monetization layer expansion.</p><div class="tags"><span class="tag">Digital Goods</span><span class="tag">Platform</span></div><a class="card-link" href="home.html#portfolio-page">View in Portfolio <span class="arrow">-></span></a></article>
+            <article class="result-card reveal"><div class="result-kicker">Growth Strategy</div><h3>Digital Platform Scaling</h3><p>Transformed fragmented growth into THB 250M+ GMV run-rate with sustainable unit economics.</p><div class="tags"><span class="tag">Gaming</span><span class="tag">Marketplace</span></div><a class="card-link" href="home.html#case-studies">View Case Study <span class="arrow">-></span></a></article>
+            <article class="result-card reveal"><div class="result-kicker">Token Economy</div><h3>$8M GameFi Capital Raise</h3><p>Structured tokenomics supporting $8M raise in 24 hours with long-term ecosystem sustainability.</p><div class="tags"><span class="tag">Web3</span><span class="tag">GameFi</span></div><a class="card-link" href="home.html#case-studies">View Case Study <span class="arrow">-></span></a></article>
+            <article class="result-card reveal"><div class="result-kicker">Monetization</div><h3>ARPPU Optimization</h3><p>Increased ARPPU by +43% through pricing strategy and monetization layer expansion.</p><div class="tags"><span class="tag">Digital Goods</span><span class="tag">Platform</span></div><a class="card-link" href="home.html#case-studies">View Selected Work <span class="arrow">-></span></a></article>
           </div>
-          <div class="center-action"><a class="btn btn-secondary" href="home.html#portfolio-page">Explore Full Portfolio</a></div>
+          <div class="center-action"><a class="btn btn-secondary" href="home.html#case-studies">Explore Case Studies</a></div>
         </div>
       </div>
     </section>
