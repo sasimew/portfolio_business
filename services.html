@@ -164,7 +164,7 @@ img{display:block;max-width:100%}
 .btn-secondary:hover{border-color:rgba(200,37,58,0.25);color:var(--accent);box-shadow:var(--shadow)}
 .icon-btn{width:42px;height:42px;padding:0;border-radius:50%;font-size:1rem}
 .mobile-toggle{display:none}
-.section{margin-top:14px;border-radius:var(--radius);overflow:hidden}
+.section{margin-top:18px;border-radius:var(--radius);overflow:hidden}
 .eyebrow{
   display:inline-flex;
   align-items:center;
@@ -262,17 +262,58 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .cta-actions{display:flex;gap:12px;flex-wrap:wrap}.handshake{position:relative;min-height:225px;overflow:hidden;border-radius:24px}.handshake::before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:var(--accent);left:50%;top:58%;transform:translate(-50%,-50%);box-shadow:0 22px 56px rgba(200,37,58,0.28)}
 .handshake::before{display:none}
 .handshake img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(105%,500px);filter:drop-shadow(0 24px 28px rgba(0,0,0,0.16))}
-.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:var(--shadow-md)}
-.footer-inner{display:grid;grid-template-columns:1.1fr 0.9fr}
-.fcopy{padding:48px 42px}.fcopy h2{color:#f7f4ee;max-width:520px}.fcopy p{max-width:560px;margin:18px 0 26px;color:rgba(230,226,218,0.67);line-height:1.72}.fcopy-btns{display:flex;gap:12px;flex-wrap:wrap}
-.clist{padding:48px 42px;border-left:1px solid rgba(255,255,255,0.06);display:grid;gap:16px}.citem{display:flex;align-items:center;gap:14px;color:rgba(240,236,228,0.78);font-weight:600}.cico{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(200,37,58,0.14);border:1px solid rgba(200,37,58,0.25);color:#ef4d62}
-.fbase{border-top:1px solid rgba(255,255,255,0.06);padding:18px 42px;display:flex;align-items:center;justify-content:space-between;gap:14px;color:rgba(230,226,218,0.52);font-size:0.88rem;flex-wrap:wrap}.footer .brand{color:#fff}.flinks{display:flex;gap:22px}.flinks a:hover{color:#fff}
+
+.footer{
+  background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.14),transparent 30%),linear-gradient(135deg,#3f3d38 0%,#36332f 56%,#2c2a27 100%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:32px;
+  overflow:hidden;
+  margin-top:18px;
+  box-shadow:0 22px 58px rgba(0,0,0,0.16);
+}
+.footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px;}
+.footer-col{min-width:0;}
+.footer-positioning{padding-right:4px;}
+.footer-kicker{display:inline-flex;align-items:center;gap:12px;color:#ef4d62;font-size:0.68rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:13px;}
+.footer-kicker::after{content:"";width:34px;height:1px;background:#ef4d62;}
+.footer h2{font-family:"Bebas Neue",sans-serif;color:#f7f4ee;max-width:420px;margin-bottom:14px;font-size:clamp(2rem,2.7vw,2.85rem);line-height:0.95;letter-spacing:0.035em;text-transform:uppercase;}
+.footer h3{display:inline-flex;align-items:center;gap:14px;color:#f7f4ee;font-size:1.06rem;line-height:1.2;margin-bottom:18px;letter-spacing:0.04em;text-transform:uppercase;}
+.footer h3::after{content:"";width:34px;height:1px;background:#ef4d62;}
+.footer p{color:rgba(247,244,238,0.62);line-height:1.64;font-size:0.9rem;}
+.fcopy-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:370px;margin-top:24px;}
+.footer-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 16px;border-radius:999px;border:1px solid transparent;font:800 0.8rem/1 "Outfit",sans-serif;letter-spacing:0.035em;text-transform:uppercase;white-space:nowrap;transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease,background 0.22s ease,color 0.22s ease;}
+.footer-btn:hover{transform:translateY(-2px);}
+.footer-btn-primary{background:#c8253a;color:#fff;box-shadow:0 16px 38px rgba(200,37,58,0.22);}
+.footer-btn-secondary{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.26);color:#f7f4ee;}
+.footer-btn-secondary:hover{border-color:rgba(239,77,98,0.55);color:#fff;}
+.footer-list{display:grid;gap:10px;list-style:none;margin-top:10px;padding-left:0;}
+.footer-list li{color:rgba(247,244,238,0.72);line-height:1.42;font-size:0.88rem;padding-left:17px;position:relative;}
+.footer-list li::before{content:"";position:absolute;left:0;top:0.58em;width:6px;height:6px;border-radius:50%;background:#ef4d62;}
+.selective-line{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.18);color:#f7f4ee!important;font-weight:800;font-size:0.92rem;line-height:1.55;}
+.contact-list{display:grid;}
+.contact-item{display:grid;grid-template-columns:36px 1fr;gap:13px;align-items:center;padding:0 0 12px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.10);}
+.contact-item:last-child{margin-bottom:0;}
+.contact-ico{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#ef4d62;border:1px solid rgba(239,77,98,0.75);background:rgba(239,77,98,0.045);}
+.contact-ico svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.contact-item div span{display:block;color:#ef4d62;font-size:0.66rem;font-weight:900;letter-spacing:0.13em;text-transform:uppercase;margin-bottom:5px;}
+.contact-item a,.contact-item p{color:rgba(247,244,238,0.84);font-weight:700;line-height:1.35;font-size:0.9rem;margin:0;}
+.contact-item a:hover{color:#fff;}
+.linkedin-link{color:#ef4d62!important;}
+.linkedin-link:hover{color:#ff7b8b!important;}
+.trust-line{display:none;}
+.fbase{border-top:1px solid rgba(255,255,255,0.10);padding:20px 58px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;color:rgba(247,244,238,0.52);font-size:0.86rem;}
+.footer .brand{color:#fff;}
+.footer .brand span{color:#ef4d62;}
+.flinks{display:flex;gap:22px;align-items:center;justify-content:flex-end;}
+.flinks a:hover{color:#fff;}
+.linkedin-mark{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:transparent;border:1px solid rgba(255,255,255,0.45);color:#fff!important;font-size:0.78rem;font-weight:900;line-height:1;}
+
 .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease}.reveal.in{opacity:1;transform:translateY(0)}
 @media (max-width:980px){
   .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
   .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
   .hero{padding:54px 28px}.hero-visual{min-height:0}.services-grid,.result-grid{grid-template-columns:repeat(2,1fr)}
-  .process-grid{grid-template-columns:1fr;gap:24px}.connector{display:none}.cta-banner,.footer-inner{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr;gap:24px}.connector{display:none}.cta-banner,.footer-inner{grid-template-columns:1fr}.fcopy-btns{grid-template-columns:1fr;max-width:none}.fbase{grid-template-columns:1fr}.flinks{justify-content:flex-start}
   .clist{border-left:0;border-top:1px solid rgba(255,255,255,0.06)}
 }
 @media (max-width:640px){
@@ -282,7 +323,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   .services-grid,.result-grid{grid-template-columns:1fr}.services-grid{padding-bottom:20px}.service-card{min-height:auto;padding:22px}.context-box,.outcome{min-height:0}
   .section-head,.process,.results{padding-left:20px;padding-right:20px}.results-shell{padding:24px 16px}.section-head{padding-top:48px}
   .step{grid-template-columns:1fr}.step-num{width:56px;height:56px}.cta-banner{padding:32px 20px}.cta-banner h2{font-size:1.65rem}.handshake{min-height:185px}
-  .fcopy,.clist{padding:34px 22px}.fbase{padding:18px 22px;align-items:flex-start;flex-direction:column}
+  .footer-inner{padding:32px;gap:28px}.fbase{padding:20px 32px}
 }
 </style>
 </head>
@@ -438,25 +479,39 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 
   <footer class="footer">
     <div class="footer-inner">
-      <div class="fcopy">
-        <h2>LET'S BUILD SOMETHING VALUABLE TOGETHER</h2>
-        <p>Available for strategic roles, executive advisory, business development leadership, platform growth, and partnership opportunities across fintech and digital platforms.</p>
+      <div class="footer-col footer-positioning">
+        <span class="footer-kicker">Strategic Advisor</span>
+        <h2>Let's Build Something Valuable Together</h2>
+        <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization, and capital strategy.</p>
         <div class="fcopy-btns">
-          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Contact Me -></a>
-          <a class="btn btn-secondary" href="home.html">↓ Download CV</a>
+          <a class="footer-btn footer-btn-primary" href="mailto:sasi.bu.bd@gmail.com">Contact Me</a>
+          <a class="footer-btn footer-btn-secondary" href="case-studies.html">View Case Studies</a>
         </div>
       </div>
-      <div class="clist">
-        <div class="citem"><span class="cico">✉</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div>
-        <div class="citem"><span class="cico">☎</span><a href="tel:+66962614499">+66 96 261 4499</a></div>
-        <div class="citem"><span class="cico">⌂</span><span>Bangkok, Thailand</span></div>
-        <div class="citem"><span class="cico">in</span><a href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div>
+      <div class="footer-col">
+        <h3>Engagement</h3>
+        <ul class="footer-list">
+          <li>Strategic advisory</li>
+          <li>Capital strategy</li>
+          <li>Platform growth</li>
+          <li>Partnerships &amp; expansion</li>
+        </ul>
+        <p class="selective-line">Selective engagements focused on high-impact decisions.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="contact-list">
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><span>Email</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><span>Phone</span><a href="tel:+66962614499">+66 96 261 4499</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><span>Location</span><p>Bangkok, Thailand</p></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></span><div><span>LinkedIn</span><a class="linkedin-link" href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div></div>
+        </div>
       </div>
     </div>
     <div class="fbase">
       <div class="brand">SASI<span>.ASIA</span></div>
       <div>© 2025 sasi.asia. All rights reserved.</div>
-      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a class="linkedin-mark" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
     </div>
   </footer>
 </div>
