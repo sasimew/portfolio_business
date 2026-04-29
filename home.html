@@ -263,9 +263,11 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 .about-proof li{position:relative;padding-left:18px;color:var(--text2);font-size:0.83rem;line-height:1.48;font-weight:600;}
 .about-proof li::before{content:"";position:absolute;left:0;top:0.65em;width:6px;height:6px;border-radius:50%;background:var(--accent);}
 .about-positioning{color:var(--muted);font-size:0.88rem;line-height:1.62;max-width:620px;margin-bottom:20px;}
-.about-hero-vis{width:92%;min-height:455px;justify-self:end;background:linear-gradient(145deg,#f7f3ef,#ebe6df);}
+.about-hero-vis{width:98%;min-height:500px;justify-self:end;background:linear-gradient(145deg,#f7f3ef,#ebe6df);overflow:visible;}
 .about-hero-vis .vis-ring{display:none;}
-.about-hero-vis .portrait-img{background-size:140% auto;background-position:center bottom;background-repeat:no-repeat;}
+.about-hero-vis .portrait-wrap{display:flex;align-items:flex-end;justify-content:center;border-radius:inherit;overflow:hidden;}
+.about-hero-vis .portrait-img{background-size:140% auto;background-position:center bottom;background-repeat:no-repeat;flex:0 0 auto;}
+.about-hero-vis::after{content:"";position:absolute;right:28px;top:-18px;width:82px;height:82px;border-radius:50%;background:var(--accent);z-index:5;box-shadow:0 18px 36px rgba(200,37,58,0.24);pointer-events:none;}
 .about-metric{position:absolute;z-index:4;left:18px;bottom:18px;display:grid;gap:2px;padding:12px 14px;border-radius:15px;background:rgba(255,255,255,0.72);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.78);box-shadow:var(--shadow-sm);}
 .about-metric strong{font-family:"Bebas Neue",sans-serif;font-size:1.24rem;line-height:1;color:var(--accent);letter-spacing:0.04em;}
 .about-metric span{font-size:0.66rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:0.08em;}
@@ -372,7 +374,8 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 @media(max-width:1100px){
   .hero-grid{grid-template-columns:1fr;}.hero-vis{min-height:310px;}
   .about-hero-grid{grid-template-columns:1fr;min-height:auto;}
-  .about-hero-vis{width:100%;min-height:380px;}
+  .about-hero-vis{width:100%;min-height:430px;overflow:hidden;}
+  .about-hero-vis::after{right:20px;top:18px;width:58px;height:58px;}
   .about-proof-grid{grid-template-columns:1fr;}
   .stats{grid-template-columns:repeat(2,1fr);}
   .ach-grid,.expert-grid,.case-study-grid,.passion-grid,.port-grid,.news-grid{grid-template-columns:repeat(2,1fr);}
@@ -392,7 +395,8 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   .about-hero-copy{padding:16px 0 22px;}
   .about-name{font-size:2.9rem;}
   .about-proof{padding:16px;}
-  .about-hero-vis{min-height:330px;}
+  .about-hero-vis{min-height:360px;}
+  .about-hero-vis::after{width:48px;height:48px;}
   .about-hero-vis .portrait-img{background-size:140% auto;}
   .one-line{white-space:normal;}
   .stats{grid-template-columns:1fr 1fr;}
@@ -836,7 +840,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
         <div class="vis-ring vis-ring-2"></div>
         <div class="vis-dots"></div>
         <div class="vis-ball"></div>
-        <div class="portrait-wrap"><div class="portrait-img" role="img" aria-label="Portrait of Sasion Nanthaphiriyakit"></div></div>
+        <div class="portrait-wrap"><div class="portrait-img" role="img" aria-label="Portrait of Sasion Nanthaphiriyakit" style="height: 500px !important; width: 400px !important;"></div></div>
         <div class="about-metric"><strong>Strategic Business Advisor</strong><span>Multi-hundred-million THB decisions</span></div>
       </div>
     </div>
