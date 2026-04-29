@@ -197,6 +197,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   text-transform:uppercase;
 }
 .red{color:var(--accent)}
+.no-break{white-space:nowrap}
 .hero{
   position:relative;
   display:grid;
@@ -215,8 +216,9 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   height:96px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.12;
+  opacity:1;
   pointer-events:none;
+  z-index:2;
 }
 .hero-copy{position:relative;z-index:1}
 .hero-copy p{max-width:680px;margin-top:18px}
@@ -260,10 +262,10 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 }
 .visual-card{
   position:absolute;
-  left:24px;
   right:24px;
-  bottom:24px;
+  bottom:10px;
   z-index:2;
+  width:min(370px,calc(100% - 48px));
   border-radius:24px;
   padding:22px;
   background:rgba(255,255,255,0.82);
@@ -271,7 +273,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   box-shadow:var(--shadow);
 }
 .visual-card span{display:block;color:var(--accent);font-weight:900;letter-spacing:0.14em;text-transform:uppercase;font-size:0.72rem;margin-bottom:9px}
-.visual-card p{color:var(--text2);font-weight:700;line-height:1.5}
+.visual-card p{color:var(--text2);font-weight:500;line-height:1.42;font-size:0.94rem}
 .featured-cases{
   padding:56px 42px;
   background:rgba(255,255,255,0.52);
@@ -824,7 +826,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
     <section class="section glass hero">
       <div class="hero-copy reveal in">
         <span class="eyebrow">Selected Work</span>
-        <h1>Strategic <span class="red">Case Studies</span></h1>
+        <h1>Strategic <span class="red no-break">Case Studies</span></h1>
         <p>A track record of solving high-impact problems across platform growth, monetization, market expansion, strategic partnerships, token economy, and cross-border execution.</p>
         <p>Typically engaged for high-impact decisions where strategy directly affects revenue, valuation, and market position.</p>
         <div class="metric-row">
@@ -842,7 +844,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
         <img class="hero-case-img" src="assets/case-growth-hero.png" alt="">
         <div class="visual-card">
           <span>Decision-Level Work</span>
-          <p>Platform strategy, monetization architecture, market entry, and strategic execution tied to measurable business outcomes.</p>
+          <p>High-impact strategy across platform growth, monetization, market expansion, partnerships, and token economy -- focused on decisions that move revenue, valuation, and market position.</p>
         </div>
       </div>
     </section>
