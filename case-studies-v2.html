@@ -420,8 +420,8 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .footer-inner{
   display:grid;
   grid-template-columns:1.15fr 0.9fr 0.85fr;
-  gap:34px;
-  padding:54px 46px 38px;
+  gap:32px;
+  padding:42px 46px 30px;
 }
 .footer-col{min-width:0}
 .footer-kicker{
@@ -438,8 +438,9 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .footer-kicker::after{content:"";width:34px;height:1px;background:#ef4d62}
 .footer h2{
   color:#f7f4ee;
-  max-width:520px;
-  margin-bottom:16px;
+  max-width:460px;
+  margin-bottom:14px;
+  font-size:clamp(1.85rem,3vw,2.7rem);
 }
 .footer h3{
   color:#f7f4ee;
@@ -450,23 +451,23 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 }
 .footer p{
   color:rgba(230,226,218,0.70);
-  line-height:1.7;
-  font-size:0.95rem;
+  line-height:1.62;
+  font-size:0.9rem;
 }
-.footer-focus{margin-top:14px}
+.footer-focus{margin-top:11px}
 .metric-strip{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
-  margin:24px 0 26px;
+  margin:18px 0 22px;
 }
 .metric-strip span{
   border-radius:999px;
-  padding:8px 11px;
+  padding:7px 10px;
   background:rgba(255,255,255,0.065);
   border:1px solid rgba(255,255,255,0.08);
   color:rgba(247,244,238,0.86);
-  font-size:0.74rem;
+  font-size:0.68rem;
   font-weight:800;
   letter-spacing:0.06em;
   text-transform:uppercase;
@@ -474,13 +475,13 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .fcopy-btns{display:flex;gap:12px;flex-wrap:wrap}
 .footer-list{
   display:grid;
-  gap:13px;
+  gap:10px;
   list-style:none;
 }
 .footer-list li{
   color:rgba(240,236,228,0.76);
-  line-height:1.5;
-  font-size:0.93rem;
+  line-height:1.42;
+  font-size:0.9rem;
 }
 .footer-list li::before{
   content:"";
@@ -493,11 +494,11 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   vertical-align:middle;
 }
 .selective-line{
-  margin-top:18px;
+  margin-top:15px;
   color:#f7f4ee;
   font-weight:800;
 }
-.contact-list{display:grid;gap:15px}
+.contact-list{display:grid;gap:12px}
 .contact-item span{
   display:block;
   color:#ef4d62;
@@ -513,14 +514,28 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   line-height:1.35;
 }
 .contact-item a:hover{color:#fff}
+.linkedin-link{color:#0a66c2!important}
+.linkedin-link:hover{color:#62a7f2!important}
+.linkedin-mark{
+  display:inline-grid;
+  place-items:center;
+  width:26px;
+  height:26px;
+  border-radius:8px;
+  background:#0a66c2;
+  color:#fff!important;
+  font-size:0.78rem;
+  font-weight:900;
+  line-height:1;
+}
 .trust-line{
   border-top:1px solid rgba(255,255,255,0.06);
-  padding:18px 46px;
+  padding:14px 46px;
   color:rgba(230,226,218,0.55);
   font-size:0.84rem;
   line-height:1.6;
 }
-.fbase{border-top:1px solid rgba(255,255,255,0.06);padding:18px 46px;display:flex;align-items:center;justify-content:space-between;gap:14px;color:rgba(230,226,218,0.52);font-size:0.88rem;flex-wrap:wrap}
+.fbase{border-top:1px solid rgba(255,255,255,0.06);padding:14px 46px;display:flex;align-items:center;justify-content:space-between;gap:14px;color:rgba(230,226,218,0.52);font-size:0.88rem;flex-wrap:wrap}
 .footer .brand{color:#fff}
 .flinks{display:flex;gap:22px;align-items:center}
 .flinks a:hover{color:#fff}
@@ -777,7 +792,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
           <div class="contact-item"><span>Email</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div>
           <div class="contact-item"><span>Phone</span><a href="tel:+66962614499">+66 96 261 4499</a></div>
           <div class="contact-item"><span>Location</span><p>Bangkok, Thailand</p></div>
-          <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div>
+          <div class="contact-item"><span>LinkedIn</span><a class="linkedin-link" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div>
           <div class="contact-item"><span>Portfolio</span><a href="home.html#portfolio-page">View Profile</a></div>
         </div>
       </div>
@@ -786,7 +801,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
     <div class="fbase">
       <div class="brand">SASI<span>.ASIA</span></div>
       <div>© 2025 sasi.asia. All rights reserved.</div>
-      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
+      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a class="linkedin-mark" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
     </div>
   </footer>
 </div>
