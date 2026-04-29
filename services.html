@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Sasion Nanthaphiriyakit | SASI.ASIA</title>
-<meta name="description" content="Strategic consulting services by Sasion Nanthaphiriyakit for platform growth, AI workflow design, monetization, Web3 token economy, and business development.">
+<title>Advisory | Sasion Nanthaphiriyakit | SASI.ASIA</title>
+<meta name="description" content="Strategic advisory by Sasion Nanthaphiriyakit for platform growth, capital strategy, monetization, partnerships, token economy, and business transformation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -233,6 +233,13 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .service-card:hover .icon-badge{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
 .service-card h3{font-size:1.28rem;line-height:1.18;margin-bottom:10px;color:#747474}
 .service-card>p{color:var(--muted);font-size:0.92rem;line-height:1.62;margin-bottom:18px}
+.service-card.advisory-card{min-height:560px}
+.service-card .why-box{border-radius:16px;background:rgba(247,245,241,0.72);border:1px solid rgba(26,25,21,0.055);padding:14px 15px;margin-bottom:16px}
+.service-card .why-box span,.service-card .when-list span,.service-card .outcome-list span{display:block;color:var(--accent);font-size:0.62rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:7px}
+.service-card .why-box p{font-size:0.82rem;line-height:1.52;color:var(--text2)}
+.mini-list{display:grid;gap:8px;list-style:none;margin:0 0 16px;padding:0}
+.mini-list li{position:relative;padding-left:15px;color:var(--muted);font-size:0.82rem;line-height:1.42}
+.mini-list li::before{content:"";position:absolute;left:0;top:0.57em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 .context-box{border-radius:16px;background:rgba(247,245,241,0.72);border:1px solid rgba(26,25,21,0.055);padding:14px 15px;margin-bottom:16px;min-height:116px}
 .context-box span,.outcome span{display:block;color:var(--accent);font-size:0.62rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:7px}
 .context-box p,.outcome p{font-size:0.82rem;line-height:1.52;color:var(--text2)}
@@ -243,6 +250,35 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .section-head.center{text-align:center;max-width:760px;margin:0 auto;padding-bottom:38px}
 .section-head.center .eyebrow{justify-content:center}.section-head.center .eyebrow::before{content:"";width:46px;height:1px;background:var(--accent)}
 .section-head.center p,.section-head p{margin-top:15px;color:var(--muted);line-height:1.72;font-size:0.98rem}
+.killer-bar{margin:18px 0 0;padding:20px 28px;border-radius:24px;background:rgba(255,255,255,0.66);border:1px solid rgba(255,255,255,0.82);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.killer-bar strong{font-size:1.02rem;color:#545454;line-height:1.45}
+.killer-bar span{color:var(--accent);font-weight:900;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.16em}
+.info-section{padding:0 42px 64px}
+.situations-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.situation-card,.why-panel,.eco-group,.mandate-card{border-radius:22px;background:rgba(255,255,255,0.72);border:1px solid rgba(26,25,21,0.08);box-shadow:var(--shadow)}
+.situation-card{padding:22px;min-height:168px}
+.situation-card b{display:block;color:#747474;font-size:1rem;margin-bottom:9px}
+.situation-card p,.why-panel p,.eco-group p,.mandate-card p{color:var(--muted);font-size:0.9rem;line-height:1.62}
+.why-engage{display:grid;grid-template-columns:0.9fr 1.1fr;gap:18px;align-items:stretch}
+.why-panel{padding:28px}
+.why-list{display:grid;gap:12px;list-style:none}
+.why-list li{position:relative;padding-left:20px;color:var(--text2);font-weight:700;line-height:1.45}
+.why-list li::before{content:"";position:absolute;left:0;top:0.58em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.role-note{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);color:#747474;font-weight:800;line-height:1.58}
+.eco-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.eco-group{padding:22px}
+.eco-group h3{color:#747474;font-size:1.02rem;margin-bottom:10px}
+.eco-group .companies{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.company-pill{border-radius:999px;background:rgba(200,37,58,0.07);color:var(--accent);font-weight:800;font-size:0.72rem;padding:7px 10px}
+.mandates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mandate-card{padding:24px;display:flex;flex-direction:column;min-height:265px}
+.mandate-card.featured{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:22px;min-height:auto;background:linear-gradient(135deg,rgba(255,255,255,0.82),rgba(247,245,241,0.74))}
+.mandate-kicker{display:inline-flex;align-items:center;width:max-content;border-radius:999px;background:rgba(200,37,58,0.09);color:var(--accent);font-size:0.7rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;padding:7px 11px;margin-bottom:14px}
+.mandate-card h3{font-size:1.16rem;line-height:1.22;color:#747474;margin-bottom:10px}
+.mandate-card ul{display:grid;gap:8px;list-style:none;margin:14px 0 0;padding:0}
+.mandate-card li{position:relative;padding-left:15px;color:var(--muted);font-size:0.84rem;line-height:1.45}
+.mandate-card li::before{content:"";position:absolute;left:0;top:0.58em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.advisory-process .process-grid{grid-template-columns:1fr auto 1fr auto 1fr auto 1fr}
 .process{padding:0 42px 78px}
 .process-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:20px}
 .step{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;height:100%}
@@ -312,7 +348,8 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 @media (max-width:980px){
   .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
   .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
-  .hero{padding:54px 28px}.hero-visual{min-height:0}.services-grid,.result-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:54px 28px}.hero-visual{min-height:0}.services-grid,.result-grid,.situations-grid,.eco-grid,.mandates-grid{grid-template-columns:repeat(2,1fr)}
+  .why-engage,.mandate-card.featured{grid-template-columns:1fr}.mandate-card.featured{grid-column:auto}.advisory-process .process-grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr;gap:24px}.connector{display:none}.cta-banner,.footer-inner{grid-template-columns:1fr}.fcopy-btns{grid-template-columns:1fr;max-width:none}.fbase{grid-template-columns:1fr}.flinks{justify-content:flex-start}
   .clist{border-left:0;border-top:1px solid rgba(255,255,255,0.06)}
 }
@@ -320,8 +357,9 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   .page{width:min(100% - 22px,var(--max));padding-top:6px}.topbar{padding-left:16px}.desktop-cta{display:none}
   .hero{padding:42px 20px 34px;min-height:auto}.hero-visual{min-height:0}.eyebrow{font-size:0.66rem}.eyebrow::after{width:34px}h1{font-size:3.8rem}h2{font-size:clamp(2.4rem,12vw,3.4rem)}
   .red-pill{min-height:0;border-radius:0}.trex{right:auto;width:112%;max-width:none}.mini-pixel{display:none}
-  .services-grid,.result-grid{grid-template-columns:1fr}.services-grid{padding-bottom:20px}.service-card{min-height:auto;padding:22px}.context-box,.outcome{min-height:0}
+  .services-grid,.result-grid,.situations-grid,.eco-grid,.mandates-grid{grid-template-columns:1fr}.services-grid{padding-bottom:20px}.service-card,.service-card.advisory-card{min-height:auto;padding:22px}.context-box,.outcome{min-height:0}
   .section-head,.process,.results{padding-left:20px;padding-right:20px}.results-shell{padding:24px 16px}.section-head{padding-top:48px}
+  .info-section{padding-left:20px;padding-right:20px}.killer-bar{align-items:flex-start;flex-direction:column;padding:18px 20px}.mandate-card.featured{grid-column:auto}
   .step{grid-template-columns:1fr}.step-num{width:56px;height:56px}.cta-banner{padding:32px 20px}.cta-banner h2{font-size:1.65rem}.handshake{min-height:185px}
   .footer-inner{padding:32px;gap:28px}.fbase{padding:20px 32px}
 }
@@ -345,7 +383,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         <a href="home.html">Home</a>
         <a href="home.html#portfolio-page">About</a>
         <a href="case-studies.html">Case Studies</a>
-        <a class="active" href="services.html">Services</a>
+        <a class="active" href="services.html">Advisory</a>
         <a href="home.html#insights">Insights</a>
       </nav>
       <div class="nav-actions">
@@ -356,90 +394,194 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   </div>
 
   <main>
+    <div class="killer-bar reveal in">
+      <strong>I help companies turn growth into revenue, and strategy into measurable outcomes.</strong>
+      <span>Advisory for high-impact decisions</span>
+    </div>
+
     <section class="section glass hero">
       <div class="hero-copy reveal in">
-        <span class="eyebrow">Strategic Consulting Services</span>
-        <h1>Transform Challenges Into <span class="red">Scalable Growth</span></h1>
+        <span class="eyebrow">Strategic Advisory</span>
+        <h1>Advising on Growth, Capital, and <span class="red">Strategic Transformation</span></h1>
         <div class="hero-visual" aria-label="Digital strategy transformation visual">
           <div class="red-pill">
             <span class="mini-pixel" aria-hidden="true"></span>
             <img class="trex" src="assets/services-trex2.png" alt="Transformation and digital strategy concept">
           </div>
         </div>
-        <p>I partner with founders, executives, and investors to unlock growth through strategy, platform scaling, monetization optimization, AI enablement, and business transformation. Every engagement is designed around measurable outcomes - not generic frameworks.</p>
+        <p>I work with founders, executives, and investors on high-impact decisions across business model design, monetization, capital strategy, and market expansion. My focus is turning complex situations into clear strategic direction with measurable impact on revenue, valuation, and long-term growth.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Start a Conversation -></a>
-          <a class="btn btn-secondary" href="home.html#portfolio-page">View Portfolio</a>
+          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Discuss Your Strategy -></a>
+          <a class="btn btn-secondary" href="case-studies.html">View Selected Work</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="advisory">
+      <div class="section-head">
+        <span class="eyebrow">Advisory Focus Areas</span>
+        <h2>What I Advise On</h2>
+        <p>Focused advisory for moments where growth, monetization, capital structure, or strategic direction needs to be redefined with clear commercial outcomes.</p>
+      </div>
       <div class="services-grid">
-        <article class="service-card reveal">
-          <div class="icon-badge">✦</div>
-          <h3>Growth Strategy &amp; Scaling</h3>
-          <p>Design and execute growth frameworks that move beyond vanity metrics to sustainable unit economics and market expansion.</p>
-          <div class="context-box"><span>Business Context</span><p>Ideal for platforms with early traction struggling to scale profitably or optimize CAC/LTV ratios.</p></div>
-          <div class="outcome"><span>Expected Outcome</span><p>THB 250M+ GMV run-rate achieved for digital platform with +43% ARPPU improvement.</p></div>
-          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss This Service <span class="arrow">-></span></a>
+        <article class="service-card advisory-card reveal">
+          <div class="icon-badge">01</div>
+          <h3>Business Model &amp; Growth Strategy</h3>
+          <p>Redesign business models and growth engines to move from early traction to scalable, profitable growth.</p>
+          <div class="why-box"><span>Why It Matters</span><p>Many companies grow users but fail to convert that growth into sustainable revenue.</p></div>
+          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Growth is increasing but revenue is not</li><li>CAC rising and margins declining</li><li>No clear path from traction to scale</li></ul></div>
+          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>Scalable revenue engine</li><li>Improved LTV, CAC, and ARPPU logic</li><li>Growth beyond marketing spend</li></ul></div>
+          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss Advisory <span class="arrow">-></span></a>
         </article>
-        <article class="service-card reveal">
-          <div class="icon-badge">▰</div>
-          <h3>Platform Monetization</h3>
-          <p>Optimize revenue capture through pricing strategy, take-rate optimization, and monetization layer expansion across user segments.</p>
-          <div class="context-box"><span>Business Context</span><p>For marketplaces and platforms with high traffic but low conversion or revenue per user.</p></div>
-          <div class="outcome"><span>Expected Outcome</span><p>4.5%+ paying user rate with improved contribution margin in core segments.</p></div>
-          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss This Service <span class="arrow">-></span></a>
+        <article class="service-card advisory-card reveal">
+          <div class="icon-badge">02</div>
+          <h3>Capital Strategy &amp; Fundraising</h3>
+          <p>Structure investor-ready strategy, financial models, and narratives to maximize fundraising success.</p>
+          <div class="why-box"><span>Why It Matters</span><p>Most companies fail to raise capital due to weak positioning, not weak fundamentals.</p></div>
+          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Preparing for fundraising</li><li>Difficulty communicating valuation</li><li>Investor interest without conversion</li></ul></div>
+          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>Stronger investor confidence</li><li>Higher probability of successful raise</li><li>Improved valuation positioning</li></ul></div>
+          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss Advisory <span class="arrow">-></span></a>
         </article>
-        <article class="service-card reveal">
-          <div class="icon-badge">◎</div>
-          <h3>Business Development &amp; Partnerships</h3>
-          <p>Structure strategic partnerships, negotiate deals, and build ecosystem relationships that accelerate market position.</p>
-          <div class="context-box"><span>Business Context</span><p>Companies seeking to expand through partnerships rather than purely organic or paid channels.</p></div>
-          <div class="outcome"><span>Expected Outcome</span><p>Strategic partner network delivering 30%+ of new revenue streams.</p></div>
-          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss This Service <span class="arrow">-></span></a>
+        <article class="service-card advisory-card reveal">
+          <div class="icon-badge">03</div>
+          <h3>IPO &amp; M&amp;A Advisory</h3>
+          <p>Advise on strategic transactions, valuation positioning, and deal structuring for maximum outcome.</p>
+          <div class="why-box"><span>Why It Matters</span><p>Transaction outcomes depend on strategy and positioning, not just financials.</p></div>
+          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Preparing for IPO or acquisition</li><li>Entering strategic deal discussions</li><li>Optimizing valuation before exit</li></ul></div>
+          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>Improved deal terms</li><li>Stronger negotiation leverage</li><li>Higher strategic valuation</li></ul></div>
+          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss Advisory <span class="arrow">-></span></a>
         </article>
-        <article class="service-card reveal">
-          <div class="icon-badge">◐</div>
-          <h3>AI Workflow Design</h3>
-          <p>Implement practical AI solutions across marketing automation, analytics, and decision support with real-world deployment focus.</p>
-          <div class="context-box"><span>Business Context</span><p>Organizations wanting to leverage AI beyond experimentation into operational efficiency gains.</p></div>
-          <div class="outcome"><span>Expected Outcome</span><p>40%+ reduction in manual processes with deployed AI solutions in production.</p></div>
-          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss This Service <span class="arrow">-></span></a>
+        <article class="service-card advisory-card reveal">
+          <div class="icon-badge">04</div>
+          <h3>Token Economy &amp; ICO Strategy</h3>
+          <p>Design token economies aligned with real business value and long-term sustainability.</p>
+          <div class="why-box"><span>Why It Matters</span><p>Most token models fail due to misaligned incentives and unsustainable design.</p></div>
+          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Planning token launch or ICO</li><li>Token losing value or traction</li><li>Need investor trust in Web3 model</li></ul></div>
+          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>Sustainable token economy</li><li>Stronger investor alignment</li><li>Long-term ecosystem growth</li></ul></div>
+          <a class="card-link" href="case-studies.html">See Related Work <span class="arrow">-></span></a>
         </article>
-        <article class="service-card reveal">
-          <div class="icon-badge">↗</div>
-          <h3>Product-Market Scaling</h3>
-          <p>Transition from product-market fit to scalable growth through funnel optimization, retention systems, and market expansion strategy.</p>
-          <div class="context-box"><span>Business Context</span><p>Startups with validated product seeking to scale without breaking unit economics.</p></div>
-          <div class="outcome"><span>Expected Outcome</span><p>35%+ retention uplift with reduced CAC dependency and positive contribution margin.</p></div>
-          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss This Service <span class="arrow">-></span></a>
+        <article class="service-card advisory-card reveal">
+          <div class="icon-badge">05</div>
+          <h3>Strategic Partnerships &amp; Expansion</h3>
+          <p>Structure partnerships and ecosystem strategies to unlock new growth channels beyond internal limits.</p>
+          <div class="why-box"><span>Why It Matters</span><p>Internal growth is limited. Partnerships unlock external leverage, market access, and strategic distribution.</p></div>
+          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Entering new markets</li><li>Growth plateau</li><li>Need external leverage to scale</li></ul></div>
+          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>New revenue channels</li><li>Expanded market reach</li><li>Stronger ecosystem positioning</li></ul></div>
+          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss Advisory <span class="arrow">-></span></a>
         </article>
-        <article class="service-card reveal">
-          <div class="icon-badge">◇</div>
-          <h3>Web3 &amp; Game Economy Strategy</h3>
-          <p>Design sustainable token economies, in-game economic systems, and Web3 monetization models that avoid inflation-driven collapse.</p>
-          <div class="context-box"><span>Business Context</span><p>GameFi and Web3 projects needing economic models that support fundraising and long-term sustainability.</p></div>
-          <div class="outcome"><span>Expected Outcome</span><p>$8M raised in 24 hours with sustainable tokenomics supporting ecosystem growth.</p></div>
-          <a class="card-link" href="#results">See Related Work <span class="arrow">-></span></a>
+        <article class="service-card advisory-card reveal">
+          <div class="icon-badge">06</div>
+          <h3>New S-Curve &amp; Strategic Transformation</h3>
+          <p>Identify new growth engines and redefine strategic direction beyond current business limits.</p>
+          <div class="why-box"><span>Why It Matters</span><p>Every business eventually plateaus. Growth requires a new S-curve before the current one slows down.</p></div>
+          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Growth plateau</li><li>Market saturation</li><li>Need new direction</li></ul></div>
+          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>New growth trajectory</li><li>Long-term competitive advantage</li><li>Increased valuation potential</li></ul></div>
+          <a class="card-link" href="mailto:sasi.bu.bd@gmail.com">Discuss Advisory <span class="arrow">-></span></a>
         </article>
       </div>
     </section>
 
     <section class="section glass">
+      <div class="section-head">
+        <span class="eyebrow">Where I Add Value</span>
+        <h2>Decision Moments</h2>
+        <p>Advisory is most useful when the problem is not just operational, but directly tied to revenue, valuation, market position, or investor confidence.</p>
+      </div>
+      <div class="info-section">
+        <div class="situations-grid">
+          <article class="situation-card reveal"><b>Revenue is not matching growth</b><p>User growth is visible, but monetization, pay rate, or contribution margin needs redesign.</p></article>
+          <article class="situation-card reveal"><b>Fundraising needs sharper positioning</b><p>The company needs a clear narrative, valuation logic, and investor-ready strategic materials.</p></article>
+          <article class="situation-card reveal"><b>Platform strategy feels fragmented</b><p>Product, growth, partnerships, and finance need to align around one operating direction.</p></article>
+          <article class="situation-card reveal"><b>Expansion requires external leverage</b><p>New markets, partners, licensing, or ecosystem relationships need strategic structure.</p></article>
+          <article class="situation-card reveal"><b>Token economy needs trust</b><p>Web3 or GameFi models require sustainable incentive design, utility logic, and long-term alignment.</p></article>
+          <article class="situation-card reveal"><b>Transaction readiness matters</b><p>IPO, M&amp;A, or strategic deal conversations need stronger positioning before negotiation.</p></article>
+          <article class="situation-card reveal"><b>Growth has plateaued</b><p>The business needs a new S-curve before current channels stop compounding.</p></article>
+          <article class="situation-card reveal"><b>Executives need a decision partner</b><p>Founders and leaders need structured thinking from someone who understands operating reality.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="why-engage">
+        <div class="why-panel glass reveal">
+          <span class="eyebrow">Why Companies Engage</span>
+          <h2>Clear Strategy, Real Execution</h2>
+          <p>My advisory work is designed for founders, executives, and investors who need clarity on decisions that affect commercial outcomes, not generic frameworks.</p>
+          <p class="role-note">I operate as a strategic decision partner across growth, capital, monetization, and ecosystem expansion.</p>
+        </div>
+        <div class="why-panel glass reveal">
+          <ul class="why-list">
+            <li>Translate messy business problems into clear strategic options.</li>
+            <li>Connect growth strategy with revenue, margin, and valuation impact.</li>
+            <li>Build investor narratives grounded in operating evidence.</li>
+            <li>Structure partnerships and market entry paths with commercial logic.</li>
+            <li>Support execution through measurable milestones and decision discipline.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section glass">
+      <div class="section-head">
+        <span class="eyebrow">Ecosystem Exposure</span>
+        <h2>Operating Context</h2>
+        <p>Experience includes working with or alongside global platforms, telecom operators, technology providers, gaming ecosystems, and digital infrastructure across Southeast Asia.</p>
+      </div>
+      <div class="info-section">
+        <div class="eco-grid">
+          <article class="eco-group reveal"><h3>Platforms &amp; Telecom</h3><p>Strategic exposure across distribution, payments, regional partnerships, and platform-scale operating environments.</p><div class="companies"><span class="company-pill">Tencent</span><span class="company-pill">Singtel</span><span class="company-pill">AIS</span><span class="company-pill">True</span></div></article>
+          <article class="eco-group reveal"><h3>Technology &amp; Cloud</h3><p>Commercial and ecosystem work around cloud services, analytics, performance marketing, and digital enablement.</p><div class="companies"><span class="company-pill">AMD</span><span class="company-pill">Google Cloud</span><span class="company-pill">AWS</span><span class="company-pill">Adjust</span></div></article>
+          <article class="eco-group reveal"><h3>Gaming &amp; Digital Goods</h3><p>Growth, monetization, launch strategy, community, and cross-border partnership context across game ecosystems.</p><div class="companies"><span class="company-pill">Mineski</span><span class="company-pill">Game Studios</span><span class="company-pill">NeverCloud</span></div></article>
+          <article class="eco-group reveal"><h3>Digital Economy</h3><p>Exposure to regulatory, SME, and digital infrastructure environments that shape market entry and scale decisions.</p><div class="companies"><span class="company-pill">DOPA</span><span class="company-pill">Digital Economy</span><span class="company-pill">SME Tech</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section glass" id="selected-mandates">
+      <div class="section-head">
+        <span class="eyebrow">Selected Mandates</span>
+        <h2>Advisory in Practice</h2>
+        <p>Representative types of strategic work across platform growth, token economy, partnerships, monetization, and transaction readiness.</p>
+      </div>
+      <div class="info-section">
+        <div class="mandates-grid">
+          <article class="mandate-card featured reveal">
+            <div>
+              <span class="mandate-kicker">Featured Mandate</span>
+              <h3>Scaling a Digital Platform to THB 250M+ GMV Run-Rate</h3>
+              <p>Transformed fragmented growth into a structured marketplace scale-up model with improved monetization, stronger unit economics, and clearer contribution margin logic.</p>
+            </div>
+            <ul>
+              <li>Reset growth priorities around unit economics and pay rate.</li>
+              <li>Improved ARPPU through pricing and monetization layer design.</li>
+              <li>Built a clearer operating rhythm across growth, supply, and conversion.</li>
+            </ul>
+          </article>
+          <article class="mandate-card reveal"><span class="mandate-kicker">Capital Strategy</span><h3>Token Economy for $8M Capital Raise</h3><p>Structured sustainable tokenomics for a Web3/GameFi project, aligning investor demand with long-term ecosystem incentives.</p><ul><li>Supply and vesting logic</li><li>Utility and fee loop design</li><li>Investor narrative and raise readiness</li></ul></article>
+          <article class="mandate-card reveal"><span class="mandate-kicker">Partnerships</span><h3>Cross-Border Licensing &amp; Partnerships</h3><p>Negotiated licensing rights and regional exclusivity with major studios across China, Korea, and Southeast Asia.</p><ul><li>Market entry logic</li><li>Commercial negotiation</li><li>Partner ecosystem expansion</li></ul></article>
+          <article class="mandate-card reveal"><span class="mandate-kicker">Payments</span><h3>Online &amp; Offline Payment Architecture</h3><p>Planned unified payment architecture covering reconciliation, settlement, refund workflows, and AML safeguards.</p><ul><li>Operating model design</li><li>Compliance-aware workflows</li><li>Vendor and channel structure</li></ul></article>
+          <article class="mandate-card reveal"><span class="mandate-kicker">GTM</span><h3>MMORPG Launch Strategy</h3><p>Led launch logic across mobile and PC distribution, monetization, cross-border licensing, and user acquisition.</p><ul><li>Commercial launch plan</li><li>Retention and monetization loops</li><li>THB 66M revenue in 3 months</li></ul></article>
+          <article class="mandate-card reveal"><span class="mandate-kicker">Loyalty</span><h3>Utility Coin Framework</h3><p>Built loyalty and utility coin business logic across accounting, abuse prevention, redemption, and partner-funded rewards.</p><ul><li>Token utility architecture</li><li>Reward liability controls</li><li>Partner-funded value loops</li></ul></article>
+          <article class="mandate-card reveal"><span class="mandate-kicker">DeFi</span><h3>Tokenomics &amp; DeFi Advisory</h3><p>Designed token supply schedules, burn mechanics, staking rewards, and inflation controls for Web3 and GameFi projects.</p><ul><li>Governance alignment</li><li>Inflation control</li><li>Long-term ecosystem health</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section glass advisory-process">
       <div class="section-head center">
         <span class="eyebrow">How We Work Together</span>
-        <h2>Engagement Process</h2>
-        <p>Every engagement follows a structured approach designed to move from understanding to action with clear milestones and measurable outcomes.</p>
+        <h2>Advisory Process</h2>
+        <p>Every engagement moves from diagnosis to structured decisions, then into execution support and measurable optimization.</p>
       </div>
       <div class="process">
         <div class="process-grid">
-          <div class="step reveal"><div class="step-num">1</div><div><h3>Diagnosis</h3><p>Deep dive into current state, metrics, bottlenecks, and opportunities through data analysis and stakeholder interviews.</p><span class="timeline">1-2 weeks</span></div></div>
+          <div class="step reveal"><div class="step-num">1</div><div><h3>Diagnose</h3><p>Clarify current state, bottlenecks, unit economics, market context, and strategic constraints.</p><span class="timeline">Current reality</span></div></div>
           <div class="connector">-></div>
-          <div class="step reveal"><div class="step-num">2</div><div><h3>Strategy</h3><p>Develop actionable roadmap with prioritized initiatives, clear KPIs, and resource requirements aligned to business goals.</p><span class="timeline">2-3 weeks</span></div></div>
+          <div class="step reveal"><div class="step-num">2</div><div><h3>Structure</h3><p>Build decision options, operating logic, KPIs, capital narrative, and prioritized initiatives.</p><span class="timeline">Strategic clarity</span></div></div>
           <div class="connector">-></div>
-          <div class="step reveal"><div class="step-num">3</div><div><h3>Execution Support</h3><p>Hands-on collaboration with your team to implement strategy, track progress, and iterate based on real-world results.</p><span class="timeline">Ongoing</span></div></div>
+          <div class="step reveal"><div class="step-num">3</div><div><h3>Execute</h3><p>Support leadership and teams through milestones, commercial decisions, partnerships, and implementation rhythm.</p><span class="timeline">Action support</span></div></div>
+          <div class="connector">-></div>
+          <div class="step reveal"><div class="step-num">4</div><div><h3>Optimize</h3><p>Review outcomes, refine monetization and growth levers, and improve decision quality over time.</p><span class="timeline">Measured outcomes</span></div></div>
         </div>
       </div>
     </section>
@@ -449,12 +591,12 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         <div class="results-shell glass">
           <div class="section-head center" style="padding:0 0 8px;">
             <span class="eyebrow">Proven Results</span>
-            <h2 style="font-family:Outfit,sans-serif;font-size:1.9rem;letter-spacing:-0.04em;">Services Connected to Real Outcomes</h2>
+            <h2 style="font-family:Outfit,sans-serif;font-size:1.9rem;letter-spacing:-0.04em;">Advisory Connected to Real Outcomes</h2>
           </div>
           <div class="result-grid">
             <article class="result-card reveal"><div class="result-kicker">Growth Strategy</div><h3>Digital Platform Scaling</h3><p>Transformed fragmented growth into THB 250M+ GMV run-rate with sustainable unit economics.</p><div class="tags"><span class="tag">Gaming</span><span class="tag">Marketplace</span></div><a class="card-link" href="case-studies.html">View Case Study <span class="arrow">-></span></a></article>
-            <article class="result-card reveal"><div class="result-kicker">Token Economy</div><h3>$8M GameFi Capital Raise</h3><p>Structured tokenomics supporting $8M raise in 24 hours with long-term ecosystem sustainability.</p><div class="tags"><span class="tag">Web3</span><span class="tag">GameFi</span></div><a class="card-link" href="case-studies.html">View Case Study <span class="arrow">-></span></a></article>
-            <article class="result-card reveal"><div class="result-kicker">Monetization</div><h3>ARPPU Optimization</h3><p>Increased ARPPU by +43% through pricing strategy and monetization layer expansion.</p><div class="tags"><span class="tag">Digital Goods</span><span class="tag">Platform</span></div><a class="card-link" href="case-studies.html">View Selected Work <span class="arrow">-></span></a></article>
+            <article class="result-card reveal"><div class="result-kicker">Capital Strategy</div><h3>$8M GameFi Capital Raise</h3><p>Structured tokenomics supporting $8M raise in 24 hours with long-term ecosystem sustainability.</p><div class="tags"><span class="tag">Web3</span><span class="tag">GameFi</span></div><a class="card-link" href="case-studies.html">View Case Study <span class="arrow">-></span></a></article>
+            <article class="result-card reveal"><div class="result-kicker">Strategic Expansion</div><h3>Cross-Border Partnerships</h3><p>Built partnership and licensing logic across regional ecosystems, studios, and commercial channels.</p><div class="tags"><span class="tag">SEA</span><span class="tag">Partnerships</span></div><a class="card-link" href="case-studies.html">View Selected Work <span class="arrow">-></span></a></article>
           </div>
           <div class="center-action"><a class="btn btn-secondary" href="case-studies.html">Explore Case Studies</a></div>
         </div>
@@ -466,7 +608,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         <h2>Ready to Transform Your Business?</h2>
         <p>Let's discuss how strategic thinking and hands-on execution can drive measurable impact for your organization.</p>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="#services">Explore Services -></a>
+          <a class="btn btn-primary" href="#advisory">Explore Advisory -></a>
           <a class="btn btn-secondary" href="#results">View Case Studies -></a>
           <a class="btn btn-secondary" href="mailto:sasi.bu.bd@gmail.com">Get in Touch</a>
         </div>
