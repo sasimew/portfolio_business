@@ -410,18 +410,18 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .cta-visual::before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:var(--accent);left:50%;top:54%;transform:translate(-50%,-50%);box-shadow:0 22px 56px rgba(200,37,58,0.22)}
 .cta-visual img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(105%,420px);filter:drop-shadow(0 24px 28px rgba(0,0,0,0.16))}
 .footer{
-  background:radial-gradient(circle at 78% 22%,rgba(200,37,58,0.18),transparent 30%),linear-gradient(135deg,#4f4a44 0%,#3e3933 48%,#342f2b 100%);
-  border:1px solid rgba(255,255,255,0.07);
-  border-radius:32px;
+  background:radial-gradient(circle at 82% 12%,rgba(200,37,58,0.20),transparent 30%),linear-gradient(135deg,#121212 0%,#181716 55%,#241313 100%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:36px;
   overflow:hidden;
-  margin-top:22px;
-  box-shadow:0 28px 80px rgba(74,72,66,0.18);
+  margin-top:16px;
+  box-shadow:0 24px 70px rgba(0,0,0,0.18);
 }
 .footer-inner{
   display:grid;
-  grid-template-columns:1.08fr 0.9fr 0.9fr;
-  gap:50px;
-  padding:58px 54px 42px;
+  grid-template-columns:1.25fr 1fr 1fr;
+  gap:64px;
+  padding:56px 64px 44px;
 }
 .footer-col{min-width:0}
 .footer-positioning{padding-right:8px}
@@ -440,8 +440,8 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .footer h2{
   color:#f7f4ee;
   max-width:390px;
-  margin-bottom:20px;
-  font-size:clamp(2.15rem,3.1vw,3.4rem);
+  margin-bottom:16px;
+  font-size:clamp(1.95rem,2.8vw,3rem);
   line-height:0.95;
   text-transform:uppercase;
 }
@@ -452,22 +452,22 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   color:#f7f4ee;
   font-size:1.06rem;
   line-height:1.2;
-  margin-bottom:24px;
+  margin-bottom:20px;
   letter-spacing:0.04em;
   text-transform:uppercase;
 }
 .footer h3::after{content:"";width:34px;height:1px;background:#ef4d62}
 .footer p{
-  color:rgba(230,226,218,0.70);
-  line-height:1.72;
-  font-size:0.92rem;
+  color:rgba(247,244,238,0.62);
+  line-height:1.68;
+  font-size:0.9rem;
 }
 .footer-focus{display:none}
 .metric-strip{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:0;
-  margin:30px 0 30px;
+  margin:26px 0 26px;
 }
 .metric-item{
   position:relative;
@@ -486,7 +486,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .metric-item strong{
   display:block;
   color:#f7f4ee;
-  font-size:1.15rem;
+  font-size:1.06rem;
   line-height:1;
   font-weight:900;
   letter-spacing:0.02em;
@@ -494,14 +494,14 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .metric-item span{
   display:block;
   margin-top:8px;
-  color:rgba(230,226,218,0.48);
+  color:rgba(247,244,238,0.48);
   font-size:0.66rem;
   font-weight:900;
   letter-spacing:0.09em;
   text-transform:uppercase;
 }
 .fcopy-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:420px}
-.fcopy-btns .btn{width:100%;padding-left:14px;padding-right:14px}
+.fcopy-btns .btn{width:100%;min-height:44px;padding-left:14px;padding-right:14px}
 .footer-list{
   display:grid;
   gap:12px;
@@ -509,7 +509,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   margin-top:12px;
 }
 .footer-list li{
-  color:rgba(240,236,228,0.76);
+  color:rgba(247,244,238,0.72);
   line-height:1.46;
   font-size:0.88rem;
   padding-left:17px;
@@ -537,25 +537,32 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .contact-list{display:grid}
 .contact-item{
   display:grid;
-  grid-template-columns:46px 1fr;
-  gap:16px;
+  grid-template-columns:42px 1fr;
+  gap:14px;
   align-items:center;
-  padding:0 0 17px;
-  margin-bottom:17px;
+  padding:0 0 14px;
+  margin-bottom:14px;
   border-bottom:1px solid rgba(255,255,255,0.10);
 }
 .contact-item:last-child{margin-bottom:0}
 .contact-ico{
-  width:38px;
-  height:38px;
+  width:42px;
+  height:42px;
   border-radius:50%;
   display:grid;
   place-items:center;
   color:#ef4d62;
   border:1px solid rgba(239,77,98,0.75);
   background:rgba(239,77,98,0.045);
-  font-size:0.82rem;
-  font-weight:900;
+}
+.contact-ico svg{
+  width:18px;
+  height:18px;
+  stroke:currentColor;
+  stroke-width:2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 .contact-item div span{
   display:block;
@@ -567,7 +574,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   margin-bottom:5px;
 }
 .contact-item a,.contact-item p{
-  color:rgba(247,244,238,0.86);
+  color:rgba(247,244,238,0.84);
   font-weight:700;
   line-height:1.35;
   font-size:0.92rem;
@@ -602,7 +609,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   color:rgba(230,226,218,0.38);
   font-size:0.76rem;
 }
-.fbase{border-top:1px solid rgba(255,255,255,0.18);padding:24px 54px 28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;color:rgba(230,226,218,0.52);font-size:0.88rem}
+.fbase{border-top:1px solid rgba(255,255,255,0.10);padding:22px 64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;color:rgba(247,244,238,0.52);font-size:0.88rem}
 .footer .brand{color:#fff}
 .flinks{display:flex;gap:22px;align-items:center;justify-content:flex-end}
 .flinks a:hover{color:#fff}
@@ -637,12 +644,13 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   .deal-metric{text-align:left}
   .cta-banner{padding:32px 20px}
   .cta-banner h2{font-size:1.65rem}
-  .footer-inner{padding:36px 22px}
+  .footer{border-radius:24px}
+  .footer-inner{padding:32px;gap:28px}
   .fcopy-btns{grid-template-columns:1fr;max-width:none}
   .metric-strip{grid-template-columns:repeat(2,1fr);gap:16px 0}
   .metric-item:not(:last-child)::after{display:none}
   .trust-line{padding:18px 22px}
-  .fbase{padding:18px 22px}
+  .fbase{padding:20px 32px}
 }
 </style>
 </head>
@@ -861,11 +869,11 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
       <div class="footer-col">
         <h3>Contact</h3>
         <div class="contact-list">
-          <div class="contact-item"><span class="contact-ico">@</span><div><span>Email</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div></div>
-          <div class="contact-item"><span class="contact-ico">T</span><div><span>Phone</span><a href="tel:+66962614499">+66 96 261 4499</a></div></div>
-          <div class="contact-item"><span class="contact-ico">B</span><div><span>Location</span><p>Bangkok, Thailand</p></div></div>
-          <div class="contact-item"><span class="contact-ico">in</span><div><span>LinkedIn</span><a class="linkedin-link" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div></div>
-          <div class="contact-item"><span class="contact-ico">CS</span><div><span>Portfolio</span><a href="#cases">View Case Studies</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><span>Email</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><span>Phone</span><a href="tel:+66962614499">+66 96 261 4499</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><span>Location</span><p>Bangkok, Thailand</p></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></span><div><span>LinkedIn</span><a class="linkedin-link" href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span><div><span>Portfolio</span><a href="case-studies.html">View Case Studies</a></div></div>
         </div>
       </div>
     </div>
