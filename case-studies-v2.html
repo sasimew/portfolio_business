@@ -233,9 +233,9 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .metric-pill span{display:block;margin-top:5px;color:var(--muted);font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em}
 .hero-visual{
   position:relative;
-  min-height:360px;
+  min-height:390px;
   border-radius:32px;
-  background:linear-gradient(135deg,rgba(255,255,255,0.62),rgba(247,245,241,0.7));
+  background:#ece9e4;
   border:1px solid rgba(255,255,255,0.82);
   box-shadow:var(--shadow);
   overflow:hidden;
@@ -243,35 +243,206 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .hero-visual::before{
   content:"";
   position:absolute;
-  width:320px;
-  height:320px;
-  border-radius:50%;
-  right:-74px;
-  top:24px;
-  background:radial-gradient(circle,rgba(200,37,58,0.16),rgba(200,37,58,0.02) 62%,transparent 63%);
+  inset:0;
+  z-index:1;
+  background:linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.30));
 }
 .hero-visual::after{
-  content:"";
+  content:none;
+}
+.hero-case-img{
   position:absolute;
-  inset:36px;
-  border:1px solid rgba(200,37,58,0.14);
-  border-radius:50%;
-  transform:rotate(-18deg);
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
 }
 .visual-card{
   position:absolute;
-  left:34px;
-  right:34px;
-  bottom:34px;
+  left:24px;
+  right:24px;
+  bottom:24px;
   z-index:2;
   border-radius:24px;
-  padding:26px;
-  background:rgba(255,255,255,0.78);
+  padding:22px;
+  background:rgba(255,255,255,0.82);
   border:1px solid rgba(255,255,255,0.9);
   box-shadow:var(--shadow);
 }
 .visual-card span{display:block;color:var(--accent);font-weight:900;letter-spacing:0.14em;text-transform:uppercase;font-size:0.72rem;margin-bottom:9px}
 .visual-card p{color:var(--text2);font-weight:700;line-height:1.5}
+.featured-cases{
+  padding:56px 42px;
+  background:rgba(255,255,255,0.52);
+  border:1px solid rgba(255,255,255,0.72);
+  box-shadow:var(--shadow);
+}
+.featured-cases-grid{
+  display:grid;
+  gap:22px;
+}
+.featured-case{
+  border-radius:var(--radius);
+  background:rgba(255,255,255,0.78);
+  border:1px solid rgba(84,84,84,0.08);
+  box-shadow:var(--shadow);
+  padding:30px;
+}
+.featured-case-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+.case-badge{
+  display:inline-flex;
+  align-items:center;
+  border-radius:7px;
+  background:var(--soft-red);
+  color:var(--accent);
+  font-size:0.68rem;
+  font-weight:900;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding:9px 12px;
+}
+.case-meta{
+  color:rgba(116,116,116,0.64);
+  font-size:0.95rem;
+  font-weight:600;
+}
+.featured-case h3{
+  color:var(--heading);
+  font-size:clamp(1.45rem,2.2vw,2rem);
+  line-height:1.16;
+  letter-spacing:-0.035em;
+  margin-bottom:20px;
+}
+.featured-metrics{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin-bottom:26px;
+}
+.featured-case:nth-child(2) .featured-metrics{grid-template-columns:repeat(4,1fr)}
+.featured-metric{
+  border-radius:14px;
+  background:#f2f0ed;
+  padding:17px 14px;
+  text-align:center;
+}
+.featured-metric strong{
+  display:block;
+  font-family:"Bebas Neue",sans-serif;
+  color:var(--accent);
+  font-size:2rem;
+  letter-spacing:0.04em;
+  line-height:1;
+}
+.featured-metric span{
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:0.7rem;
+  font-weight:800;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+.case-study-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.case-study-block{margin-bottom:24px}
+.case-study-block:last-child{margin-bottom:0}
+.block-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--accent);
+  font-size:0.78rem;
+  font-weight:900;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.block-title::before{content:"";width:18px;height:2px;background:var(--accent)}
+.case-study-block p,
+.case-study-block li,
+.approach-text{
+  color:var(--muted);
+  font-size:0.95rem;
+  line-height:1.68;
+  font-weight:500;
+}
+.case-study-block ul{list-style:none;display:grid;gap:9px}
+.case-study-block li{
+  border-bottom:1px solid rgba(84,84,84,0.09);
+  padding:0 0 9px 18px;
+  position:relative;
+}
+.case-study-block li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0.72em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  border:1px solid var(--accent);
+}
+.approach-list{display:grid;gap:13px}
+.approach-item{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:14px;
+  padding-bottom:13px;
+  border-bottom:1px solid rgba(84,84,84,0.09);
+}
+.approach-num{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--accent);
+  color:#fff;
+  font-weight:900;
+  font-size:0.82rem;
+}
+.approach-title{display:block;color:var(--heading);font-weight:900;margin-bottom:3px}
+.demand-card{
+  border-radius:14px;
+  background:#f2f0ed;
+  padding:15px 17px;
+  margin-bottom:12px;
+}
+.demand-card strong{display:block;color:var(--heading);font-size:1rem;margin-bottom:4px}
+.case-insight-panel{
+  margin-top:26px;
+  border-radius:18px;
+  background:rgba(200,37,58,0.045);
+  padding:22px 24px;
+}
+.case-insight-panel b{
+  display:block;
+  color:var(--accent);
+  font-size:0.76rem;
+  font-weight:900;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.case-insight-panel strong{
+  display:block;
+  color:var(--heading);
+  font-size:1.05rem;
+  line-height:1.45;
+  margin-bottom:10px;
+}
+.case-insight-panel p{color:var(--muted);line-height:1.68;font-weight:500}
 .case-list{display:grid;gap:14px}
 .case-block{
   display:grid;
@@ -407,10 +578,10 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
 .cta-banner p{max-width:570px;margin:12px 0 24px}
 .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
 .cta-visual{position:relative;min-height:210px;border-radius:24px;overflow:hidden}
-.cta-visual::before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:var(--accent);left:50%;top:54%;transform:translate(-50%,-50%);box-shadow:0 22px 56px rgba(200,37,58,0.22)}
-.cta-visual img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(105%,420px);filter:drop-shadow(0 24px 28px rgba(0,0,0,0.16))}
+.cta-visual::before{content:none}
+.cta-visual img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(96%,420px);height:100%;max-height:235px;object-fit:contain;object-position:center;filter:drop-shadow(0 24px 28px rgba(0,0,0,0.16))}
 .footer{
-  background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.16),transparent 30%),linear-gradient(135deg,#121212 0%,#1a1716 55%,#241313 100%);
+  background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.14),transparent 30%),linear-gradient(135deg,#3f3d38 0%,#36332f 56%,#2c2a27 100%);
   border:1px solid rgba(255,255,255,0.08);
   border-radius:32px;
   overflow:hidden;
@@ -582,6 +753,9 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
   .hero{grid-template-columns:1fr;padding:54px 28px}
   .metric-row{grid-template-columns:repeat(2,1fr)}
+  .featured-metrics,
+  .featured-case:nth-child(2) .featured-metrics{grid-template-columns:repeat(2,1fr)}
+  .case-study-grid{grid-template-columns:1fr}
   .case-block{grid-template-columns:1fr;padding:28px}
   .case-detail-grid{grid-template-columns:1fr}
   .deal-panel,.cta-banner,.footer-inner{grid-template-columns:1fr}
@@ -598,6 +772,10 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
   h2{font-size:clamp(2.5rem,13vw,3.5rem)}
   .hero{padding:42px 20px 34px;min-height:auto}
   .hero-visual{min-height:280px}
+  .featured-cases{padding:38px 20px}
+  .featured-case{padding:22px}
+  .featured-metrics,
+  .featured-case:nth-child(2) .featured-metrics{grid-template-columns:1fr}
   .metric-row,.cap-grid{grid-template-columns:1fr}
   .case-block{padding:22px}
   .deal-sec,.cap-sec{padding:38px 20px}
@@ -661,10 +839,134 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
         </div>
       </div>
       <div class="hero-visual reveal in" aria-hidden="true">
+        <img class="hero-case-img" src="assets/case-growth-hero.png" alt="">
         <div class="visual-card">
           <span>Decision-Level Work</span>
           <p>Platform strategy, monetization architecture, market entry, and strategic execution tied to measurable business outcomes.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section featured-cases" id="featured-cases">
+      <div class="section-head">
+        <span class="eyebrow">Featured Case Studies</span>
+        <h2>High-Impact Strategic Work</h2>
+      </div>
+      <div class="featured-cases-grid">
+        <article class="featured-case reveal">
+          <div class="featured-case-top">
+            <span class="case-badge">Case Study #1</span>
+            <span class="case-meta">Digital Platform · Gaming &amp; Digital Goods</span>
+          </div>
+          <h3>Scaling a Digital Platform to THB 250M+ GMV Run-Rate</h3>
+          <div class="featured-metrics">
+            <div class="featured-metric"><strong>250M+</strong><span>THB GMV Run-Rate</span></div>
+            <div class="featured-metric"><strong>+43%</strong><span>ARPPU Increase</span></div>
+            <div class="featured-metric"><strong>4.5%+</strong><span>Paying User Rate</span></div>
+            <div class="featured-metric"><strong>38%</strong><span>Retention Rate</span></div>
+            <div class="featured-metric"><strong>Improved</strong><span>Contribution Margin</span></div>
+          </div>
+          <div class="case-study-grid">
+            <div>
+              <div class="case-study-block">
+                <div class="block-title">Overview</div>
+                <p>A digital platform in the gaming and digital goods sector faced stalled growth despite strong early traction. Within 6 months, the platform transitioned from fragmented growth to structured scale, achieving sustainable unit economics and market-leading performance.</p>
+              </div>
+              <div class="case-study-block">
+                <div class="block-title">Problem</div>
+                <ul>
+                  <li><strong>Stalled Growth:</strong> Platform hit plateau despite early momentum</li>
+                  <li><strong>Low Transaction Efficiency:</strong> High MAU but poor monetization conversion</li>
+                  <li><strong>Fragmented Liquidity:</strong> Disconnected supply-side ecosystem</li>
+                  <li><strong>Weak Pricing Discipline:</strong> Inconsistent pricing across sellers</li>
+                  <li><strong>CAC Dependency:</strong> Over-reliance on paid acquisition</li>
+                  <li><strong>No Unit Economics Framework:</strong> Growth without profitability path</li>
+                </ul>
+              </div>
+              <div class="case-study-block">
+                <div class="block-title">Objective</div>
+                <p>Rebuild the platform into a scalable, economically sustainable marketplace by increasing monetization efficiency, strengthening supply-demand matching, reducing dependency on paid growth, and establishing clear unit economics.</p>
+              </div>
+            </div>
+            <div>
+              <div class="case-study-block">
+                <div class="block-title">Strategic Approach</div>
+                <div class="approach-list">
+                  <div class="approach-item"><span class="approach-num">1</span><div><span class="approach-title">Unit Economics Reset</span><span class="approach-text">Defined transaction rate, ARPPU, and take rate targets with structured KPI tracking.</span></div></div>
+                  <div class="approach-item"><span class="approach-num">2</span><div><span class="approach-title">Liquidity &amp; Supply Optimization</span><span class="approach-text">Consolidated sellers, prioritized high-conversion SKUs, introduced pricing discipline.</span></div></div>
+                  <div class="approach-item"><span class="approach-num">3</span><div><span class="approach-title">Conversion Funnel Optimization</span><span class="approach-text">Optimized discovery to payment flow, reduced friction, improved trust signals.</span></div></div>
+                  <div class="approach-item"><span class="approach-num">4</span><div><span class="approach-title">Monetization Layer Expansion</span><span class="approach-text">Tiered pricing structure, optimized take rates, focused on high-value segments.</span></div></div>
+                  <div class="approach-item"><span class="approach-num">5</span><div><span class="approach-title">Growth Rebalancing</span><span class="approach-text">Shifted from paid-heavy to organic + retention-led growth model.</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-insight-panel">
+            <b>Key Insight</b>
+            <strong>"Scale without unit economics is not growth -- it's delayed failure."</strong>
+            <p>The inflection point came from prioritizing monetization efficiency over user volume, building liquidity before features, and treating pricing as a strategic lever.</p>
+          </div>
+        </article>
+
+        <article class="featured-case reveal">
+          <div class="featured-case-top">
+            <span class="case-badge">Case Study #2</span>
+            <span class="case-meta">Web3 · GameFi · Token Economics</span>
+          </div>
+          <h3>Structuring a Token Economy to Support $8M Capital Raise</h3>
+          <div class="featured-metrics">
+            <div class="featured-metric"><strong>$8M</strong><span>Capital Raised</span></div>
+            <div class="featured-metric"><strong>24hrs</strong><span>Time to Close</span></div>
+            <div class="featured-metric"><strong>Strong</strong><span>Investor Demand</span></div>
+            <div class="featured-metric"><strong>High</strong><span>Participation Rate</span></div>
+          </div>
+          <div class="case-study-grid">
+            <div>
+              <div class="case-study-block">
+                <div class="block-title">Ecosystem Challenge</div>
+                <p>A Web3/GameFi project required a token model capable of supporting capital raise while sustaining long-term ecosystem health. Typical failure patterns include over-supply and inflation, no real utility, misaligned incentives, and short-term speculation.</p>
+              </div>
+              <div class="case-study-block">
+                <div class="block-title">Token Utility Design</div>
+                <ul>
+                  <li>In-platform transaction currency</li>
+                  <li>Fee mechanism integration</li>
+                  <li>Reward system alignment</li>
+                </ul>
+              </div>
+              <div class="case-study-block">
+                <div class="block-title">Supply &amp; Vesting Strategy</div>
+                <ul>
+                  <li>Structured vesting: Team, Investors, Ecosystem</li>
+                  <li>Controlled emission rate</li>
+                  <li>Long-term alignment mechanisms</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="case-study-block">
+                <div class="block-title">Demand Mechanism</div>
+                <div class="demand-card"><strong>Staking Model</strong><span class="approach-text">Lock-up incentives for long-term holders</span></div>
+                <div class="demand-card"><strong>Fee Usage Loop</strong><span class="approach-text">Continuous utility demand generation</span></div>
+                <div class="demand-card"><strong>Buyback Logic</strong><span class="approach-text">Linked to platform revenue</span></div>
+              </div>
+              <div class="case-study-block">
+                <div class="block-title">Measurable Outcomes</div>
+                <ul>
+                  <li>$8M raised within 24 hours of launch</li>
+                  <li>Strong investor demand across multiple rounds</li>
+                  <li>High participation rate from target investors</li>
+                  <li>Sustainable economic model established</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="case-insight-panel">
+            <b>Key Insight</b>
+            <strong>"Token price is not the product -- the economy is."</strong>
+            <p>Success came from designing a sustainable economic system rather than optimizing for short-term price action. The token model enabled long-term ecosystem growth and built lasting investor confidence.</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -805,7 +1107,7 @@ h2{font-size:clamp(1.9rem,3.2vw,3.1rem)}
         <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization, and capital strategy.</p>
         <div class="fcopy-btns">
           <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Contact Me</a>
-          <a class="btn btn-secondary" href="case-studies.html">View Case Studies</a>
+          <a class="btn btn-secondary" href="case-studies-v2.html">View Case Studies</a>
         </div>
       </div>
       <div class="footer-col">
