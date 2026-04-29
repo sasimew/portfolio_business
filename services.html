@@ -47,6 +47,70 @@ body::before{
   background:radial-gradient(ellipse 55% 45% at 8% 8%,rgba(200,37,58,0.065),transparent 55%),
              radial-gradient(ellipse 45% 38% at 92% 88%,rgba(200,37,58,0.05),transparent 50%);
 }
+.orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(65px);
+  pointer-events:none;
+  z-index:0;
+  opacity:0.34;
+  animation:floatOrb 12s ease-in-out infinite alternate;
+}
+.orb-1{width:220px;height:220px;left:-70px;top:130px;background:rgba(200,37,58,0.16);}
+.orb-2{width:260px;height:260px;right:-100px;top:38%;background:rgba(200,37,58,0.11);animation-delay:-4s;}
+.orb-3{width:180px;height:180px;left:20%;bottom:-80px;background:rgba(20,19,15,0.08);animation-delay:-7s;}
+@keyframes floatOrb{
+  from{transform:translate3d(0,0,0) scale(1);}
+  to{transform:translate3d(18px,-24px,0) scale(1.08);}
+}
+.bounce-dot{
+  position:fixed;
+  left:7%;
+  top:24%;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 12px 30px rgba(200,37,58,0.28);
+  pointer-events:none;
+  z-index:0;
+  animation:bounceDot 3.4s ease-in-out infinite;
+}
+@keyframes bounceDot{
+  0%,100%{transform:translateY(0);opacity:0.65;}
+  50%{transform:translateY(-18px);opacity:1;}
+}
+.bg-ring-wrap{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+.bg-ring{
+  position:absolute;
+  left:50%;
+  top:50%;
+  border-radius:50%;
+  border:1px solid rgba(200,37,58,0.045);
+  transform:translate(-50%,-50%);
+}
+.bg-ring-1{
+  width:110vmax;
+  height:110vmax;
+  animation:pulseRing 7s ease-in-out infinite;
+}
+.bg-ring-2{
+  width:75vmax;
+  height:75vmax;
+  border-color:rgba(200,37,58,0.07);
+  animation:pulseRing 7s ease-in-out infinite;
+  animation-delay:-3.5s;
+}
+@keyframes pulseRing{
+  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.7;}
+  50%{transform:translate(-50%,-50%) scale(1.08);opacity:1;}
+}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:8px 0 64px;position:relative;z-index:1}
@@ -224,6 +288,15 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 </style>
 </head>
 <body>
+<div class="bg-ring-wrap">
+  <div class="bg-ring bg-ring-1"></div>
+  <div class="bg-ring bg-ring-2"></div>
+</div>
+<div class="bounce-dot"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
 <div class="page">
   <div class="topbar-outer">
     <header class="topbar">
