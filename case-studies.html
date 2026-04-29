@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies | Sasion Nanthaphiriyakit | SASI.ASIA</title>
+<meta name="description" content="Selected strategic case studies by Sasion Nanthaphiriyakit across platform growth, monetization, market expansion, partnerships, token economy, and cross-border execution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f0ec;
+  --bg2:#f8f7f5;
+  --surface:rgba(255,255,255,0.72);
+  --paper:#ffffff;
+  --text:#14130f;
+  --text2:#3a3830;
+  --muted:#747474;
+  --line:rgba(26,25,21,0.09);
+  --line2:rgba(255,255,255,0.78);
+  --accent:#c8253a;
+  --accent2:#e32330;
+  --soft-red:rgba(200,37,58,0.08);
+  --shadow:0 18px 45px rgba(26,25,21,0.06);
+  --shadow-md:0 24px 70px rgba(26,25,21,0.10);
+  --shadow-red:0 16px 38px rgba(200,37,58,0.22);
+  --radius:28px;
+  --radius-card:22px;
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  font-family:"Outfit",sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:radial-gradient(ellipse 55% 45% at 8% 8%,rgba(200,37,58,0.065),transparent 55%),
+             radial-gradient(ellipse 45% 38% at 92% 88%,rgba(200,37,58,0.05),transparent 50%);
+}
+.orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(65px);
+  pointer-events:none;
+  z-index:0;
+  opacity:0.34;
+  animation:floatOrb 12s ease-in-out infinite alternate;
+}
+.orb-1{width:220px;height:220px;left:-70px;top:130px;background:rgba(200,37,58,0.16)}
+.orb-2{width:260px;height:260px;right:-100px;top:38%;background:rgba(200,37,58,0.11);animation-delay:-4s}
+.orb-3{width:180px;height:180px;left:20%;bottom:-80px;background:rgba(20,19,15,0.08);animation-delay:-7s}
+@keyframes floatOrb{
+  from{transform:translate3d(0,0,0) scale(1)}
+  to{transform:translate3d(18px,-24px,0) scale(1.08)}
+}
+.bounce-dot{
+  position:fixed;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:var(--accent);
+  opacity:0.22;
+  top:45%;
+  right:8%;
+  pointer-events:none;
+  z-index:0;
+}
+.bg-ring-wrap{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+.bg-ring{
+  position:absolute;
+  left:50%;
+  top:50%;
+  border-radius:50%;
+  border:1px solid rgba(200,37,58,0.045);
+  transform:translate(-50%,-50%);
+}
+.bg-ring-1{width:110vmax;height:110vmax;animation:pulseRing 7s ease-in-out infinite}
+.bg-ring-2{width:75vmax;height:75vmax;border-color:rgba(200,37,58,0.07);animation:pulseRing 7s ease-in-out infinite;animation-delay:-3.5s}
+@keyframes pulseRing{
+  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.7}
+  50%{transform:translate(-50%,-50%) scale(1.08);opacity:1}
+}
+a{color:inherit;text-decoration:none}
+.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:8px 0 64px;position:relative;z-index:1}
+.glass{
+  background:var(--surface);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid var(--line2);
+  box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,0.85);
+}
+.topbar-outer{position:sticky;top:14px;z-index:200;padding:0 0 22px}
+.topbar{
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:11px 14px 11px 22px;
+  background:rgba(242,240,236,0.88);
+  backdrop-filter:blur(32px);
+  -webkit-backdrop-filter:blur(32px);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 4px 24px rgba(26,25,21,0.07),inset 0 1px 0 rgba(255,255,255,0.95);
+}
+.brand{font-family:"Bebas Neue",sans-serif;font-size:1.65rem;letter-spacing:0.04em;line-height:1;color:#747474}
+.brand span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:7px 14px;border-radius:999px;font-size:0.87rem;font-weight:600;color:var(--muted);transition:all 0.22s}
+.nav a:hover,.nav a.active{background:rgba(26,25,21,0.07);color:var(--text)}
+.nav a.active{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:42px;
+  padding:11px 20px;
+  border-radius:999px;
+  border:1px solid transparent;
+  font:800 0.82rem/1 "Outfit",sans-serif;
+  letter-spacing:0.035em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  transition:transform 0.24s ease,box-shadow 0.24s ease,background 0.24s ease,border-color 0.24s ease,color 0.24s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
+.btn-primary:hover{background:var(--accent2);box-shadow:0 20px 46px rgba(200,37,58,0.28)}
+.btn-secondary{background:rgba(255,255,255,0.62);border-color:rgba(26,25,21,0.13);color:var(--text2)}
+.btn-secondary:hover{border-color:rgba(200,37,58,0.25);color:var(--accent);box-shadow:var(--shadow)}
+.icon-btn{width:42px;height:42px;padding:0;border-radius:50%;font-size:1rem}
+.mobile-toggle{display:none}
+.section{margin-top:14px;border-radius:var(--radius);overflow:hidden}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:12px;
+  color:var(--accent);
+  font-size:0.72rem;
+  font-weight:900;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+}
+.eyebrow::after{content:"";width:46px;height:1px;background:var(--accent)}
+h1,h2{
+  font-family:"Bebas Neue",sans-serif;
+  letter-spacing:0.025em;
+  line-height:0.95;
+  color:#747474;
+}
+h1{font-size:clamp(4.4rem,8vw,8rem);max-width:760px}
+h2{font-size:clamp(2.8rem,5vw,5.2rem)}
+.red{color:var(--accent)}
+.hero{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) 0.95fr;
+  gap:42px;
+  align-items:center;
+  padding:74px 56px 66px;
+  min-height:560px;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  right:58px;
+  top:74px;
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  background:var(--accent);
+  opacity:0.12;
+  pointer-events:none;
+}
+.hero-copy{position:relative;z-index:1}
+.hero-copy p{max-width:680px;color:var(--muted);font-size:1rem;line-height:1.72;margin-top:18px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px;max-width:770px}
+.metric-pill{
+  border-radius:18px;
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(26,25,21,0.08);
+  box-shadow:0 12px 32px rgba(26,25,21,0.05);
+  padding:15px 14px;
+}
+.metric-pill strong{display:block;font-family:"Bebas Neue",sans-serif;font-size:2rem;line-height:1;color:var(--accent);letter-spacing:0.035em}
+.metric-pill span{display:block;margin-top:5px;color:var(--muted);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
+.hero-visual{
+  position:relative;
+  min-height:360px;
+  border-radius:32px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.62),rgba(247,245,241,0.7));
+  border:1px solid rgba(255,255,255,0.82);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  right:-74px;
+  top:24px;
+  background:radial-gradient(circle,rgba(200,37,58,0.16),rgba(200,37,58,0.02) 62%,transparent 63%);
+}
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:36px;
+  border:1px solid rgba(200,37,58,0.14);
+  border-radius:50%;
+  transform:rotate(-18deg);
+}
+.visual-card{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:34px;
+  z-index:2;
+  border-radius:24px;
+  padding:26px;
+  background:rgba(255,255,255,0.78);
+  border:1px solid rgba(255,255,255,0.9);
+  box-shadow:var(--shadow);
+}
+.visual-card span{display:block;color:var(--accent);font-weight:900;letter-spacing:0.14em;text-transform:uppercase;font-size:0.72rem;margin-bottom:9px}
+.visual-card p{color:var(--text2);font-weight:700;line-height:1.5}
+.case-list{display:grid;gap:14px}
+.case-block{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:28px;
+  padding:36px;
+  border-radius:var(--radius);
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(255,255,255,0.82);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:transform 0.28s ease,border-color 0.28s ease,box-shadow 0.28s ease;
+}
+.case-block:hover{transform:translateY(-5px);border-color:rgba(200,37,58,0.24);box-shadow:var(--shadow-md)}
+.case-side{position:relative}
+.case-num{display:block;font-family:"Bebas Neue",sans-serif;font-size:4rem;line-height:0.9;color:rgba(200,37,58,0.22);letter-spacing:0.04em;margin-bottom:14px}
+.case-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:0.72rem;
+  font-weight:900;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.case-category::before{content:"";width:16px;height:2px;background:var(--accent)}
+.mini-box{border-radius:18px;background:rgba(247,245,241,0.8);border:1px solid rgba(26,25,21,0.055);padding:16px;margin-top:12px}
+.mini-box b{display:block;color:var(--accent);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:7px}
+.mini-box span{color:var(--muted);font-size:0.84rem;line-height:1.52}
+.case-title{font-family:"Outfit",sans-serif;font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.08;letter-spacing:-0.04em;color:#747474;margin-bottom:14px}
+.thesis{
+  display:inline-flex;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  align-items:center;
+  padding:10px 14px;
+  border-radius:999px;
+  background:var(--soft-red);
+  color:var(--text2);
+  font-size:0.88rem;
+  font-weight:700;
+  margin-bottom:18px;
+}
+.thesis b{color:var(--accent);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase}
+.case-context{max-width:850px;color:var(--muted);font-size:0.98rem;line-height:1.74;margin-bottom:24px}
+.case-detail-grid{display:grid;grid-template-columns:1fr 1fr 0.9fr;gap:16px;margin-bottom:20px}
+.detail-card{
+  border-radius:20px;
+  background:rgba(247,245,241,0.58);
+  border:1px solid rgba(26,25,21,0.055);
+  padding:18px;
+}
+.detail-label{display:flex;align-items:center;gap:10px;color:var(--accent);font-size:0.68rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px}
+.detail-label::before{content:"";width:10px;height:1px;background:var(--accent)}
+.detail-card ul{display:grid;gap:9px;list-style:none}
+.detail-card li{color:var(--text2);font-size:0.88rem;line-height:1.45}
+.detail-card li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:9px;vertical-align:middle}
+.outcome-stack{display:grid;gap:8px}
+.outcome-chip{border-radius:14px;background:rgba(255,255,255,0.72);border:1px solid rgba(26,25,21,0.06);padding:11px 12px}
+.outcome-chip strong{display:block;color:var(--accent);font-family:"Bebas Neue",sans-serif;font-size:1.7rem;line-height:1;letter-spacing:0.035em}
+.outcome-chip span{display:block;color:var(--muted);font-size:0.72rem;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;margin-top:3px}
+.insight{
+  border-left:3px solid var(--accent);
+  border-radius:18px;
+  background:rgba(255,255,255,0.58);
+  padding:17px 18px;
+}
+.insight b{display:block;color:var(--accent);font-size:0.68rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px}
+.insight p{color:var(--text2);font-size:0.94rem;line-height:1.62}
+.deal-sec,.cap-sec{padding:54px 42px}
+.section-head{margin-bottom:26px}
+.section-head p{max-width:760px;color:var(--muted);line-height:1.72;margin-top:12px}
+.deal-panel{
+  display:grid;
+  grid-template-columns:0.86fr 1.14fr;
+  gap:20px;
+  border-radius:var(--radius);
+  background:radial-gradient(circle at 14% 6%,rgba(200,37,58,0.18),transparent 32%),linear-gradient(135deg,#171511,#281611);
+  color:#fff;
+  padding:30px;
+  box-shadow:var(--shadow-md);
+  overflow:hidden;
+}
+.deal-panel h2{color:#fff}
+.deal-panel p{color:rgba(255,255,255,0.58);line-height:1.7;margin-top:12px}
+.deal-rows{display:grid;gap:10px}
+.deal-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:18px;
+  align-items:center;
+  border-radius:18px;
+  background:rgba(255,255,255,0.055);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:15px 16px;
+}
+.deal-cat{color:#ef4d62;font-size:0.66rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px}
+.deal-title{font-weight:800;color:rgba(255,255,255,0.9)}
+.deal-detail{color:rgba(255,255,255,0.48);font-size:0.84rem;margin-top:4px}
+.deal-metric{font-family:"Bebas Neue",sans-serif;font-size:1.75rem;letter-spacing:0.04em;color:#fff;text-align:right}
+.cap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cap-item{
+  min-height:210px;
+  border-radius:var(--radius-card);
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(255,255,255,0.82);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+.cap-num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--soft-red);color:var(--accent);font-weight:900;margin-bottom:16px}
+.cap-item h3{font-size:1rem;line-height:1.2;color:#747474;margin-bottom:10px}
+.cap-item p{color:var(--muted);font-size:0.86rem;line-height:1.58}
+.cta-banner{
+  display:grid;
+  grid-template-columns:1fr 0.64fr;
+  gap:28px;
+  align-items:center;
+  padding:44px 56px;
+  min-height:270px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.78),rgba(239,236,231,0.72));
+  position:relative;
+}
+.cta-banner h2{font-family:"Outfit",sans-serif;font-size:2rem;letter-spacing:-0.035em;line-height:1.12;color:#747474}
+.cta-banner p{max-width:570px;color:var(--muted);line-height:1.68;margin:12px 0 24px}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-visual{position:relative;min-height:210px;border-radius:24px;overflow:hidden}
+.cta-visual::before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:var(--accent);left:50%;top:54%;transform:translate(-50%,-50%);box-shadow:0 22px 56px rgba(200,37,58,0.22)}
+.cta-visual img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(105%,420px);filter:drop-shadow(0 24px 28px rgba(0,0,0,0.16))}
+.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:var(--shadow-md)}
+.footer-inner{display:grid;grid-template-columns:1.1fr 0.9fr}
+.fcopy{padding:48px 42px}
+.fcopy h2{color:#f7f4ee;max-width:520px}
+.fcopy p{max-width:560px;margin:18px 0 26px;color:rgba(230,226,218,0.67);line-height:1.72}
+.fcopy-btns{display:flex;gap:12px;flex-wrap:wrap}
+.clist{padding:48px 42px;border-left:1px solid rgba(255,255,255,0.06);display:grid;gap:16px}
+.citem{display:flex;align-items:center;gap:14px;color:rgba(240,236,228,0.78);font-weight:600}
+.cico{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(200,37,58,0.14);border:1px solid rgba(200,37,58,0.25);color:#ef4d62}
+.fbase{border-top:1px solid rgba(255,255,255,0.06);padding:18px 42px;display:flex;align-items:center;justify-content:space-between;gap:14px;color:rgba(230,226,218,0.52);font-size:0.88rem;flex-wrap:wrap}
+.footer .brand{color:#fff}
+.flinks{display:flex;gap:22px}
+.flinks a:hover{color:#fff}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media (max-width:980px){
+  .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
+  .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
+  .hero{grid-template-columns:1fr;padding:54px 28px}
+  .metric-row{grid-template-columns:repeat(2,1fr)}
+  .case-block{grid-template-columns:1fr;padding:28px}
+  .case-detail-grid{grid-template-columns:1fr}
+  .deal-panel,.cta-banner,.footer-inner{grid-template-columns:1fr}
+  .cap-grid{grid-template-columns:repeat(2,1fr)}
+  .clist{border-left:0;border-top:1px solid rgba(255,255,255,0.06)}
+}
+@media (max-width:640px){
+  .page{width:min(100% - 22px,var(--max));padding-top:6px}
+  .topbar{padding-left:16px}
+  .desktop-cta{display:none}
+  h1{font-size:3.9rem}
+  h2{font-size:clamp(2.5rem,13vw,3.5rem)}
+  .hero{padding:42px 20px 34px;min-height:auto}
+  .hero-visual{min-height:280px}
+  .metric-row,.cap-grid{grid-template-columns:1fr}
+  .case-block{padding:22px}
+  .deal-sec,.cap-sec{padding:38px 20px}
+  .deal-panel{padding:24px 18px}
+  .deal-row{grid-template-columns:1fr}
+  .deal-metric{text-align:left}
+  .cta-banner{padding:32px 20px}
+  .cta-banner h2{font-size:1.65rem}
+  .fcopy,.clist{padding:34px 22px}
+  .fbase{padding:18px 22px;align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="bg-ring-wrap">
+  <div class="bg-ring bg-ring-1"></div>
+  <div class="bg-ring bg-ring-2"></div>
+</div>
+<div class="bounce-dot"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="page">
+  <div class="topbar-outer">
+    <header class="topbar">
+      <a class="brand" href="home.html">SASI<span>.ASIA</span></a>
+      <nav class="nav" id="nav">
+        <a href="home.html">Home</a>
+        <a href="home.html#portfolio-page">About</a>
+        <a class="active" href="case-studies.html">Case Studies</a>
+        <a href="services.html">Services</a>
+        <a href="home.html#insights">Insights</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary desktop-cta" href="mailto:sasi.bu.bd@gmail.com">Contact Me -></a>
+        <button class="btn btn-secondary icon-btn mobile-toggle" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="section glass hero">
+      <div class="hero-copy reveal in">
+        <span class="eyebrow">Selected Work</span>
+        <h1>Strategic <span class="red">Case Studies</span></h1>
+        <p>A track record of solving high-impact problems across platform growth, monetization, market expansion, strategic partnerships, token economy, and cross-border execution.</p>
+        <p>Typically engaged for high-impact decisions where strategy directly affects revenue, valuation, and market position.</p>
+        <div class="metric-row">
+          <div class="metric-pill"><strong>THB 66M</strong><span>Revenue · 3 Months</span></div>
+          <div class="metric-pill"><strong>$8M</strong><span>Raised · 24 Hours</span></div>
+          <div class="metric-pill"><strong>299K</strong><span>Peak Concurrent Users</span></div>
+          <div class="metric-pill"><strong>38%</strong><span>Monthly Retention</span></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Discuss Your Strategy -></a>
+          <a class="btn btn-secondary" href="services.html">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal in" aria-hidden="true">
+        <div class="visual-card">
+          <span>Decision-Level Work</span>
+          <p>Platform strategy, monetization architecture, market entry, and strategic execution tied to measurable business outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-list" id="cases">
+      <article class="case-block reveal">
+        <aside class="case-side">
+          <span class="case-num">01</span>
+          <div class="case-category">Platform Growth</div>
+          <div class="mini-box"><b>Role</b><span>Strategic Director - Monetization, Growth &amp; Platform Structure</span></div>
+          <div class="mini-box"><b>Complexity</b><span>Cross-functional coordination across product, marketing, and payment systems.</span></div>
+        </aside>
+        <div class="case-main">
+          <h2 class="case-title">Scaling a Game Marketplace to THB 66M in 3 Months</h2>
+          <div class="thesis"><b>Investment Thesis</b> Growth was constrained not by traffic, but by misaligned monetization mechanics.</div>
+          <p class="case-context">A newly launched gaming platform faced unclear monetization structure and weak early traction despite strong demand signals. High traffic existed, but conversion to revenue was structurally broken: the platform was acquiring users without a mechanism to capture value.</p>
+          <div class="case-detail-grid">
+            <div class="detail-card"><div class="detail-label">Key Issues</div><ul><li>Weak monetization architecture</li><li>Low conversion despite strong traffic</li><li>No repeat purchase or retention loop</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Strategic Actions</div><ul><li>Redesigned pricing and monetization architecture</li><li>Built transaction-driven growth loop</li><li>Optimized conversion funnel and payment flow</li><li>Aligned product, marketing, and partnerships</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Measured Outcomes</div><div class="outcome-stack"><div class="outcome-chip"><strong>THB 66M</strong><span>Revenue in 3 months</span></div><div class="outcome-chip"><strong>299K</strong><span>Peak concurrent users</span></div><div class="outcome-chip"><strong>38%</strong><span>Monthly retention rate</span></div></div></div>
+          </div>
+          <div class="insight"><b>Value Creation Insight</b><p>Revenue growth was driven by monetization alignment, not user acquisition. Fixing the conversion architecture unlocked value that already existed in the user base.</p></div>
+        </div>
+      </article>
+
+      <article class="case-block reveal">
+        <aside class="case-side">
+          <span class="case-num">02</span>
+          <div class="case-category">Market Expansion</div>
+          <div class="mini-box"><b>Role</b><span>Strategic Advisor - Market Entry &amp; Ecosystem Design</span></div>
+          <div class="mini-box"><b>Complexity</b><span>Multi-country adaptation across global publishing strategy and fragmented local markets.</span></div>
+        </aside>
+        <div class="case-main">
+          <h2 class="case-title">Structuring Southeast Asia Esports Strategy for Market Expansion</h2>
+          <div class="thesis"><b>Investment Thesis</b> Success in emerging markets depends on ecosystem orchestration, not just content distribution.</div>
+          <p class="case-context">A global publisher required a localized strategy to enter fragmented SEA esports markets. The challenge was not product quality, but the absence of a coherent local ecosystem model against the realities of regional diversity.</p>
+          <div class="case-detail-grid">
+            <div class="detail-card"><div class="detail-label">Key Issues</div><ul><li>Fragmented regional esports ecosystem</li><li>Weak local audience engagement model</li><li>Misalignment between global and local strategy</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Strategic Actions</div><ul><li>Designed localized esports market strategy</li><li>Structured partnership and engagement model</li><li>Aligned global positioning with local execution</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Measured Outcomes</div><ul><li>Scalable regional engagement framework</li><li>Strengthened local market positioning</li><li>Replicable model across SEA markets</li></ul></div>
+          </div>
+          <div class="insight"><b>Value Creation Insight</b><p>Local ecosystem control is the critical variable in emerging market entry. Distribution without community infrastructure creates reach without retention.</p></div>
+        </div>
+      </article>
+
+      <article class="case-block reveal">
+        <aside class="case-side">
+          <span class="case-num">03</span>
+          <div class="case-category">Cross-Border Execution</div>
+          <div class="mini-box"><b>Role</b><span>Execution Lead - Regional Stakeholder Coordination</span></div>
+          <div class="mini-box"><b>Complexity</b><span>Real-time delivery across telecom, publishers, event infrastructure, and multi-country stakeholders.</span></div>
+        </aside>
+        <div class="case-main">
+          <h2 class="case-title">Executing Cross-Border Esports Event - Singtel &amp; AIS, Singapore</h2>
+          <div class="thesis"><b>Investment Thesis</b> Strategic events act as ecosystem catalysts when tied to platform growth, not standalone activations.</div>
+          <p class="case-context">A regional telecom collaboration required a high-impact cross-border esports event to drive subscriber engagement and brand positioning. The complexity was aligning multi-stakeholder commercial objectives across countries in real time.</p>
+          <div class="case-detail-grid">
+            <div class="detail-card"><div class="detail-label">Key Issues</div><ul><li>Multi-stakeholder coordination at scale</li><li>Cross-border execution complexity</li><li>Requirement for measurable engagement impact</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Strategic Actions</div><ul><li>Coordinated telecom, publishers, and event teams</li><li>Designed engagement and participation model</li><li>Delivered large-scale cross-border execution</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Measured Outcomes</div><ul><li>Successful regional event delivery</li><li>Strengthened telecom ecosystem engagement</li><li>Operational playbook for future cross-border events</li></ul></div>
+          </div>
+          <div class="insight"><b>Value Creation Insight</b><p>Events create value when integrated into growth strategy: not as brand spend, but as distribution infrastructure.</p></div>
+        </div>
+      </article>
+
+      <article class="case-block reveal">
+        <aside class="case-side">
+          <span class="case-num">04</span>
+          <div class="case-category">Strategic Partnerships</div>
+          <div class="mini-box"><b>Role</b><span>Business Development Lead - Cross-Industry Partnership Strategy</span></div>
+          <div class="mini-box"><b>Complexity</b><span>Negotiation across industries with different commercial objectives and brand positioning priorities.</span></div>
+        </aside>
+        <div class="case-main">
+          <h2 class="case-title">Building Strategic Partnerships with AMD and AirAsia</h2>
+          <div class="thesis"><b>Investment Thesis</b> Cross-industry partnerships unlock distribution channels and brand credibility that organic growth cannot replicate at speed.</div>
+          <p class="case-context">Growth beyond the core gaming ecosystem required access to new audiences and distribution infrastructure. Partnerships with AMD and AirAsia were identified as high-leverage paths for credibility, travel-commerce integration, and reach expansion.</p>
+          <div class="case-detail-grid">
+            <div class="detail-card"><div class="detail-label">Key Issues</div><ul><li>Limited reach beyond core gaming audience</li><li>Absence of strategic cross-industry partnerships</li><li>Untapped brand leverage and credibility opportunities</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Strategic Actions</div><ul><li>Initiated and structured partnership agreements</li><li>Aligned commercial incentives across industries</li><li>Integrated partnerships into core growth engine</li></ul></div>
+            <div class="detail-card"><div class="detail-label">Measured Outcomes</div><ul><li>Secured global partnerships with AMD and AirAsia</li><li>Expanded ecosystem reach beyond core market</li><li>Established repeatable partnership framework</li></ul></div>
+          </div>
+          <div class="insight"><b>Value Creation Insight</b><p>Partnerships must be embedded into the growth engine. Standalone partnerships create moments; integrated partnerships create compounding distribution.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section deal-sec glass">
+      <div class="deal-panel">
+        <div>
+          <span class="eyebrow">Transaction Record</span>
+          <h2>Selected Transactions &amp; Engagements</h2>
+          <p>A summary of principal engagements by category and measurable impact. These are the types of problems where business design, capital logic, and execution discipline need to move together.</p>
+        </div>
+        <div class="deal-rows">
+          <div class="deal-row"><div><div class="deal-cat">Platform Scaling</div><div class="deal-title">Game marketplace monetization restructure &amp; growth</div><div class="deal-detail">Revenue architecture, conversion funnel, retention loop</div></div><div class="deal-metric">THB 66M</div></div>
+          <div class="deal-row"><div><div class="deal-cat">Token Economy / Web3</div><div class="deal-title">GameFi token design and fundraising execution</div><div class="deal-detail">Tokenomics, vesting design, investor narrative</div></div><div class="deal-metric">$8M</div></div>
+          <div class="deal-row"><div><div class="deal-cat">Market Expansion Strategy</div><div class="deal-title">SEA esports market entry strategy</div><div class="deal-detail">Ecosystem design, local engagement model, regional framework</div></div><div class="deal-metric">SEA</div></div>
+          <div class="deal-row"><div><div class="deal-cat">Cross-Border Execution</div><div class="deal-title">Telecom esports event - Singtel &amp; AIS</div><div class="deal-detail">Multi-stakeholder coordination, cross-border delivery</div></div><div class="deal-metric">Live</div></div>
+          <div class="deal-row"><div><div class="deal-cat">Strategic Partnerships</div><div class="deal-title">Global partnerships - AMD &amp; AirAsia</div><div class="deal-detail">Cross-industry BD, incentive alignment, growth integration</div></div><div class="deal-metric">BD</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cap-sec">
+      <div class="section-head">
+        <span class="eyebrow">What I Bring</span>
+        <h2>Core Strategic Capabilities</h2>
+        <p>Capabilities refined through direct ownership of outcomes, not advisory distance. Each area has been stress-tested in live, high-stakes environments.</p>
+      </div>
+      <div class="cap-grid">
+        <article class="cap-item reveal"><span class="cap-num">01</span><h3>Platform Monetization &amp; Unit Economics</h3><p>Revenue architecture across ARPPU, take rate, conversion, and contribution margin.</p></article>
+        <article class="cap-item reveal"><span class="cap-num">02</span><h3>Growth Strategy - Traction to Scalable Revenue</h3><p>Translating early market fit into repeatable revenue growth and retention loops.</p></article>
+        <article class="cap-item reveal"><span class="cap-num">03</span><h3>Strategic Partnerships &amp; Ecosystem Expansion</h3><p>Structuring partnerships that expand distribution, credibility, and commercial reach.</p></article>
+        <article class="cap-item reveal"><span class="cap-num">04</span><h3>Capital Strategy &amp; Token Economy Design</h3><p>Investor-ready narratives and sustainable token economic models across Web3 raises.</p></article>
+        <article class="cap-item reveal"><span class="cap-num">05</span><h3>Cross-Border Execution &amp; Market Entry</h3><p>Multi-stakeholder execution across Thailand, Singapore, China, Korea, and SEA.</p></article>
+      </div>
+    </section>
+
+    <section class="section glass cta-banner">
+      <div>
+        <h2>Work on What Matters</h2>
+        <p>If you're solving a complex growth or monetization challenge, we can discuss how to approach it with clarity and structure without the overhead of a large firm.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Discuss Your Strategy -></a>
+          <a class="btn btn-secondary" href="services.html">View Services</a>
+        </div>
+      </div>
+      <div class="cta-visual" aria-hidden="true">
+        <img src="assets/handshake-top2.png" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="fcopy">
+        <h2>LET'S BUILD SOMETHING VALUABLE TOGETHER</h2>
+        <p>Available for strategic roles, executive advisory, business development leadership, platform growth, and partnership opportunities across fintech and digital platforms.</p>
+        <div class="fcopy-btns">
+          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Contact Me -></a>
+          <a class="btn btn-secondary" href="home.html">↓ Download CV</a>
+        </div>
+      </div>
+      <div class="clist">
+        <div class="citem"><span class="cico">✉</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div>
+        <div class="citem"><span class="cico">☎</span><a href="tel:+66962614499">+66 96 261 4499</a></div>
+        <div class="citem"><span class="cico">⌂</span><span>Bangkok, Thailand</span></div>
+        <div class="citem"><span class="cico">in</span><a href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div>
+      </div>
+    </div>
+    <div class="fbase">
+      <div class="brand">SASI<span>.ASIA</span></div>
+      <div>© 2025 sasi.asia. All rights reserved.</div>
+      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const nav=document.getElementById("nav");
+if(menuBtn){menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));}
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("in");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.14});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
