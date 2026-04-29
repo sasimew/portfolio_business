@@ -248,7 +248,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 .page-title{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.2rem,3.8vw,3.6rem);letter-spacing:0.04em;line-height:1;color:var(--text);margin-bottom:10px;}
 .page-intro{color:var(--muted);font-size:0.92rem;line-height:1.72;max-width:720px;}
 .about-hero{padding:32px 38px 0;}
-.about-hero-grid{display:grid;grid-template-columns:1.08fr 0.92fr;gap:28px;min-height:500px;align-items:center;}
+.about-hero-grid{display:grid;grid-template-columns:1.18fr 0.82fr;gap:30px;min-height:500px;align-items:center;}
 .about-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:18px 0 30px;}
 .about-name{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.9rem,5vw,5.55rem);line-height:0.92;letter-spacing:0.02em;margin:0 0 14px;color:var(--text);}
 .about-name span{display:block;color:var(--accent);font-size:0.82em;}
@@ -262,9 +262,9 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 .about-proof li{position:relative;padding-left:18px;color:var(--text2);font-size:0.83rem;line-height:1.48;font-weight:600;}
 .about-proof li::before{content:"";position:absolute;left:0;top:0.65em;width:6px;height:6px;border-radius:50%;background:var(--accent);}
 .about-positioning{color:var(--muted);font-size:0.88rem;line-height:1.62;max-width:620px;margin-bottom:20px;}
-.about-hero-vis{min-height:392px;background:linear-gradient(145deg,#f7f3ef,#ebe6df);}
+.about-hero-vis{width:86%;min-height:455px;justify-self:center;background:linear-gradient(145deg,#f7f3ef,#ebe6df);}
 .about-hero-vis .vis-ring{display:none;}
-.about-hero-vis .portrait-img{background-size:70% auto;background-position:center bottom;background-repeat:no-repeat;}
+.about-hero-vis .portrait-img{background-size:78% auto;background-position:center bottom;background-repeat:no-repeat;}
 .about-metric{position:absolute;z-index:4;left:18px;bottom:18px;display:grid;gap:2px;padding:12px 14px;border-radius:15px;background:rgba(255,255,255,0.72);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.78);box-shadow:var(--shadow-sm);}
 .about-metric strong{font-family:"Bebas Neue",sans-serif;font-size:1.24rem;line-height:1;color:var(--accent);letter-spacing:0.04em;}
 .about-metric span{font-size:0.66rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:0.08em;}
@@ -371,7 +371,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
 @media(max-width:1100px){
   .hero-grid{grid-template-columns:1fr;}.hero-vis{min-height:310px;}
   .about-hero-grid{grid-template-columns:1fr;min-height:auto;}
-  .about-hero-vis{min-height:380px;}
+  .about-hero-vis{width:100%;min-height:380px;}
   .about-proof-grid{grid-template-columns:1fr;}
   .stats{grid-template-columns:repeat(2,1fr);}
   .ach-grid,.expert-grid,.case-study-grid,.passion-grid,.port-grid,.news-grid{grid-template-columns:repeat(2,1fr);}
@@ -391,7 +391,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   .about-hero-copy{padding:16px 0 22px;}
   .about-name{font-size:2.9rem;}
   .about-proof{padding:16px;}
-  .about-hero-vis{min-height:310px;}
+  .about-hero-vis{min-height:330px;}
   .about-hero-vis .portrait-img{background-size:82% auto;}
   .stats{grid-template-columns:1fr 1fr;}
   .two-col,.exp-row{grid-template-columns:1fr;}
@@ -747,6 +747,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   <!-- STRATEGIC CASE STUDIES -->
   <section class="card mb14" id="case-studies">
     <div class="page-hdr">
+      <span class="sub sub-rule">Selected Work</span>
       <div class="page-title">STRATEGIC CASE STUDIES</div>
       <div class="page-intro">Platform strategy, payment system design, gaming go-to-market execution, cross-border partnerships, and token ecosystem advisory.</div>
     </div>
@@ -798,7 +799,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   <section class="card mb14 about-hero">
     <div class="about-hero-grid">
       <div class="about-hero-copy">
-        <span class="eyebrow">HELLO, I’M</span>
+        <span class="sub sub-rule">About Me</span>
         <h1 class="about-name">Sasion <span>Nanthaphiriyakit</span></h1>
         <div class="about-role">Strategic Advisor for Platform, Growth, and Capital Decisions</div>
         <p class="about-primary">I work with founders, executives, and investors on high-impact decisions that directly affect revenue, valuation, and market position.</p>
