@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | Sasion Nanthaphiriyakit | SASI.ASIA</title>
+<meta name="description" content="Insights and perspectives on growth strategy, platform economics, monetization, AI, Web3, and capital strategy by Sasion Nanthaphiriyakit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f0ec;
+  --bg2:#f8f7f5;
+  --surface:rgba(255,255,255,0.72);
+  --paper:#ffffff;
+  --text:#14130f;
+  --text2:#3a3830;
+  --muted:#747474;
+  --line:rgba(26,25,21,0.09);
+  --line2:rgba(255,255,255,0.78);
+  --accent:#c8253a;
+  --accent2:#e32330;
+  --soft-red:rgba(200,37,58,0.08);
+  --shadow:0 18px 45px rgba(26,25,21,0.06);
+  --shadow-md:0 24px 70px rgba(26,25,21,0.10);
+  --shadow-red:0 16px 38px rgba(200,37,58,0.22);
+  --radius:28px;
+  --radius-card:22px;
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  font-family:"Outfit",sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:radial-gradient(ellipse 55% 45% at 8% 8%,rgba(200,37,58,0.065),transparent 55%),
+             radial-gradient(ellipse 45% 38% at 92% 88%,rgba(200,37,58,0.05),transparent 50%);
+}
+.orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(65px);
+  pointer-events:none;
+  z-index:0;
+  opacity:0.34;
+  animation:floatOrb 12s ease-in-out infinite alternate;
+}
+.orb-1{width:220px;height:220px;left:-70px;top:130px;background:rgba(200,37,58,0.16);}
+.orb-2{width:260px;height:260px;right:-100px;top:38%;background:rgba(200,37,58,0.11);animation-delay:-4s;}
+.orb-3{width:180px;height:180px;left:20%;bottom:-80px;background:rgba(20,19,15,0.08);animation-delay:-7s;}
+@keyframes floatOrb{
+  from{transform:translate3d(0,0,0) scale(1);}
+  to{transform:translate3d(18px,-24px,0) scale(1.08);}
+}
+.bounce-dot{
+  position:fixed;
+  width:50px;height:50px;
+  border-radius:50%;
+  background:var(--accent);
+  opacity:0.18;
+  top:45%;right:8%;
+  pointer-events:none;
+  z-index:0;
+}
+.bg-ring-wrap{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.bg-ring{
+  position:absolute;left:50%;top:50%;
+  border-radius:50%;
+  border:1px solid rgba(200,37,58,0.045);
+  transform:translate(-50%,-50%);
+}
+.bg-ring-1{width:110vmax;height:110vmax;animation:pulseRing 7s ease-in-out infinite;}
+.bg-ring-2{width:75vmax;height:75vmax;border-color:rgba(200,37,58,0.07);animation:pulseRing 7s ease-in-out infinite;animation-delay:-3.5s;}
+@keyframes pulseRing{
+  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.7;}
+  50%{transform:translate(-50%,-50%) scale(1.08);opacity:1;}
+}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:8px 0 64px;position:relative;z-index:1}
+.glass{
+  background:var(--surface);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid var(--line2);
+  box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,0.85);
+}
+
+/* NAV */
+.topbar-outer{position:sticky;top:14px;z-index:200;padding:0 0 22px}
+.topbar{
+  min-height:0;border-radius:999px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:11px 14px 11px 22px;
+  background:rgba(242,240,236,0.88);
+  backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 4px 24px rgba(26,25,21,0.07),inset 0 1px 0 rgba(255,255,255,0.95);
+}
+.brand{font-family:"Bebas Neue",sans-serif;font-size:1.65rem;letter-spacing:0.04em;line-height:1;color:#747474}
+.brand span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:7px 14px;border-radius:999px;font-size:0.87rem;font-weight:600;color:var(--muted);transition:all 0.22s}
+.nav a:hover,.nav a.active{background:rgba(26,25,21,0.07);color:var(--text)}
+.nav a.active{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:42px;padding:11px 20px;
+  border-radius:999px;border:1px solid transparent;
+  font:800 0.82rem/1 "Outfit",sans-serif;
+  letter-spacing:0.035em;text-transform:uppercase;white-space:nowrap;cursor:pointer;
+  transition:transform 0.24s ease,box-shadow 0.24s ease,background 0.24s ease,border-color 0.24s ease,color 0.24s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary,.btn-red{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
+.btn-primary:hover,.btn-red:hover{background:var(--accent2);box-shadow:0 20px 46px rgba(200,37,58,0.28)}
+.btn-secondary{background:rgba(255,255,255,0.62);border-color:rgba(26,25,21,0.13);color:var(--text2)}
+.btn-secondary:hover{border-color:rgba(200,37,58,0.25);color:var(--accent);box-shadow:var(--shadow)}
+.icon-btn{width:42px;height:42px;padding:0;border-radius:50%;font-size:1rem}
+.mobile-toggle{display:none}
+
+/* CORE */
+.section{margin-top:14px;border-radius:var(--radius);overflow:hidden}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:14px;margin-bottom:12px;
+  color:var(--accent);font-size:0.72rem;font-weight:900;letter-spacing:0.18em;text-transform:uppercase;
+}
+.eyebrow::after{content:"";width:46px;height:1px;background:var(--accent)}
+h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.95;color:#747474}
+h1{font-size:clamp(4rem,7vw,8rem);max-width:700px}
+h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
+.red{color:var(--accent)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 0.85fr;
+  gap:32px;
+  align-items:center;
+  min-height:580px;
+  padding:64px 52px 60px;
+}
+.hero-copy{}
+.hero-copy p{max-width:560px;margin:14px 0 6px;color:var(--muted);font-size:0.94rem;line-height:1.68}
+.hero-copy .hero-desc{
+  margin:18px 0 28px;
+  font-size:0.88rem;
+  color:var(--muted);
+  line-height:1.65;
+  max-width:520px;
+  padding:14px 18px;
+  background:rgba(200,37,58,0.05);
+  border:1px solid rgba(200,37,58,0.12);
+  border-radius:14px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* HERO VISUAL — redesigned */
+.hero-visual{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:420px;
+  padding:20px 0 40px;
+}
+.hero-visual-inner{
+  position:relative;
+  width:100%;
+  max-width:440px;
+  animation:floatCard 6s ease-in-out infinite;
+}
+.vis-orb{
+  position:absolute;
+  width:280px;height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(200,37,58,0.32),rgba(200,37,58,0.06) 60%,transparent 80%);
+  right:-50px;top:-55px;
+  filter:blur(3px);
+  z-index:1;pointer-events:none;
+}
+.vis-ring{
+  position:absolute;width:340px;height:340px;border-radius:50%;
+  border:1.5px solid rgba(200,37,58,0.2);
+  right:-80px;top:-80px;z-index:0;pointer-events:none;
+}
+.vis-ring2{
+  position:absolute;width:450px;height:450px;border-radius:50%;
+  border:1px solid rgba(200,37,58,0.08);
+  right:-140px;top:-140px;z-index:0;pointer-events:none;
+}
+.vis-dot{
+  position:absolute;width:11px;height:11px;border-radius:50%;
+  background:var(--accent);right:-18px;top:36px;z-index:3;
+  box-shadow:0 0 16px rgba(200,37,58,0.6);
+}
+.vis-main{
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(32px);
+  border:1px solid rgba(255,255,255,0.95);
+  box-shadow:0 32px 80px rgba(26,25,21,0.14),inset 0 1px 0 rgba(255,255,255,1);
+  border-radius:26px;
+  padding:24px 26px 20px;
+  position:relative;z-index:2;
+}
+/* LinkedIn badge */
+.vis-in-badge{
+  position:absolute;top:22px;right:22px;
+  width:32px;height:32px;border-radius:8px;
+  background:#0a66c2;
+  display:grid;place-items:center;
+  box-shadow:0 4px 14px rgba(10,102,194,0.35);
+}
+.vis-title{font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:4px;padding-right:40px}
+.vis-sub{font-size:0.78rem;color:var(--muted);margin-bottom:20px;line-height:1.4}
+
+/* Chart */
+.vis-chart-wrap{position:relative;height:88px;margin-bottom:14px}
+.vis-chart{
+  display:flex;align-items:flex-end;gap:6px;
+  height:72px;
+  position:absolute;bottom:0;left:0;right:0;
+}
+.vis-bar{
+  flex:1;border-radius:6px 6px 0 0;
+  background:linear-gradient(180deg,rgba(200,37,58,0.65),rgba(200,37,58,0.18));
+}
+.vis-bar-last{background:linear-gradient(180deg,#c8253a,rgba(200,37,58,0.55))}
+.vis-trend{
+  position:absolute;top:0;left:0;right:0;
+  width:100%;height:72px;
+  pointer-events:none;overflow:visible;
+}
+
+/* Focus */
+.vis-focus{
+  background:rgba(247,245,241,0.92);
+  border:1px solid rgba(26,25,21,0.07);
+  border-radius:14px;padding:13px 14px;
+}
+.vis-focus-title{
+  font-size:0.62rem;font-weight:900;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+}
+.vis-focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px}
+.vis-focus-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:0.76rem;color:var(--text2);font-weight:600;
+}
+.vis-focus-ico{
+  width:18px;height:18px;
+  color:var(--accent);font-size:0.82rem;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* Impact card */
+.vis-impact{
+  position:absolute;
+  bottom:-28px;right:-28px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(24px);
+  border:1.5px solid rgba(200,37,58,0.2);
+  border-radius:20px;
+  padding:16px 20px;
+  box-shadow:0 16px 48px rgba(26,25,21,0.14);
+  z-index:4;min-width:152px;
+  animation:floatCard 6s ease-in-out infinite;
+  animation-delay:-3s;
+}
+.vis-impact-label{
+  font-size:0.6rem;font-weight:900;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
+.vis-metric{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:2.4rem;color:var(--accent);
+  letter-spacing:0.03em;line-height:0.88;
+}
+.vis-metric-sub{font-size:0.68rem;color:var(--muted);margin-bottom:10px;margin-top:2px}
+
+/* ============================================================
+   CATEGORY FILTER CHIPS
+   ============================================================ */
+.filter-section{
+  margin-top:14px;
+  border-radius:var(--radius);
+  padding:20px 28px;
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,0.85);
+}
+.filter-wrap{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+.filter-chip{
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:0.78rem;
+  font-weight:700;
+  cursor:pointer;
+  border:1px solid rgba(26,25,21,0.1);
+  background:rgba(255,255,255,0.68);
+  color:var(--text2);
+  transition:all 0.2s ease;
+  user-select:none;
+}
+.filter-chip:hover{border-color:rgba(200,37,58,0.3);color:var(--accent);background:rgba(200,37,58,0.06)}
+.filter-chip.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:var(--shadow-red)}
+
+/* ============================================================
+   FEATURED INSIGHT
+   ============================================================ */
+.featured-insight{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:center;
+  padding:52px 52px;
+}
+.fi-left{}
+.fi-left .eyebrow{margin-bottom:16px}
+.fi-left h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(2rem,3.6vw,3.4rem);color:#747474;line-height:0.95;margin-bottom:16px}
+.fi-body{font-size:0.94rem;line-height:1.72;color:var(--text2);margin-bottom:22px;max-width:520px}
+.fi-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.fi-tag{
+  padding:5px 12px;border-radius:999px;
+  font-size:0.7rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;
+  background:var(--soft-red);color:var(--accent);border:1px solid rgba(200,37,58,0.15);
+}
+.fi-right{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.fi-embed-wrap{
+  width:100%;
+  max-width:504px;
+  background:rgba(255,255,255,0.72);
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.8);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+}
+.linkedin-frame{
+  width:100%;
+  max-width:476px;
+  min-height:524px;
+  border:0;
+  border-radius:12px;
+  display:block;
+}
+
+/* ============================================================
+   LINKEDIN EMBEDS GRID
+   ============================================================ */
+.section-head{padding:64px 52px 28px}
+.section-head.center{text-align:center;max-width:760px;margin:0 auto;padding-bottom:34px}
+.section-head.center .eyebrow{justify-content:center}
+.section-head.center .eyebrow::before{content:"";width:46px;height:1px;background:var(--accent)}
+.section-head p{margin-top:12px;color:var(--muted);line-height:1.72;font-size:0.94rem}
+
+.li-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding:0 0 48px;
+  align-items:start;
+}
+.li-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:var(--shadow);
+  border-radius:var(--radius-card);
+  padding:14px;
+  overflow:hidden;
+  transition:transform 0.26s,box-shadow 0.26s;
+}
+.li-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.li-card iframe{
+  width:100%;
+  max-width:100%;
+  min-height:560px;
+  border:0;
+  border-radius:10px;
+  display:block;
+}
+/* Card wrapper with floating button */
+.li-card-wrap{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  transition:opacity 0.28s ease, transform 0.28s ease;
+}
+.li-card-link-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  border-radius:var(--radius-card);
+}
+.li-card-wrap .li-card,
+.li-card-wrap .post-card{
+  flex:1;
+  transition:transform 0.26s,box-shadow 0.26s,border-color 0.26s;
+  cursor:pointer;
+}
+.li-card-wrap:hover .li-card,
+.li-card-wrap:hover .post-card{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-md);
+  border-color:rgba(200,37,58,0.22);
+}
+/* Floating LinkedIn button */
+.li-float-btn{
+  position:absolute;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%) translateY(6px);
+  opacity:0;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:var(--accent);
+  color:#fff;
+  font-size:0.75rem;
+  font-weight:900;
+  letter-spacing:0.04em;
+  padding:9px 18px;
+  border-radius:999px;
+  box-shadow:var(--shadow-red);
+  white-space:nowrap;
+  transition:opacity 0.22s ease,transform 0.22s ease;
+  pointer-events:none;
+}
+.li-card-wrap:hover .li-float-btn{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+  pointer-events:auto;
+}
+.li-float-in{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:18px;height:18px;border-radius:4px;
+  background:#fff;
+  flex-shrink:0;
+}
+
+/* Embed card with header */
+.post-card-embed{padding:16px}
+.post-embed-header{
+  display:flex;align-items:center;gap:9px;
+  margin-bottom:12px;
+}
+.post-embed-in{
+  width:26px;height:26px;border-radius:7px;
+  background:#0a66c2;
+  display:grid;place-items:center;flex-shrink:0;
+}
+.post-embed-label{
+  font-size:0.72rem;font-weight:800;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* Article post cards */
+.post-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:var(--shadow);
+  border-radius:var(--radius-card);
+  padding:26px 24px 22px;
+  display:flex;
+  flex-direction:column;
+  transition:transform 0.26s,box-shadow 0.26s,border-color 0.26s;
+  cursor:default;
+}
+.post-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:rgba(200,37,58,0.2)}
+.post-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+.post-tag{
+  padding:5px 13px;border-radius:999px;
+  font-size:0.65rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;
+  border:1px solid rgba(26,25,21,0.13);
+  color:var(--text2);background:transparent;
+}
+.post-tag.tag-primary{
+  color:var(--accent);border-color:rgba(200,37,58,0.3);background:rgba(200,37,58,0.06);
+}
+.post-card h3{
+  font-size:1.05rem;font-weight:800;color:var(--text);line-height:1.3;
+  margin-bottom:12px;
+}
+.post-card p{
+  font-size:0.86rem;color:var(--muted);line-height:1.68;
+  margin-bottom:0;
+}
+.post-footer{
+  display:flex;align-items:center;justify-content:flex-start;
+  border-top:1px solid var(--line);padding-top:14px;
+  margin-top:20px;
+}
+.post-date{font-size:0.76rem;color:var(--muted);font-weight:500}
+
+/* Placeholder card */
+.li-placeholder{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:524px;
+  background:rgba(247,245,241,0.72);
+  border:1.5px dashed rgba(200,37,58,0.22);
+  border-radius:var(--radius-card);
+  padding:24px;
+  text-align:center;
+}
+.li-placeholder-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:rgba(200,37,58,0.08);border:1px solid rgba(200,37,58,0.18);
+  display:grid;place-items:center;
+  color:var(--accent);font-weight:900;font-size:1rem;
+}
+.li-placeholder p{font-size:0.82rem;color:var(--muted);line-height:1.55}
+.li-placeholder code{font-size:0.72rem;color:var(--accent);background:rgba(200,37,58,0.06);padding:4px 10px;border-radius:8px;font-family:monospace}
+
+/* ============================================================
+   INSIGHT THEMES
+   ============================================================ */
+.themes-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding:0 0 48px;
+}
+.theme-card{
+  position:relative;
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(26,25,21,0.07);
+  box-shadow:var(--shadow);
+  border-radius:var(--radius-card);
+  padding:28px 26px;
+  overflow:hidden;
+  transition:transform 0.26s,border-color 0.26s,box-shadow 0.26s;
+}
+.theme-card::after{
+  content:"";position:absolute;
+  inset:auto -22px -38px auto;
+  width:110px;height:110px;border-radius:50%;
+  background:rgba(200,37,58,0.06);
+  transform:scale(0.8);
+  transition:transform 0.28s ease;
+}
+.theme-card:hover{transform:translateY(-6px);border-color:rgba(200,37,58,0.3);box-shadow:var(--shadow-md)}
+.theme-card:hover::after{transform:scale(1.18)}
+.theme-ico{
+  width:46px;height:46px;border-radius:14px;
+  background:var(--soft-red);border:1px solid rgba(200,37,58,0.16);
+  display:grid;place-items:center;
+  color:var(--accent);font-size:1.25rem;
+  margin-bottom:18px;
+  transition:all 0.24s;
+}
+.theme-card:hover .theme-ico{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
+.theme-card h3{font-size:1.08rem;font-weight:800;color:#747474;margin-bottom:10px;line-height:1.2}
+.theme-card p{font-size:0.86rem;color:var(--muted);line-height:1.62}
+
+/* ============================================================
+   CTA BANNER
+   ============================================================ */
+.cta-banner{
+  padding:64px 72px;
+  text-align:center;
+  background:linear-gradient(135deg,rgba(255,255,255,0.78),rgba(239,236,231,0.72));
+}
+.cta-banner h2{margin-bottom:14px}
+.cta-banner p{max-width:580px;margin:0 auto 28px;color:var(--muted);line-height:1.72;font-size:0.96rem}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{
+  background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),
+            linear-gradient(135deg,#14130f,#251510);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin-top:14px;
+  box-shadow:var(--shadow-md);
+}
+/* Metric strip */
+.footer-metrics{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  overflow:hidden;
+}
+.footer-metric{
+  flex:1;
+  text-align:center;
+  padding:18px 12px;
+  border-right:1px solid rgba(255,255,255,0.06);
+}
+.footer-metric:last-child{border-right:0}
+.fm-val{font-family:"Bebas Neue",sans-serif;font-size:1.7rem;color:var(--accent);letter-spacing:0.06em;line-height:1}
+.fm-label{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(240,236,228,0.55);margin-top:4px}
+/* Footer body */
+.footer-inner{display:grid;grid-template-columns:1.2fr 0.9fr 0.9fr}
+.fcol{padding:42px 36px}
+.fcol+.fcol{border-left:1px solid rgba(255,255,255,0.06)}
+.fcol-label{font-size:0.62rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:rgba(200,37,58,0.9);margin-bottom:14px}
+.fcol h2{font-family:"Bebas Neue",sans-serif;color:#f7f4ee;font-size:1.8rem;letter-spacing:0.04em;line-height:1;max-width:280px;margin-bottom:14px}
+.fcol p{font-size:0.85rem;color:rgba(230,226,218,0.65);line-height:1.7;max-width:300px;margin-bottom:22px}
+.fcol-btns{display:flex;gap:10px;flex-wrap:wrap}
+.citem{display:flex;align-items:center;gap:12px;margin-bottom:13px;color:rgba(240,236,228,0.78);font-size:0.88rem;font-weight:600}
+.cico{
+  width:36px;height:36px;border-radius:11px;
+  display:grid;place-items:center;
+  background:rgba(200,37,58,0.14);border:1px solid rgba(200,37,58,0.25);
+  color:#ef4d62;font-size:0.78rem;font-weight:900;flex-shrink:0;
+}
+.citem a:hover{color:#fff}
+.fbase{
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding:16px 36px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  color:rgba(230,226,218,0.45);font-size:0.82rem;flex-wrap:wrap;
+}
+.footer .brand{color:#fff}
+.flinks{display:flex;gap:20px}
+.flinks a:hover{color:#fff}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:980px){
+  .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
+  .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
+  .hero{grid-template-columns:1fr;min-height:auto;padding:48px 28px}
+  .hero-visual{min-height:280px;order:-1}
+  .vis-main{max-width:340px;margin:0 auto}
+  .vis-impact{bottom:-14px;right:-10px}
+  .featured-insight{grid-template-columns:1fr;padding:36px 28px}
+  .fi-right{justify-content:flex-start}
+  .li-grid,.themes-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr}
+  .fcol+.fcol{border-left:0;border-top:1px solid rgba(255,255,255,0.06)}
+  .section-head{padding:48px 28px 22px}
+  .footer-metrics{flex-wrap:wrap}
+  .footer-metric{min-width:50%;border-right:0;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .cta-banner{padding:44px 28px}
+}
+@media(max-width:640px){
+  .page{width:min(100% - 22px,var(--max));padding-top:6px}
+  .topbar{padding-left:16px}.desktop-cta{display:none}
+  .hero{padding:36px 16px 28px}
+  h1{font-size:3.4rem}h2{font-size:clamp(2rem,10vw,3rem)}
+  .eyebrow{font-size:0.66rem}.eyebrow::after{width:34px}
+  .li-grid,.themes-grid{grid-template-columns:1fr}
+  .li-card iframe{min-height:480px}
+  .section-head{padding:40px 16px 18px}
+  .featured-insight{padding:28px 16px}
+  .filter-wrap{padding:0 0 14px}
+  .fi-embed-wrap{padding:10px}
+  .cta-banner{padding:36px 16px}
+  .fcol{padding:30px 22px}
+  .fbase{padding:14px 22px;flex-direction:column;align-items:flex-start}
+  .footer-metric{min-width:100%}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S0N3M3191G');
+</script>
+</head>
+<body>
+
+<div class="bg-ring-wrap">
+  <div class="bg-ring bg-ring-1"></div>
+  <div class="bg-ring bg-ring-2"></div>
+</div>
+<div class="bounce-dot"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="page">
+
+  <!-- ===== NAV ===== -->
+  <div class="topbar-outer">
+    <header class="topbar">
+      <a class="brand" href="home.html">SASI<span>.ASIA</span></a>
+      <nav class="nav" id="nav">
+        <a href="home.html">Home</a>
+        <a href="home.html#portfolio-page">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="services.html">Advisory</a>
+        <a class="active" href="insights.html">Insights</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary desktop-cta" href="contact.html">Contact Me →</a>
+        <button class="btn btn-secondary icon-btn mobile-toggle" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="section glass hero">
+      <div class="hero-copy reveal in">
+        <span class="eyebrow">Thought Leadership</span>
+        <h1>Insights &amp;<br><span class="red">Perspectives</span></h1>
+        <p>Current thinking on growth strategy, platform economics, monetization, AI implementation, product scaling, and digital business transformation.</p>
+        <div class="hero-desc">
+          These insights are drawn from real-world experience building and scaling digital platforms across gaming, fintech, Web3, and regional ecosystems.
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener">View LinkedIn Insights -></a>
+          <a class="btn btn-secondary" href="mailto:sasi.bu.bd@gmail.com">Discuss Your Strategy</a>
+        </div>
+      </div>
+
+      <!-- Hero Visual — redesigned to match reference -->
+      <div class="hero-visual reveal in">
+        <div class="hero-visual-inner">
+          <!-- background orb & rings -->
+          <div class="vis-orb"></div>
+          <div class="vis-ring"></div>
+          <div class="vis-ring2"></div>
+          <div class="vis-dot"></div>
+
+          <!-- Main strategy card -->
+          <div class="vis-main">
+            <div class="vis-in-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="vis-title">Strategy</div>
+            <div class="vis-sub">Turning insight into measurable impact.</div>
+
+            <!-- Bar chart -->
+            <div class="vis-chart-wrap">
+              <div class="vis-chart">
+                <div class="vis-bar" style="height:30%"></div>
+                <div class="vis-bar" style="height:42%"></div>
+                <div class="vis-bar" style="height:35%"></div>
+                <div class="vis-bar" style="height:55%"></div>
+                <div class="vis-bar" style="height:48%"></div>
+                <div class="vis-bar" style="height:70%"></div>
+                <div class="vis-bar" style="height:75%"></div>
+                <div class="vis-bar" style="height:88%"></div>
+                <div class="vis-bar" style="height:92%"></div>
+                <div class="vis-bar vis-bar-last" style="height:100%"></div>
+              </div>
+              <!-- Trend line SVG -->
+              <svg class="vis-trend" viewBox="0 0 200 70" preserveAspectRatio="none">
+                <polyline
+                  points="0,62 22,52 44,56 66,42 88,44 110,28 132,22 154,12 176,7 200,2"
+                  fill="none" stroke="#c8253a" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="154" cy="12" r="5" fill="#c8253a"/>
+                <circle cx="110" cy="28" r="3.5" fill="rgba(200,37,58,0.55)"/>
+                <circle cx="66" cy="42" r="3" fill="rgba(200,37,58,0.38)"/>
+              </svg>
+            </div>
+
+            <!-- Focus areas -->
+            <div class="vis-focus">
+              <div class="vis-focus-title">Focus Areas</div>
+              <div class="vis-focus-grid">
+                <div class="vis-focus-item"><span class="vis-focus-ico">↗</span><span>Growth Strategy</span></div>
+                <div class="vis-focus-item"><span class="vis-focus-ico">◎</span><span>Platform Economics</span></div>
+                <div class="vis-focus-item"><span class="vis-focus-ico">$</span><span>Monetization</span></div>
+                <div class="vis-focus-item"><span class="vis-focus-ico">⚡</span><span>AI &amp; Automation</span></div>
+                <div class="vis-focus-item"><span class="vis-focus-ico">◈</span><span>Capital Strategy</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact floating card -->
+          <div class="vis-impact">
+            <div class="vis-impact-label">Impact</div>
+            <div class="vis-metric">66M</div>
+            <div class="vis-metric-sub">Revenue Generated</div>
+            <div class="vis-metric">299K</div>
+            <div class="vis-metric-sub" style="margin-bottom:0">Peak Users</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORY FILTER ===== -->
+    <div class="filter-section reveal">
+      <div class="filter-wrap">
+        <button class="filter-chip active" data-filter="all">All Insights</button>
+        <button class="filter-chip" data-filter="growth">Growth Strategy</button>
+        <button class="filter-chip" data-filter="platform">Platform Economics</button>
+        <button class="filter-chip" data-filter="ai">AI &amp; Automation</button>
+        <button class="filter-chip" data-filter="monetization">Monetization</button>
+        <button class="filter-chip" data-filter="web3">Web3</button>
+        <button class="filter-chip" data-filter="capital">Capital Strategy</button>
+        <button class="filter-chip" data-filter="partnerships">Strategic Partnerships</button>
+      </div>
+    </div>
+
+    <!-- ===== LINKEDIN EMBEDS GRID ===== -->
+    <section class="section">
+      <div class="section-head center">
+        <span class="eyebrow">LinkedIn Insights</span>
+        <h2>Latest Thinking from <span class="red">LinkedIn & Beyond</span></h2>
+        <p>Selected posts and articles on strategy, platform growth, monetization, AI, fundraising, and digital business execution.</p>
+      </div>
+
+
+      <div class="li-grid">
+
+        <!-- ROW 1 — Card 1 -->
+        <div class="li-card-wrap reveal" data-category="ai">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">AI</span><span class="post-tag">Automation</span></div>
+            <h3>AI Is Not the Strategy. Adoption Is.</h3>
+            <p>Everyone talks about how powerful AI is. Almost no one talks about why people don't use it. The failure isn't in the model — it's in the workflow. If AI doesn't fit into how decisions are actually made, it becomes noise. The real advantage is building systems people trust enough to act on.</p>
+            <div class="post-footer"><span class="post-date">Dec 12, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 1 — Card 2 -->
+        <div class="li-card-wrap reveal" data-category="platform growth">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Strategy</span><span class="post-tag">Platform</span></div>
+            <h3>Most Marketplaces Don't Fail Because of Product</h3>
+            <p>They fail because no one shows up. You can build the best UX in the world and still have zero transactions. Liquidity is not a feature — it's the foundation. The real game is getting the first 1,000 transactions right. Everything else comes after.</p>
+            <div class="post-footer"><span class="post-date">Nov 30, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 1 — Card 3 -->
+        <div class="li-card-wrap reveal" data-category="web3">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Web3</span><span class="post-tag">Tokenomics</span></div>
+            <h3>Token Price Is the Byproduct. Not the Product.</h3>
+            <p>Every cycle proves the same thing. Speculation can start momentum, but it cannot sustain it. What holds value is usage. What drives usage is design. If the economy doesn't work, the price eventually tells the truth.</p>
+            <div class="post-footer"><span class="post-date">Nov 18, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 2 — Card 1 -->
+        <div class="li-card-wrap reveal" data-category="monetization growth">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Monetization</span><span class="post-tag">Gaming</span></div>
+            <h3>Most Teams Are Optimizing the Wrong Metric</h3>
+            <p>They chase conversion rate because it's easy to measure. But real growth often comes from ARPPU. A small increase in how much people spend beats a large increase in how many people click. Revenue is not just about traffic — it's about depth of value.</p>
+            <div class="post-footer"><span class="post-date">Nov 5, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 2 — Card 2 -->
+        <div class="li-card-wrap reveal" data-category="platform growth">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Platform Growth</span><span class="post-tag">Operations</span></div>
+            <h3>Growth Breaks Systems Faster Than It Builds Companies</h3>
+            <p>Scaling feels good until things start breaking quietly. Delays increase. Teams lose alignment. Costs become harder to track. Most companies don't fail from lack of growth — they fail from unmanaged growth. Systems are what turn momentum into something sustainable.</p>
+            <div class="post-footer"><span class="post-date">Oct 22, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 2 — Card 3 -->
+        <div class="li-card-wrap reveal" data-category="ai">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">AI</span><span class="post-tag">Marketing</span></div>
+            <h3>AI in Marketing Sounds Better Than It Performs</h3>
+            <p>Everyone is generating content faster. Very few are converting better. The gap between demo and real impact is still huge. AI works when it's part of a system — not when it's used as a shortcut.</p>
+            <div class="post-footer"><span class="post-date">Oct 10, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 3 — Card 1 -->
+        <div class="li-card-wrap reveal" data-category="web3 capital">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Web3</span><span class="post-tag">Strategy</span></div>
+            <h3>Launching Is Easy. Staying Alive Is Not.</h3>
+            <p>Token launches create attention. Sustainable demand requires structure. Most projects underestimate how hard it is to maintain momentum after the hype fades. The real strategy starts when no one is watching anymore.</p>
+            <div class="post-footer"><span class="post-date">Sep 28, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 3 — Card 2 -->
+        <div class="li-card-wrap reveal" data-category="monetization web3">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Game Economy</span><span class="post-tag">Design</span></div>
+            <h3>Game Economies Don't Break Immediately. They Collapse Slowly.</h3>
+            <p>At first everything looks fine. Rewards feel generous. Growth looks strong. Then inflation builds quietly and value starts leaking. By the time it's visible, it's already too late.</p>
+            <div class="post-footer"><span class="post-date">Sep 15, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 3 — Card 3 -->
+        <div class="li-card-wrap reveal" data-category="web3 capital">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Treasury</span><span class="post-tag">Digital Assets</span></div>
+            <h3>Most Web3 Projects Don't Die From Product Failure</h3>
+            <p>They run out of money. Treasury is rarely treated as a strategic function. But liquidity, allocation, and discipline determine survival. In volatile markets, treasury is not support — it is control.</p>
+            <div class="post-footer"><span class="post-date">Sep 2, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 4 — Card 1 -->
+        <div class="li-card-wrap reveal" data-category="partnerships">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Partnerships</span><span class="post-tag">Strategy</span></div>
+            <h3>Partnerships Look Good on Slides. Rarely in Reality.</h3>
+            <p>Logos don't create value — incentives do. If both sides don't win clearly, nothing scales. Most partnerships fail quietly because expectations were never aligned. Real partnerships are structured, not announced.</p>
+            <div class="post-footer"><span class="post-date">Aug 20, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 4 — Card 2 -->
+        <div class="li-card-wrap reveal" data-category="ai">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">AI</span><span class="post-tag">Decision Making</span></div>
+            <h3>More Data Doesn't Mean Better Decisions</h3>
+            <p>Most teams already have too much information. Adding AI on top often makes it worse. What matters is clarity — not volume. The best systems reduce decisions, not expand them.</p>
+            <div class="post-footer"><span class="post-date">Aug 5, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 4 — Card 3 -->
+        <div class="li-card-wrap reveal" data-category="platform growth">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Operations</span><span class="post-tag">Management</span></div>
+            <h3>Execution Speed Is Underrated Until It's Too Late</h3>
+            <p>Opportunities don't wait for perfect plans. In fast markets, delay is loss. The companies that win are not always the smartest — they are the ones that move first and adjust faster.</p>
+            <div class="post-footer"><span class="post-date">Jul 22, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 5 — Card 1 -->
+        <div class="li-card-wrap reveal" data-category="web3">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Web3</span><span class="post-tag">Governance</span></div>
+            <h3>Decentralization Without Governance Is Just Chaos</h3>
+            <p>Giving power to users sounds good. But without structure, it breaks quickly. Clear rules, accountability, and decision frameworks create trust. Without them, everything becomes unstable.</p>
+            <div class="post-footer"><span class="post-date">Jul 10, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 5 — Card 2 -->
+        <div class="li-card-wrap reveal" data-category="growth platform">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Growth</span><span class="post-tag">Strategy</span></div>
+            <h3>Paid Growth Works. Until It Doesn't.</h3>
+            <p>You can always buy users. You cannot always keep them. When acquisition becomes the only engine, costs eventually catch up. Real growth comes from retention and product value.</p>
+            <div class="post-footer"><span class="post-date">Jun 25, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+        <!-- ROW 5 — Card 3 -->
+        <div class="li-card-wrap reveal" data-category="growth">
+          <a class="li-card-link-overlay" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="View on LinkedIn"></a>
+          <div class="post-card">
+            <div class="post-tags"><span class="post-tag tag-primary">Business</span><span class="post-tag">Leadership</span></div>
+            <h3>Being a Founder Is Not the Same as Running a Company</h3>
+            <p>Starting something requires vision. Running it requires discipline. The shift is uncomfortable and many avoid it. But long-term success depends on systems, not ideas.</p>
+            <div class="post-footer"><span class="post-date">Jun 10, 2024</span></div>
+          </div>
+          <a class="li-float-btn" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener"><span class="li-float-in"><svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> Read on LinkedIn →</a>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- ===== INSIGHT THEMES ===== -->
+    <section class="section glass">
+      <div class="section-head center">
+        <span class="eyebrow">Core Themes</span>
+        <h2>What I <span class="red">Write About</span></h2>
+        <p>Six domains where strategic clarity directly changes business outcomes.</p>
+      </div>
+      <div class="themes-grid" style="padding:0 42px 52px">
+
+        <div class="theme-card reveal">
+          <div class="theme-ico">◎</div>
+          <h3>Platform Economics</h3>
+          <p>How platforms convert users, transactions, and network effects into sustainable revenue.</p>
+        </div>
+
+        <div class="theme-card reveal">
+          <div class="theme-ico">$</div>
+          <h3>Monetization Strategy</h3>
+          <p>Pricing, ARPPU, take-rate design, conversion behavior, and revenue model optimization.</p>
+        </div>
+
+        <div class="theme-card reveal">
+          <div class="theme-ico">⚡</div>
+          <h3>AI &amp; Automation</h3>
+          <p>Practical AI implementation for operations, analytics, marketing workflows, and decision support.</p>
+        </div>
+
+        <div class="theme-card reveal">
+          <div class="theme-ico">◈</div>
+          <h3>Capital &amp; Fundraising</h3>
+          <p>Business plans, financial models, investor narratives, valuation logic, and fundraising readiness.</p>
+        </div>
+
+        <div class="theme-card reveal">
+          <div class="theme-ico">◇</div>
+          <h3>Game &amp; Web3 Strategy</h3>
+          <p>Token economy, digital goods, game ecosystem design, and Web3 capital structure.</p>
+        </div>
+
+        <div class="theme-card reveal">
+          <div class="theme-ico">⊕</div>
+          <h3>Strategic Partnerships</h3>
+          <p>Ecosystem expansion, cross-border partnerships, and growth through external leverage.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section glass cta-banner">
+      <span class="eyebrow" style="justify-content:center;display:flex">Engage</span>
+      <h2>Turn Insight Into <span class="red">Strategy</span></h2>
+      <p>If one of these ideas connects with a business challenge you are facing, we can discuss how to turn it into a clear decision framework and execution path.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Discuss Your Strategy -></a>
+        <a class="btn btn-secondary" href="case-studies.html">View Case Studies</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <!-- Footer Body -->
+    <div class="footer-inner">
+      <div class="fcol">
+        <div class="fcol-label">Strategic Advisor</div>
+        <h2>LET'S BUILD SOMETHING VALUABLE TOGETHER</h2>
+        <p>Available for strategic advisory, board-level consultation, capital strategy, and high-impact business transformation across growth and digital ecosystems.</p>
+        <div class="fcol-btns">
+          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Contact Me -></a>
+          <a class="btn btn-secondary" href="case-studies.html">View Case Studies</a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="fcol-label">Engagement</div>
+        <div class="citem"><span class="cico">→</span><a href="services.html">Advisory Services</a></div>
+        <div class="citem"><span class="cico">→</span><a href="case-studies.html">Case Studies</a></div>
+        <div class="citem"><span class="cico">→</span><a href="insights.html">Insights</a></div>
+        <div class="citem"><span class="cico">in</span><a href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+      </div>
+      <div class="fcol">
+        <div class="fcol-label">Contact</div>
+        <div class="citem"><span class="cico">✉</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div>
+        <div class="citem"><span class="cico">☎</span><a href="tel:+66962614499">+66 96 261 4499</a></div>
+        <div class="citem"><span class="cico">⌂</span><span>Bangkok, Thailand</span></div>
+        <div class="citem"><span class="cico">in</span><a href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div>
+      </div>
+    </div>
+    <div class="fbase">
+      <div class="brand">SASI<span>.ASIA</span></div>
+      <div>© 2025 sasi.asia. All rights reserved.</div>
+      <div class="flinks">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page -->
+
+<script>
+/* NAV toggle */
+const menuBtn=document.getElementById("menuBtn");
+const nav=document.getElementById("nav");
+if(menuBtn){menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));}
+
+/* Reveal on scroll */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("in");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.08});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+/* Category filter — show/hide cards */
+const chips = document.querySelectorAll(".filter-chip");
+const cards = document.querySelectorAll(".li-card-wrap[data-category]");
+
+chips.forEach(chip=>{
+  chip.addEventListener("click",()=>{
+    chips.forEach(c=>c.classList.remove("active"));
+    chip.classList.add("active");
+
+    const filter = chip.dataset.filter;
+    let visible = 0;
+
+    cards.forEach(card=>{
+      const cats = card.dataset.category || "";
+      if(filter === "all" || cats.includes(filter)){
+        card.style.display = "";
+        card.style.opacity = "0";
+        card.style.transform = "translateY(10px)";
+        setTimeout(()=>{
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, 20);
+        visible++;
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(8px)";
+        setTimeout(()=>{ card.style.display = "none"; }, 260);
+      }
+    });
+  });
+});
+</script>
+<script>
+  // GA4 Event Tracking for sasi.asia
+  // Measurement ID: G-S0N3M3191G
+
+  window.addEventListener("DOMContentLoaded", function () {
+    function trackEvent(eventName, params = {}) {
+      if (typeof gtag === "function") {
+        gtag("event", eventName, {
+          website: "sasi.asia",
+          page_path: window.location.pathname,
+          page_title: document.title,
+          ...params,
+        });
+      }
+    }
+
+    // 1. Track CTA clicks
+    document.querySelectorAll("a, button").forEach(function (el) {
+      el.addEventListener("click", function () {
+        const text = (el.innerText || el.getAttribute("aria-label") || "").trim();
+        const href = el.getAttribute("href") || "";
+
+        if (
+          text.toLowerCase().includes("contact") ||
+          text.toLowerCase().includes("email") ||
+          text.toLowerCase().includes("consult") ||
+          text.includes("ติดต่อ") ||
+          text.includes("ปรึกษา") ||
+          href.includes("mailto:")
+        ) {
+          trackEvent("click_contact_cta", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+
+        if (href.includes("#portfolio-page")) {
+          trackEvent("click_portfolio", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+
+        if (href.includes("#services")) {
+          trackEvent("click_services", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+
+        if (href.includes("linkedin.com")) {
+          trackEvent("click_linkedin", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+      });
+    });
+
+    // 2. Track scroll depth
+    const scrollMarks = [25, 50, 75, 90];
+    const trackedScroll = {};
+
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 100;
+
+      scrollMarks.forEach(function (mark) {
+        if (scrollPercent >= mark && !trackedScroll[mark]) {
+          trackedScroll[mark] = true;
+          trackEvent("scroll_depth", {
+            percent_scrolled: mark,
+          });
+        }
+      });
+    });
+
+    // 3. Track section views
+    const sections = document.querySelectorAll("section[id], div[id]");
+
+    const sectionObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+
+            if (!entry.target.dataset.gaTracked) {
+              entry.target.dataset.gaTracked = "true";
+
+              trackEvent("view_section", {
+                section_id: sectionId,
+              });
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach(function (section) {
+      sectionObserver.observe(section);
+    });
+
+    // 4. Track case study / portfolio card clicks
+    document.querySelectorAll("[data-case], .case-card, .portfolio-card").forEach(function (card) {
+      card.addEventListener("click", function () {
+        trackEvent("click_case_study", {
+          case_name:
+            card.getAttribute("data-case") ||
+            card.innerText.trim().slice(0, 80),
+        });
+      });
+    });
+
+    // 5. Track email clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
+      el.addEventListener("click", function () {
+        trackEvent("click_email", {
+          email_link: el.getAttribute("href"),
+        });
+      });
+    });
+
+    // 6. Track external links
+    document.querySelectorAll('a[href^="http"]').forEach(function (el) {
+      el.addEventListener("click", function () {
+        const href = el.getAttribute("href");
+
+        if (!href.includes("sasi.asia")) {
+          trackEvent("click_external_link", {
+            external_url: href,
+          });
+        }
+      });
+    });
+
+    // 7. Track time on page
+    setTimeout(function () {
+      trackEvent("engaged_30_seconds", {
+        engagement_time: "30_seconds",
+      });
+    }, 30000);
+
+    setTimeout(function () {
+      trackEvent("engaged_60_seconds", {
+        engagement_time: "60_seconds",
+      });
+    }, 60000);
+  });
+</script>
+</body>
+</html>

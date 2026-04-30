@@ -484,6 +484,15 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   50%{transform:translate(-50%,-50%) scale(1.08);opacity:1;}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S0N3M3191G');
+</script>
 </head>
 <body>
 <div class="bg-ring-wrap">
@@ -506,7 +515,7 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
       <a href="#portfolio-page" data-page-link="portfolio-page">About</a>
       <a href="case-studies.html">Case Studies</a>
       <a href="services.html">Advisory</a>
-      <a href="#insights" data-home-section="insights">Insights</a>
+      <a href="insights.html">Insights</a>
     </nav>
     <div class="nav-actions">
       <a class="btn btn-red desktop-cta" href="contact.html">Contact Me →</a>
@@ -1082,6 +1091,159 @@ document.addEventListener("mousemove",e=>{dots.push({x:e.clientX,y:e.clientY,r:3
   dots=dots.filter(d=>d.a>.02);
   requestAnimationFrame(animCvs);
 })();
+</script>
+<script>
+  // GA4 Event Tracking for sasi.asia
+  // Measurement ID: G-S0N3M3191G
+
+  window.addEventListener("DOMContentLoaded", function () {
+    function trackEvent(eventName, params = {}) {
+      if (typeof gtag === "function") {
+        gtag("event", eventName, {
+          website: "sasi.asia",
+          page_path: window.location.pathname,
+          page_title: document.title,
+          ...params,
+        });
+      }
+    }
+
+    // 1. Track CTA clicks
+    document.querySelectorAll("a, button").forEach(function (el) {
+      el.addEventListener("click", function () {
+        const text = (el.innerText || el.getAttribute("aria-label") || "").trim();
+        const href = el.getAttribute("href") || "";
+
+        if (
+          text.toLowerCase().includes("contact") ||
+          text.toLowerCase().includes("email") ||
+          text.toLowerCase().includes("consult") ||
+          text.includes("ติดต่อ") ||
+          text.includes("ปรึกษา") ||
+          href.includes("mailto:")
+        ) {
+          trackEvent("click_contact_cta", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+
+        if (href.includes("#portfolio-page")) {
+          trackEvent("click_portfolio", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+
+        if (href.includes("#services")) {
+          trackEvent("click_services", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+
+        if (href.includes("linkedin.com")) {
+          trackEvent("click_linkedin", {
+            cta_text: text,
+            cta_url: href,
+          });
+        }
+      });
+    });
+
+    // 2. Track scroll depth
+    const scrollMarks = [25, 50, 75, 90];
+    const trackedScroll = {};
+
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 100;
+
+      scrollMarks.forEach(function (mark) {
+        if (scrollPercent >= mark && !trackedScroll[mark]) {
+          trackedScroll[mark] = true;
+          trackEvent("scroll_depth", {
+            percent_scrolled: mark,
+          });
+        }
+      });
+    });
+
+    // 3. Track section views
+    const sections = document.querySelectorAll("section[id], div[id]");
+
+    const sectionObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+
+            if (!entry.target.dataset.gaTracked) {
+              entry.target.dataset.gaTracked = "true";
+
+              trackEvent("view_section", {
+                section_id: sectionId,
+              });
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach(function (section) {
+      sectionObserver.observe(section);
+    });
+
+    // 4. Track case study / portfolio card clicks
+    document.querySelectorAll("[data-case], .case-card, .portfolio-card").forEach(function (card) {
+      card.addEventListener("click", function () {
+        trackEvent("click_case_study", {
+          case_name:
+            card.getAttribute("data-case") ||
+            card.innerText.trim().slice(0, 80),
+        });
+      });
+    });
+
+    // 5. Track email clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
+      el.addEventListener("click", function () {
+        trackEvent("click_email", {
+          email_link: el.getAttribute("href"),
+        });
+      });
+    });
+
+    // 6. Track external links
+    document.querySelectorAll('a[href^="http"]').forEach(function (el) {
+      el.addEventListener("click", function () {
+        const href = el.getAttribute("href");
+
+        if (!href.includes("sasi.asia")) {
+          trackEvent("click_external_link", {
+            external_url: href,
+          });
+        }
+      });
+    });
+
+    // 7. Track time on page
+    setTimeout(function () {
+      trackEvent("engaged_30_seconds", {
+        engagement_time: "30_seconds",
+      });
+    }, 30000);
+
+    setTimeout(function () {
+      trackEvent("engaged_60_seconds", {
+        engagement_time: "60_seconds",
+      });
+    }, 60000);
+  });
 </script>
 </body>
 </html>
