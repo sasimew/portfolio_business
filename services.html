@@ -199,24 +199,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .hero-copy{display:flex;flex-direction:column;align-items:center}
 .hero-copy p{max-width:760px;margin:10px 0 26px;color:var(--muted);font-size:0.95rem;line-height:1.55}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.hero-visual{position:relative;width:100%;min-height:0;display:grid;place-items:center;margin:8px auto 10px;perspective:900px}
-.hero-visual::after{
-  content:"";
-  position:absolute;
-  width:260px;
-  height:160px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.25);
-  backdrop-filter:blur(20px) saturate(170%);
-  -webkit-backdrop-filter:blur(20px) saturate(170%);
-  top:20%;
-  right:18%;
-  border:1px solid rgba(255,255,255,0.58);
-  box-shadow:0 20px 60px rgba(0,0,0,0.12),inset 0 1px 0 rgba(255,255,255,0.55);
-  z-index:1;
-  pointer-events:none;
-  transform:rotate(-4deg);
-}
+.hero-visual{position:relative;width:100%;min-height:0;display:grid;place-items:center;margin:8px auto 10px}
 .red-pill{
   position:relative;
   width:100%;
@@ -230,7 +213,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   place-items:center;
 }
 .red-pill::before,.red-pill::after,.mini-pixel{display:none}
-.trex{position:relative;right:auto;bottom:auto;width:min(100%,850px);filter:drop-shadow(0 30px 42px rgba(200,37,58,0.18)) drop-shadow(0 22px 28px rgba(0,0,0,0.10));z-index:2;will-change:transform;transition:transform 0.22s ease-out}
+.trex{position:relative;right:auto;bottom:auto;width:min(100%,850px);filter:drop-shadow(0 30px 42px rgba(200,37,58,0.18)) drop-shadow(0 22px 28px rgba(0,0,0,0.10));z-index:2}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 0 34px;align-items:stretch;grid-auto-rows:1fr}
 .service-card{
@@ -286,14 +269,25 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .situation-card:hover::before{opacity:1}
 .situation-card b{display:block;color:#747474;font-size:1rem;margin-bottom:9px}
 .situation-card p,.why-panel p,.eco-group p,.mandate-card p{color:var(--muted);font-size:0.9rem;line-height:1.62}
-.why-engage{display:grid;grid-template-columns:0.9fr 1.1fr;gap:18px;align-items:stretch}
-.why-panel{position:relative;padding:28px;overflow:hidden}
-.why-panel::after{content:"";position:absolute;bottom:0;left:0;width:40%;height:2px;background:var(--accent);opacity:0.86;transform-origin:left;transform:scaleX(0.7);transition:transform 0.28s ease,width 0.28s ease}
-.why-panel:hover::after{width:62%;transform:scaleX(1)}
-.why-list{display:grid;gap:12px;list-style:none}
-.why-list li{position:relative;padding-left:20px;color:var(--text2);font-weight:700;line-height:1.45}
-.why-list li::before{content:"";position:absolute;left:0;top:0.58em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
-.role-note{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);color:#747474;font-weight:800;line-height:1.58}
+.why-engage{display:grid;grid-template-columns:0.88fr 1.12fr;gap:20px;align-items:stretch}
+.why-panel{position:relative;padding:34px;overflow:hidden;border-radius:28px}
+.why-panel::after{content:"";position:absolute;bottom:0;left:0;width:44%;height:2px;background:var(--accent);opacity:0.86;transform-origin:left;transform:scaleX(0.7);transition:transform 0.28s ease,width 0.28s ease}
+.why-panel:hover::after{width:66%;transform:scaleX(1)}
+.why-panel h2{font-size:clamp(2.35rem,4.2vw,4.45rem);max-width:540px}
+.why-lead{margin-top:18px;color:#545454!important;font-size:1.04rem!important;line-height:1.72!important;font-weight:700}
+.why-note{margin-top:22px;padding:18px 20px;border-radius:18px;background:rgba(200,37,58,0.07);border:1px solid rgba(200,37,58,0.12);color:#747474;font-weight:800;line-height:1.58}
+.code-panel{position:relative;border-radius:28px;overflow:hidden;background:radial-gradient(circle at 88% 12%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#111 0%,#181716 56%,#241313 100%);border:1px solid rgba(255,255,255,0.12);box-shadow:0 24px 70px rgba(0,0,0,0.18);transition:transform 0.28s ease,box-shadow 0.28s ease}
+.code-panel:hover{transform:translateY(-4px);box-shadow:0 28px 84px rgba(0,0,0,0.22)}
+.code-top{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid rgba(255,255,255,0.09);background:rgba(255,255,255,0.035)}
+.window-dots{display:flex;gap:8px}.window-dots i{width:10px;height:10px;border-radius:50%;display:block}.window-dots i:nth-child(1){background:#ff5f57}.window-dots i:nth-child(2){background:#febc2e}.window-dots i:nth-child(3){background:#28c840}
+.code-title{color:rgba(247,244,238,0.56);font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase}
+.code-body{margin:0;padding:26px 28px 28px;color:rgba(247,244,238,0.86);font-family:"SFMono-Regular","Cascadia Code","Roboto Mono",Menlo,monospace;font-size:0.82rem;line-height:1.7;white-space:pre;overflow-x:auto}
+.code-line{display:block;width:0;max-width:max-content;overflow:hidden;white-space:pre;animation:typeLine 0.55s steps(var(--steps,40)) forwards;animation-delay:var(--delay,0s)}
+.code-line.long{animation-duration:1.05s}.code-line.mid{animation-duration:0.78s}
+.code-key{color:#ff5366}.code-value{color:#eef5df}.code-string{color:#b8f7bd}.code-punc{color:rgba(247,244,238,0.55)}.code-accent{color:#ff6b7b}
+.code-line:last-child::after{content:"";display:inline-block;width:7px;height:1.1em;margin-left:2px;background:var(--accent);vertical-align:-0.2em;animation:cursorBlink 0.85s infinite}
+@keyframes typeLine{to{width:100%}}
+@keyframes cursorBlink{0%,45%{opacity:1}46%,100%{opacity:0}}
 .eco-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .eco-group{padding:22px}
 .eco-group h3{color:#747474;font-size:1.02rem;margin-bottom:10px}
@@ -393,8 +387,9 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 @media (max-width:640px){
   .page{width:min(100% - 22px,var(--max));padding-top:6px}.topbar{padding-left:16px}.desktop-cta{display:none}
   .hero{padding:42px 20px 34px;min-height:auto}.hero-visual{min-height:0}.eyebrow{font-size:0.66rem}.eyebrow::after{width:34px}h1{font-size:3.8rem}h2{font-size:clamp(2.4rem,12vw,3.4rem)}
-  .red-pill{min-height:0;border-radius:0}.hero-visual::after{width:160px;height:98px;right:2%;top:16%;border-radius:18px}.trex{right:auto;width:112%;max-width:none}.mini-pixel{display:none}
+  .red-pill{min-height:0;border-radius:0}.trex{right:auto;width:112%;max-width:none}.mini-pixel{display:none}
   .services-grid,.result-grid,.situations-grid,.eco-grid,.mandates-grid{grid-template-columns:1fr}.services-grid{padding-bottom:20px}.service-card,.service-card.advisory-card,.service-card.featured{grid-column:auto;min-height:auto;padding:22px}.service-card.featured::before{position:relative;right:auto;top:auto;width:max-content;margin-bottom:14px;order:-1}.context-box,.outcome{min-height:0}
+  .why-panel{padding:24px}.code-body{font-size:0.68rem;padding:20px 18px 22px}.code-top{padding:0 14px}
   .section-head,.process,.results{padding-left:20px;padding-right:20px}.results-shell{padding:24px 16px}.section-head{padding-top:48px}
   .info-section{padding-left:20px;padding-right:20px}.killer-bar{align-items:flex-start;flex-direction:column;padding:18px 20px}.mandate-card.featured{grid-column:auto}
   .step{grid-template-columns:1fr}.step-num{width:56px;height:56px}.cta-banner{padding:32px 20px}.cta-banner h2{font-size:1.65rem}.handshake{min-height:185px}
@@ -499,15 +494,6 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         </article>
         <article class="service-card advisory-card reveal">
           <div class="icon-badge">05</div>
-          <h3>Strategic Partnerships &amp; Expansion</h3>
-          <p>Structure partnerships and ecosystem strategies to unlock new growth channels beyond internal limits.</p>
-          <div class="why-box"><span>Why It Matters</span><p>Internal growth is limited. Partnerships unlock external leverage, market access, and strategic distribution.</p></div>
-          <div class="when-list"><span>When Useful</span><ul class="mini-list"><li>Entering new markets</li><li>Growth plateau</li><li>Need external leverage to scale</li></ul></div>
-          <div class="outcome-list"><span>Outcome</span><ul class="mini-list"><li>New revenue channels</li><li>Expanded market reach</li><li>Stronger ecosystem positioning</li></ul></div>
-          <a class="card-link" href="contact.html">Discuss Advisory <span class="arrow">→</span></a>
-        </article>
-        <article class="service-card advisory-card reveal">
-          <div class="icon-badge">06</div>
           <h3>New S-Curve &amp; Strategic Transformation</h3>
           <p>Identify new growth engines and redefine strategic direction beyond current business limits.</p>
           <div class="why-box"><span>Why It Matters</span><p>Every business eventually plateaus. Growth requires a new S-curve before the current one slows down.</p></div>
@@ -542,18 +528,32 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
       <div class="why-engage">
         <div class="why-panel glass reveal">
           <span class="eyebrow">Why Companies Engage</span>
-          <h2>Clear Strategy, Real Execution</h2>
-          <p>My advisory work is designed for founders, executives, and investors who need clarity on decisions that affect commercial outcomes, not generic frameworks.</p>
-          <p class="role-note">I operate as a strategic decision partner across growth, capital, monetization, and ecosystem expansion.</p>
+          <h2>CLEAR STRATEGY, REAL EXECUTION</h2>
+          <p class="why-lead">I help leadership teams turn complex growth, capital, and market questions into decisions that can move revenue, valuation, and operating clarity.</p>
+          <p class="why-note">Strategy should behave like a system: structured, testable, commercially grounded, and tied to real execution milestones.</p>
         </div>
-        <div class="why-panel glass reveal">
-          <ul class="why-list">
-            <li>Translate messy business problems into clear strategic options.</li>
-            <li>Connect growth strategy with revenue, margin, and valuation impact.</li>
-            <li>Build investor narratives grounded in operating evidence.</li>
-            <li>Structure partnerships and market entry paths with commercial logic.</li>
-            <li>Support execution through measurable milestones and decision discipline.</li>
-          </ul>
+        <div class="code-panel reveal" aria-label="Strategic advisory framework code panel">
+          <div class="code-top">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="code-title">advisor.system.json</span>
+          </div>
+          <pre class="code-body" aria-label="Strategy as structured system"><code><span class="code-line" style="--delay:.05s;--steps:1"><span class="code-punc">{</span></span>
+<span class="code-line mid" style="--delay:.28s;--steps:32">  <span class="code-key">"role"</span><span class="code-punc">:</span> <span class="code-string">"Strategic Advisor"</span><span class="code-punc">,</span></span>
+<span class="code-line mid" style="--delay:.78s;--steps:17">  <span class="code-key">"approach"</span><span class="code-punc">:</span> <span class="code-punc">[</span></span>
+<span class="code-line long" style="--delay:1.16s;--steps:78">    <span class="code-string">"Translate complex business problems into structured decision frameworks"</span><span class="code-punc">,</span></span>
+<span class="code-line long" style="--delay:1.86s;--steps:74">    <span class="code-string">"Connect strategy directly to revenue, margin, and valuation impact"</span><span class="code-punc">,</span></span>
+<span class="code-line long" style="--delay:2.56s;--steps:68">    <span class="code-string">"Build investor narratives grounded in real operating data"</span><span class="code-punc">,</span></span>
+<span class="code-line long" style="--delay:3.22s;--steps:70">    <span class="code-string">"Design partnerships and market entry with commercial logic"</span><span class="code-punc">,</span></span>
+<span class="code-line long" style="--delay:3.88s;--steps:74">    <span class="code-string">"Drive execution with measurable milestones and decision discipline"</span></span>
+<span class="code-line" style="--delay:4.55s;--steps:4">  <span class="code-punc">],</span></span>
+<span class="code-line mid" style="--delay:4.8s;--steps:14">  <span class="code-key">"focus"</span><span class="code-punc">:</span> <span class="code-punc">[</span></span>
+<span class="code-line mid" style="--delay:5.1s;--steps:24">    <span class="code-value">"Platform Growth"</span><span class="code-punc">,</span></span>
+<span class="code-line mid" style="--delay:5.43s;--steps:34">    <span class="code-value">"Monetization Architecture"</span><span class="code-punc">,</span></span>
+<span class="code-line mid" style="--delay:5.82s;--steps:24">    <span class="code-value">"Capital Strategy"</span><span class="code-punc">,</span></span>
+<span class="code-line mid" style="--delay:6.16s;--steps:24">    <span class="code-value">"Market Expansion"</span></span>
+<span class="code-line" style="--delay:6.5s;--steps:4">  <span class="code-punc">],</span></span>
+<span class="code-line long" style="--delay:6.72s;--steps:64">  <span class="code-key">"engagement"</span><span class="code-punc">:</span> <span class="code-string">"Selective, high-impact decisions only"</span></span>
+<span class="code-line" style="--delay:7.28s;--steps:1"><span class="code-punc">}</span></span></code></pre>
         </div>
       </div>
     </section>
@@ -711,18 +711,6 @@ document.querySelectorAll(".reveal").forEach((el,i)=>{
   el.style.setProperty("--reveal-delay",`${Math.min(i*35,260)}ms`);
   observer.observe(el);
 });
-
-const heroVisual=document.querySelector(".hero-visual");
-const trex=document.querySelector(".trex");
-if(heroVisual&&trex){
-  heroVisual.addEventListener("mousemove",e=>{
-    const rect=heroVisual.getBoundingClientRect();
-    const x=(e.clientX-rect.left)/rect.width-0.5;
-    const y=(e.clientY-rect.top)/rect.height-0.5;
-    trex.style.transform=`translate3d(${x*24}px,${y*18}px,0) rotate(${x*1.2}deg)`;
-  });
-  heroVisual.addEventListener("mouseleave",()=>{trex.style.transform="translate3d(0,0,0)";});
-}
 
 const dot=document.querySelector(".bounce-dot");
 if(dot){
