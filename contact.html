@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Sasion Nanthaphiriyakit | SASI.ASIA</title>
+<meta name="description" content="Start a strategic conversation with Sasion Nanthaphiriyakit on growth, capital strategy, and high-impact business decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f0ec;
+  --surface:rgba(255,255,255,0.72);
+  --text:#545454;--text2:#5f5f5f;--muted:#747474;--heading:#545454;
+  --line:rgba(26,25,21,0.09);--line2:rgba(255,255,255,0.78);
+  --accent:#c8253a;--accent2:#e32330;--soft-red:rgba(200,37,58,0.08);
+  --shadow:0 18px 45px rgba(74,72,66,0.06);
+  --shadow-md:0 28px 80px rgba(74,72,66,0.12);
+  --shadow-red:0 16px 38px rgba(200,37,58,0.22);
+  --radius:28px;--radius-card:22px;--max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{min-height:100vh;font-family:"Outfit",sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 55% 45% at 8% 8%,rgba(200,37,58,0.065),transparent 55%),
+             radial-gradient(ellipse 45% 38% at 92% 88%,rgba(200,37,58,0.05),transparent 50%)}
+.orb{position:fixed;border-radius:50%;filter:blur(65px);pointer-events:none;z-index:0;opacity:0.34;animation:floatOrb 12s ease-in-out infinite alternate}
+.orb-1{width:220px;height:220px;left:-70px;top:130px;background:rgba(200,37,58,0.16)}
+.orb-2{width:260px;height:260px;right:-100px;top:38%;background:rgba(200,37,58,0.11);animation-delay:-4s}
+.orb-3{width:180px;height:180px;left:20%;bottom:-80px;background:rgba(84,84,84,0.08);animation-delay:-7s}
+@keyframes floatOrb{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(18px,-24px,0) scale(1.08)}}
+.bounce-dot{position:fixed;width:50px;height:50px;border-radius:50%;background:var(--accent);opacity:0.18;top:45%;right:8%;pointer-events:none;z-index:0}
+.bg-ring-wrap{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg-ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px solid rgba(200,37,58,0.045);transform:translate(-50%,-50%)}
+.bg-ring-1{width:110vmax;height:110vmax;animation:pulseRing 7s ease-in-out infinite}
+.bg-ring-2{width:75vmax;height:75vmax;border-color:rgba(200,37,58,0.07);animation:pulseRing 7s ease-in-out infinite;animation-delay:-3.5s}
+@keyframes pulseRing{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.7}50%{transform:translate(-50%,-50%) scale(1.08);opacity:1}}
+a{color:inherit;text-decoration:none}
+.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:8px 0 64px;position:relative;z-index:1}
+.glass{background:var(--surface);backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);border:1px solid var(--line2);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,0.85)}
+
+/* ── NAV ── */
+.topbar-outer{position:sticky;top:14px;z-index:200;padding:0 0 18px}
+.topbar{border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 14px 11px 22px;background:rgba(242,240,236,0.88);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(255,255,255,0.78);box-shadow:0 4px 24px rgba(84,84,84,0.07),inset 0 1px 0 rgba(255,255,255,0.95)}
+.brand{font-family:"Bebas Neue",sans-serif;font-size:1.65rem;letter-spacing:0.04em;line-height:1;color:#747474}
+.brand span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:7px 14px;border-radius:999px;font-size:0.87rem;font-weight:600;color:var(--muted);transition:all 0.22s}
+.nav a:hover,.nav a.active{background:rgba(84,84,84,0.07);color:var(--text)}
+.nav a.active{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:11px 20px;border-radius:999px;border:1px solid transparent;font:800 0.82rem/1 "Outfit",sans-serif;letter-spacing:0.035em;text-transform:uppercase;white-space:nowrap;cursor:pointer;transition:transform 0.24s ease,box-shadow 0.24s ease,background 0.24s ease,border-color 0.24s ease,color 0.24s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
+.btn-primary:hover{background:var(--accent2);box-shadow:0 20px 46px rgba(200,37,58,0.28)}
+.btn-secondary{background:rgba(255,255,255,0.62);border-color:rgba(84,84,84,0.13);color:var(--text2)}
+.btn-secondary:hover{border-color:rgba(200,37,58,0.25);color:var(--accent)}
+.icon-btn{width:42px;height:42px;padding:0;border-radius:50%;font-size:1rem}
+.mobile-toggle{display:none}
+.section{margin-top:14px;border-radius:var(--radius);overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;margin-bottom:10px;color:var(--accent);font-size:0.7rem;font-weight:900;letter-spacing:0.18em;text-transform:uppercase}
+.eyebrow::after{content:"";width:40px;height:1px;background:var(--accent)}
+h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.95;color:var(--heading)}
+.red{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ── HERO — short, centered ── */
+.hero{
+  text-align:center;
+  padding:52px 56px 44px;
+  position:relative;
+}
+.hero::after{
+  content:"";position:absolute;right:52px;top:52px;
+  width:60px;height:60px;border-radius:50%;
+  background:var(--accent);opacity:1;pointer-events:none;z-index:2;
+}
+.hero-inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
+.hero-inner .eyebrow{justify-content:center}
+.hero-inner .eyebrow::before{content:"";width:40px;height:1px;background:var(--accent)}
+.hero-h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3rem,5.5vw,5.8rem);letter-spacing:0.025em;line-height:0.92;color:var(--heading);margin-bottom:14px}
+.hero-sub{font-size:0.96rem;color:var(--muted);line-height:1.65;font-weight:500;max-width:540px;margin:0 auto}
+
+/* ── TRUST LINE ── */
+.trust-line{
+  text-align:center;
+  padding:10px 0 4px;
+  font-size:0.76rem;
+  font-weight:700;
+  color:var(--accent);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  opacity:0.88;
+}
+
+/* ── PRIMARY FORM+SIDEBAR BLOCK ── */
+.form-block{
+  display:grid;
+  grid-template-columns:1.62fr 1fr;
+  gap:16px;
+  margin-top:4px;
+  align-items:start;
+}
+
+/* FORM CARD — dominant */
+.form-card{
+  position:relative;
+  border-radius:26px;
+  background:rgba(255,255,255,0.84);
+  border:1px solid rgba(255,255,255,0.9);
+  box-shadow:0 28px 80px rgba(74,72,66,0.11),inset 0 1px 0 rgba(255,255,255,0.95);
+  padding:48px 44px 42px;
+  overflow:hidden;
+  transition:border-color 0.3s,box-shadow 0.3s;
+}
+.form-card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:26px;
+  border:1px solid transparent;
+  transition:border-color 0.3s;
+  pointer-events:none;
+  z-index:1;
+}
+.form-card:focus-within{
+  box-shadow:0 32px 90px rgba(74,72,66,0.13),0 0 0 3px rgba(200,37,58,0.12);
+  border-color:rgba(200,37,58,0.28);
+}
+/* subtle red glow behind form */
+.form-card::after{
+  content:"";
+  position:absolute;
+  top:-60px;right:-60px;
+  width:280px;height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(200,37,58,0.09),transparent 70%);
+  pointer-events:none;
+  z-index:0;
+}
+.form-card-inner{position:relative;z-index:2}
+.form-title{font-family:"Bebas Neue",sans-serif;font-size:2.2rem;letter-spacing:0.04em;color:var(--heading);margin-bottom:6px}
+.form-subtitle{font-size:0.86rem;color:var(--muted);line-height:1.55;margin-bottom:28px}
+
+/* Priority field — visually larger */
+.form-priority{margin-bottom:18px}
+.form-priority .form-input{
+  font-size:1.02rem;
+  padding:16px 18px;
+  border-radius:16px;
+  font-weight:600;
+  border-color:rgba(84,84,84,0.16);
+  min-height:56px;
+}
+.form-priority .form-input:focus{
+  border-color:rgba(200,37,58,0.5);
+  box-shadow:0 0 0 4px rgba(200,37,58,0.09);
+}
+
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.form-label{font-size:0.68rem;font-weight:900;letter-spacing:0.11em;text-transform:uppercase;color:var(--text2)}
+.form-input,.form-textarea{
+  width:100%;padding:12px 16px;border-radius:14px;
+  border:1px solid rgba(84,84,84,0.13);
+  background:rgba(255,255,255,0.92);
+  font:500 0.9rem/1.4 "Outfit",sans-serif;color:var(--text);
+  outline:none;transition:border-color 0.22s,box-shadow 0.22s;
+}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(116,116,116,0.42)}
+.form-input:focus,.form-textarea:focus{border-color:rgba(200,37,58,0.45);box-shadow:0 0 0 3px rgba(200,37,58,0.08)}
+.form-textarea{resize:vertical;min-height:110px;line-height:1.6}
+
+/* Big CTA button */
+.form-cta{
+  width:100%;min-height:54px;
+  border-radius:999px;
+  background:var(--accent);color:#fff;border:none;
+  font:900 0.92rem/1 "Outfit",sans-serif;letter-spacing:0.06em;text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 18px 42px rgba(200,37,58,0.28);
+  transition:background 0.22s,box-shadow 0.22s,transform 0.22s;
+  margin-top:8px;
+}
+.form-cta:hover{background:var(--accent2);box-shadow:0 22px 52px rgba(200,37,58,0.36);transform:translateY(-2px)}
+.form-micro{font-size:0.74rem;color:var(--muted);text-align:center;margin-top:11px;line-height:1.4;letter-spacing:0.01em}
+.form-success{display:none;align-items:center;gap:11px;padding:13px 16px;border-radius:14px;background:rgba(200,37,58,0.06);border:1px solid rgba(200,37,58,0.18);margin-top:12px}
+.form-success.show{display:flex}
+.form-success p{font-size:0.83rem;color:var(--accent);font-weight:700;line-height:1.4}
+
+/* SIDEBAR */
+.form-sidebar{display:flex;flex-direction:column;gap:14px}
+
+.sidebar-card{
+  border-radius:var(--radius-card);
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(84,84,84,0.07);
+  box-shadow:var(--shadow);
+  padding:26px 22px;
+}
+.sidebar-heading{font-size:0.9rem;font-weight:900;color:var(--heading);margin-bottom:16px;letter-spacing:0.01em}
+.engage-list{display:flex;flex-direction:column;gap:11px}
+.engage-item{display:flex;align-items:flex-start;gap:11px}
+.engage-check{width:19px;height:19px;border-radius:6px;background:var(--soft-red);border:1px solid rgba(200,37,58,0.2);display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+.engage-check svg{width:10px;height:10px;stroke:var(--accent);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.engage-t{font-size:0.86rem;font-weight:800;color:var(--heading);margin-bottom:1px;line-height:1.2}
+.engage-d{font-size:0.76rem;color:var(--muted);line-height:1.42}
+
+/* Track record */
+.track-card{
+  border-radius:var(--radius-card);
+  background:rgba(247,245,241,0.85);
+  border:1px solid rgba(84,84,84,0.07);
+  box-shadow:var(--shadow);
+  padding:22px 20px;
+}
+.track-title{font-size:0.86rem;font-weight:900;color:var(--heading);margin-bottom:14px}
+.track-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.track-m strong{display:block;font-family:"Bebas Neue",sans-serif;font-size:1.8rem;color:var(--accent);letter-spacing:0.03em;line-height:1}
+.track-m span{display:block;font-size:0.64rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px}
+.track-divider{height:1px;background:var(--line);margin:12px 0}
+.track-bio{font-size:0.77rem;color:var(--muted);line-height:1.6}
+
+/* ── CHANNELS — de-emphasised ── */
+.channels-label{
+  text-align:center;
+  padding:28px 0 12px;
+  font-size:0.68rem;
+  font-weight:900;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.channels-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:6px;
+}
+.ch-card{
+  border-radius:18px;
+  background:rgba(255,255,255,0.62);
+  border:1px solid rgba(84,84,84,0.07);
+  box-shadow:0 8px 24px rgba(74,72,66,0.04);
+  padding:20px 18px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  transition:transform 0.22s,border-color 0.22s;
+}
+.ch-card:hover{transform:translateY(-3px);border-color:rgba(200,37,58,0.18)}
+.ch-ico{width:38px;height:38px;border-radius:12px;background:var(--soft-red);border:1px solid rgba(200,37,58,0.14);display:grid;place-items:center;color:var(--accent);margin-bottom:11px;transition:all 0.22s}
+.ch-card:hover .ch-ico{background:var(--accent);color:#fff}
+.ch-ico svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ch-title{font-size:0.84rem;font-weight:800;color:var(--heading);margin-bottom:7px}
+.ch-desc{font-size:0.76rem;color:var(--muted);line-height:1.55;margin-bottom:12px;flex:1}
+.ch-link{font-size:0.76rem;font-weight:800;color:var(--accent)}
+.ch-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 18px;border-radius:999px;background:var(--accent);color:#fff;font:900 0.72rem/1 "Outfit",sans-serif;letter-spacing:0.05em;text-transform:uppercase;box-shadow:var(--shadow-red);transition:background 0.2s,transform 0.2s}
+.ch-btn:hover{background:var(--accent2);transform:translateY(-1px)}
+
+/* ── FOOTER ── */
+.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16)}
+.footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px}
+.footer-col{min-width:0}
+.footer-kicker{display:inline-flex;align-items:center;gap:12px;color:#ef4d62;font-size:0.68rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:13px}
+.footer-kicker::after{content:"";width:34px;height:1px;background:#ef4d62}
+.footer h2{font-family:"Bebas Neue",sans-serif;color:#f7f4ee;max-width:420px;margin-bottom:14px;font-size:clamp(2rem,2.7vw,2.85rem);line-height:0.95;letter-spacing:0.035em;text-transform:uppercase}
+.footer h3{display:inline-flex;align-items:center;gap:14px;color:#f7f4ee;font-size:1.06rem;line-height:1.2;margin-bottom:18px;letter-spacing:0.04em;text-transform:uppercase}
+.footer h3::after{content:"";width:34px;height:1px;background:#ef4d62}
+.footer p{color:rgba(247,244,238,0.62);line-height:1.64;font-size:0.9rem}
+.fcopy-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:370px;margin-top:24px}
+.footer-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 16px;border-radius:999px;border:1px solid transparent;font:800 0.8rem/1 "Outfit",sans-serif;letter-spacing:0.035em;text-transform:uppercase;white-space:nowrap;transition:transform 0.22s,border-color 0.22s,background 0.22s,color 0.22s}
+.footer-btn:hover{transform:translateY(-2px)}
+.footer-btn-primary{background:#c8253a;color:#fff;box-shadow:0 16px 38px rgba(200,37,58,0.22)}
+.footer-btn-secondary{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.26);color:#f7f4ee}
+.footer-btn-secondary:hover{border-color:rgba(239,77,98,0.55);color:#fff}
+.footer-list{display:grid;gap:10px;list-style:none;margin-top:10px;padding-left:0}
+.footer-list li{color:rgba(247,244,238,0.72);line-height:1.42;font-size:0.88rem;padding-left:17px;position:relative}
+.footer-list li::before{content:"";position:absolute;left:0;top:0.58em;width:6px;height:6px;border-radius:50%;background:#ef4d62}
+.selective-line{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.18);color:#f7f4ee!important;font-weight:800;font-size:0.92rem;line-height:1.55}
+.contact-list{display:grid}
+.contact-item{display:grid;grid-template-columns:36px 1fr;gap:13px;align-items:center;padding:0 0 12px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.10)}
+.contact-item:last-child{margin-bottom:0}
+.contact-ico{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#ef4d62;border:1px solid rgba(239,77,98,0.75);background:rgba(239,77,98,0.045)}
+.contact-ico svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.contact-item div span{display:block;color:#ef4d62;font-size:0.66rem;font-weight:900;letter-spacing:0.13em;text-transform:uppercase;margin-bottom:5px}
+.contact-item a,.contact-item p{color:rgba(247,244,238,0.84);font-weight:700;line-height:1.35;font-size:0.9rem;margin:0}
+.contact-item a:hover{color:#fff}
+.linkedin-link{color:#ef4d62!important}
+.fbase{border-top:1px solid rgba(255,255,255,0.10);padding:20px 58px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;color:rgba(247,244,238,0.52);font-size:0.86rem}
+.footer .brand{color:#fff}
+.footer .brand span{color:#ef4d62}
+.flinks{display:flex;gap:22px;align-items:center;justify-content:flex-end}
+.flinks a:hover{color:#fff}
+.linkedin-mark{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,0.45);color:#fff!important;font-size:0.78rem;font-weight:900}
+
+/* ── RESPONSIVE ── */
+@media(max-width:980px){
+  .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
+  .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
+  .hero{padding:40px 24px 32px}.hero::after{display:none}
+  .form-block{grid-template-columns:1fr}
+  .channels-row{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:30px}.fcopy-btns{grid-template-columns:1fr;max-width:none}
+  .fbase{grid-template-columns:1fr}.flinks{justify-content:flex-start}
+}
+@media(max-width:640px){
+  .page{width:min(100% - 22px,var(--max));padding-top:6px}
+  .topbar{padding-left:16px}.desktop-cta{display:none}
+  .hero{padding:32px 14px 26px}
+  .hero-h1{font-size:2.9rem}
+  .form-card{padding:28px 20px 26px}
+  .form-row-2{grid-template-columns:1fr}
+  .channels-row{grid-template-columns:1fr}
+  .footer{border-radius:24px}.footer-inner{padding:32px;gap:28px}.fbase{padding:20px 32px}
+}
+</style>
+</head>
+<body>
+<div class="bg-ring-wrap"><div class="bg-ring bg-ring-1"></div><div class="bg-ring bg-ring-2"></div></div>
+<div class="bounce-dot"></div>
+<div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+
+<div class="page">
+
+  <!-- NAV -->
+  <div class="topbar-outer">
+    <header class="topbar">
+      <a class="brand" href="home.html">SASI<span>.ASIA</span></a>
+      <nav class="nav" id="nav">
+        <a href="home.html">Home</a>
+        <a href="home.html#portfolio-page">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="services.html">Advisory</a>
+        <a href="insights.html">Insights</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary desktop-cta" href="#contactForm">Discuss Strategy -></a>
+        <button class="btn btn-secondary icon-btn mobile-toggle" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+
+    <!-- 1. HERO — short, centered -->
+    <section class="section glass hero">
+      <div class="hero-inner reveal in">
+        <span class="eyebrow">Contact</span>
+        <h1 class="hero-h1">Start a <span class="red">Strategic</span> Conversation</h1>
+        <p class="hero-sub">If you're working on a decision that impacts growth, revenue, or capital — this is where we start.</p>
+      </div>
+    </section>
+
+    <!-- Trust line -->
+    <p class="trust-line reveal in">Selective engagements. Focused on high-impact decisions. &nbsp;·&nbsp; Typically working with founders, executives, and investors.</p>
+
+    <!-- 2. FORM (primary) + SIDEBAR -->
+    <div class="form-block">
+
+      <!-- FORM — dominant 62% -->
+      <div class="form-card reveal in">
+        <div class="form-card-inner">
+          <div class="form-title">Tell Me What You're Working On</div>
+          <p class="form-subtitle">A few details is enough — I'll respond personally.</p>
+
+          <form id="contactForm" novalidate>
+
+            <!-- Priority field — visually larger -->
+            <div class="form-group form-priority">
+              <label class="form-label" for="fpriority">What are you working on?</label>
+              <input class="form-input" type="text" id="fpriority" name="priority"
+                placeholder="e.g. scaling platform, fundraising, entering SEA, fixing monetization"
+                autocomplete="off">
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="fname">Your Name</label>
+                <input class="form-input" type="text" id="fname" name="name" placeholder="Sasion Nanthaphiriyakit" autocomplete="name">
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="femail">Email Address</label>
+                <input class="form-input" type="email" id="femail" name="email" placeholder="you@company.com" autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fbrief">Project Brief</label>
+              <textarea class="form-textarea" id="fbrief" name="brief"
+                placeholder="Describe the decision you're facing or the outcome you're trying to reach in 2–3 sentences."></textarea>
+            </div>
+
+            <button class="form-cta" type="submit">Start the Conversation →</button>
+            <p class="form-micro">Direct response. No automated replies.</p>
+
+            <div class="form-success" id="formSuccess">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent);flex-shrink:0"><path d="M20 6L9 17l-5-5"/></svg>
+              <p>Your inquiry has been sent. I'll respond personally within 24–48 hours.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- SIDEBAR — 38% -->
+      <div class="form-sidebar">
+
+        <!-- Engagement Types -->
+        <div class="sidebar-card reveal">
+          <div class="sidebar-heading">Engagement Types</div>
+          <div class="engage-list">
+            <div class="engage-item">
+              <div class="engage-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+              <div><div class="engage-t">Strategy Advisory</div><div class="engage-d">Board-level guidance on growth, positioning, and market entry</div></div>
+            </div>
+            <div class="engage-item">
+              <div class="engage-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+              <div><div class="engage-t">Business Development</div><div class="engage-d">Partnership structuring, deal sourcing, and revenue expansion</div></div>
+            </div>
+            <div class="engage-item">
+              <div class="engage-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+              <div><div class="engage-t">Growth Architecture</div><div class="engage-d">Unit economics, monetization architecture, and scaling frameworks</div></div>
+            </div>
+            <div class="engage-item">
+              <div class="engage-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+              <div><div class="engage-t">Capital Strategy</div><div class="engage-d">Investor narratives, financial models, and fundraising readiness</div></div>
+            </div>
+            <div class="engage-item">
+              <div class="engage-check"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+              <div><div class="engage-t">Custom Engagement</div><div class="engage-d">Tailored decisions for complex, high-stakes situations</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track Record -->
+        <div class="track-card reveal">
+          <div class="track-title">Proven Track Record</div>
+          <div class="track-grid">
+            <div class="track-m"><strong>250M+</strong><span>THB Run-Rate Achieved</span></div>
+            <div class="track-m"><strong>$8M</strong><span>Capital Raised</span></div>
+            <div class="track-m"><strong>+43%</strong><span>ARPPU Increase</span></div>
+            <div class="track-m"><strong>299K</strong><span>Platform Scale</span></div>
+          </div>
+          <div class="track-divider"></div>
+          <p class="track-bio">Sasion Nanthaphiriyakit — Strategy &amp; Business Development leader across digital platforms, gaming, fintech, and Web3. MBA from NIDA, PSM I certified.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. ALTERNATIVE CHANNELS — de-emphasised -->
+    <p class="channels-label reveal">Alternative ways to reach me</p>
+    <div class="channels-row">
+
+      <div class="ch-card reveal">
+        <div class="ch-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        </div>
+        <div class="ch-title">Email Directly</div>
+        <p class="ch-desc">Best for detailed inquiries, project briefs, or when you prefer written communication.</p>
+        <a class="ch-link" href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a>
+      </div>
+
+      <div class="ch-card reveal">
+        <div class="ch-ico">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div class="ch-title">LinkedIn</div>
+        <p class="ch-desc">For quick introductions, following strategic insights, or professional connection.</p>
+        <a class="ch-link" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a>
+      </div>
+
+      <div class="ch-card reveal">
+        <div class="ch-ico">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <div class="ch-title">Schedule a Call</div>
+        <p class="ch-desc">Ready for a direct conversation? 30-minute discovery call for specific challenges.</p>
+        <a class="ch-btn" href="mailto:sasi.bu.bd@gmail.com?subject=Discovery%20Call%20Request">Book a Call</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <span class="footer-kicker">Strategic Advisor</span>
+        <h2>Let's Build Something Valuable Together</h2>
+        <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization architecture, and capital strategy.</p>
+        <div class="fcopy-btns">
+          <a class="footer-btn footer-btn-primary" href="#contactForm">Contact Me</a>
+          <a class="footer-btn footer-btn-secondary" href="case-studies.html">Case Studies</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Engagement</h3>
+        <ul class="footer-list">
+          <li>Strategic advisory</li>
+          <li>Capital strategy</li>
+          <li>Platform growth</li>
+          <li>Partnerships &amp; expansion</li>
+          <li>Token &amp; Web3 strategy</li>
+        </ul>
+        <p class="selective-line">Selective engagements focused on high-impact decisions.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="contact-list">
+          <div class="contact-item"><span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><span>Email</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div></div>
+          <div class="contact-item"><span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><span>Phone</span><a href="tel:+66962614499">+66 96 261 4499</a></div></div>
+          <div class="contact-item"><span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><span>Location</span><p>Bangkok, Thailand</p></div></div>
+          <div class="contact-item"><span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></span><div><span>LinkedIn</span><a class="linkedin-link" href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="fbase">
+      <div class="brand">SASI<span>.ASIA</span></div>
+      <div>© 2025 sasi.asia. All rights reserved.</div>
+      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a class="linkedin-mark" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+const menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav");
+if(menuBtn){menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));}
+
+const ob=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");ob.unobserve(x.target);}});
+},{threshold:0.08});
+document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
+
+/* Form submit → mailto with pre-filled data */
+const form=document.getElementById("contactForm"),succ=document.getElementById("formSuccess");
+if(form){
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const pri=form.querySelector("#fpriority").value.trim();
+    const n=form.querySelector("#fname").value.trim();
+    const em=form.querySelector("#femail").value.trim();
+    const br=form.querySelector("#fbrief").value.trim();
+    if(!n||!em)return;
+    const subject=encodeURIComponent("Strategy Inquiry — "+(n||"unnamed"));
+    const body=encodeURIComponent(
+      "Working on: "+(pri||"—")+"\n"+
+      "Name: "+n+"\n\n"+
+      (br||"")
+    );
+    window.location.href="mailto:sasi.bu.bd@gmail.com?subject="+subject+"&body="+body;
+    succ.classList.add("show");
+    const btn=form.querySelector(".form-cta");
+    btn.textContent="Sent ✓";btn.style.background="#1a8a40";
+  });
+}
+
+/* Auto-focus priority field on desktop */
+if(window.innerWidth>768){
+  const pf=document.getElementById("fpriority");
+  if(pf)setTimeout(()=>pf.focus(),400);
+}
+</script>
+</body>
+</html>
