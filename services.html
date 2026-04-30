@@ -199,7 +199,21 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .hero-copy{display:flex;flex-direction:column;align-items:center}
 .hero-copy p{max-width:760px;margin:10px 0 26px;color:var(--muted);font-size:0.95rem;line-height:1.55}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.hero-title{max-width:760px}
 .hero-visual{position:relative;width:100%;min-height:0;display:grid;place-items:center;margin:8px auto 10px}
+.transformation-flow{width:100%;display:grid;grid-template-columns:minmax(210px,0.82fr) minmax(420px,1.55fr) minmax(220px,0.88fr);align-items:center;gap:18px;position:relative}
+.transform-card{position:relative;text-align:left;border-radius:20px;padding:22px 20px;background:rgba(255,255,255,0.64);border:1px solid rgba(255,255,255,0.78);box-shadow:0 18px 48px rgba(74,72,66,0.07);backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%);transition:transform 0.28s ease,box-shadow 0.28s ease,border-color 0.28s ease,opacity 0.28s ease}
+.transform-card.fix{opacity:0.85;background:rgba(247,245,241,0.56)}
+.transform-card.get{background:rgba(255,255,255,0.82);border-color:rgba(229,57,53,0.22);box-shadow:0 24px 68px rgba(229,57,53,0.12),0 20px 48px rgba(74,72,66,0.08)}
+.transform-card:hover{transform:translateY(-6px);border-color:rgba(229,57,53,0.32)}
+.transform-card.get:hover{box-shadow:0 30px 76px rgba(229,57,53,0.18),0 22px 52px rgba(74,72,66,0.1)}
+.transform-card span{display:block;color:#E53935;font-size:0.68rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:14px}
+.transform-card ul{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.transform-card li{position:relative;padding-left:18px;color:#747474;font-size:0.82rem;font-weight:750;line-height:1.42}
+.transform-card li::before{content:"";position:absolute;left:0;top:0.58em;width:6px;height:6px;border-radius:50%;background:#E53935;opacity:0.78;transition:transform 0.2s ease,opacity 0.2s ease}
+.transform-card li::after{content:"";position:absolute;left:18px;right:100%;bottom:-2px;height:1px;background:#E53935;transition:right 0.22s ease;opacity:0.75}
+.transform-card li:hover::before{transform:scale(1.35);opacity:1}.transform-card li:hover::after{right:0}
+.flow-arrow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#E53935;color:#fff;font-weight:900;box-shadow:0 16px 34px rgba(229,57,53,0.22);pointer-events:none}
 .red-pill{
   position:relative;
   width:100%;
@@ -211,6 +225,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   isolation:isolate;
   display:grid;
   place-items:center;
+  z-index:2;
 }
 .red-pill::before,.red-pill::after,.mini-pixel{display:none}
 .trex{position:relative;right:auto;bottom:auto;width:min(100%,850px);filter:drop-shadow(0 30px 42px rgba(200,37,58,0.18)) drop-shadow(0 22px 28px rgba(0,0,0,0.10));z-index:2}
@@ -380,6 +395,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
   .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
   .hero{padding:54px 28px}.hero-visual{min-height:0}.services-grid,.result-grid,.situations-grid,.eco-grid,.mandates-grid{grid-template-columns:repeat(2,1fr)}
+  .transformation-flow{grid-template-columns:1fr;max-width:760px;margin:0 auto}.flow-arrow{position:relative;left:auto;top:auto;transform:none;margin:-6px auto;rotate:90deg}.transform-card{max-width:none}
   .service-card.featured{grid-column:span 2}.why-engage,.mandate-card.featured{grid-template-columns:1fr}.mandate-card.featured{grid-column:auto}.advisory-process .process-grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr;gap:24px}.connector{display:none}.cta-banner,.footer-inner{grid-template-columns:1fr}.fcopy-btns{grid-template-columns:1fr;max-width:none}.fbase{grid-template-columns:1fr}.flinks{justify-content:flex-start}
   .clist{border-left:0;border-top:1px solid rgba(255,255,255,0.06)}
@@ -387,6 +403,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 @media (max-width:640px){
   .page{width:min(100% - 22px,var(--max));padding-top:6px}.topbar{padding-left:16px}.desktop-cta{display:none}
   .hero{padding:42px 20px 34px;min-height:auto}.hero-visual{min-height:0}.eyebrow{font-size:0.66rem}.eyebrow::after{width:34px}h1{font-size:3.8rem}h2{font-size:clamp(2.4rem,12vw,3.4rem)}
+  .hero-title{font-size:clamp(2.55rem,12vw,3.8rem)}.transform-card{padding:20px 18px}.transform-card li{font-size:0.8rem}
   .red-pill{min-height:0;border-radius:0}.trex{right:auto;width:112%;max-width:none}.mini-pixel{display:none}
   .services-grid,.result-grid,.situations-grid,.eco-grid,.mandates-grid{grid-template-columns:1fr}.services-grid{padding-bottom:20px}.service-card,.service-card.advisory-card,.service-card.featured{grid-column:auto;min-height:auto;padding:22px}.service-card.featured::before{position:relative;right:auto;top:auto;width:max-content;margin-bottom:14px;order:-1}.context-box,.outcome{min-height:0}
   .why-panel{padding:24px}.code-body{font-size:0.68rem;padding:20px 18px 22px}.code-top{padding:0 14px}
@@ -429,11 +446,36 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
     <section class="section glass hero">
       <div class="hero-copy reveal in">
         <span class="eyebrow">Strategic Advisory</span>
-        <h1>Advising on Growth, Capital, and <span class="red">Strategic Transformation</span></h1>
+        <h2 class="hero-title">Advising on Growth, Capital, and <span class="red">Strategic Transformation</span></h2>
         <div class="hero-visual" aria-label="Digital strategy transformation visual">
-          <div class="red-pill">
-            <span class="mini-pixel" aria-hidden="true"></span>
-            <img class="trex" src="assets/services-trex2.png" alt="Transformation and digital strategy concept">
+          <div class="transformation-flow">
+            <article class="transform-card fix reveal">
+              <span>What I Fix</span>
+              <ul>
+                <li>Fragmented strategy with no clear revenue impact</li>
+                <li>Growth without monetization discipline</li>
+                <li>Fundraising story not grounded in real numbers</li>
+                <li>Partnerships driven by opportunity — not strategy</li>
+                <li>Execution without measurable milestones</li>
+                <li>Teams moving fast — but not in the same direction</li>
+              </ul>
+            </article>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="red-pill">
+              <span class="mini-pixel" aria-hidden="true"></span>
+              <img class="trex" src="assets/services-trex2.png" alt="Transformation and digital strategy concept">
+            </div>
+            <article class="transform-card get reveal">
+              <span>What You Get</span>
+              <ul>
+                <li>Clear strategic direction tied to revenue &amp; valuation</li>
+                <li>Monetization architecture that improves margins</li>
+                <li>Investor narrative backed by operating metrics</li>
+                <li>Partnership strategy with commercial logic</li>
+                <li>Execution roadmap with measurable milestones</li>
+                <li>Aligned teams operating with decision clarity</li>
+              </ul>
+            </article>
           </div>
         </div>
         <p>I work with founders, executives, and investors on high-impact decisions across business model design, monetization, capital strategy, and market expansion. My focus is turning complex situations into clear strategic direction with measurable impact on revenue, valuation, and long-term growth.</p>
