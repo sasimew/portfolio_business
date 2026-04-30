@@ -545,10 +545,10 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
       </div>
     </div>
     <div class="stats">
-      <div class="stat"><div class="stat-ico">✦</div><div><strong class="countup" data-target="10" data-suffix="+">0+</strong><span>Years Experience</span></div></div>
-      <div class="stat"><div class="stat-ico">▣</div><div><strong class="countup" data-target="30" data-suffix="+">0+</strong><span>Strategic Initiatives</span></div></div>
-      <div class="stat"><div class="stat-ico">◎</div><div><strong class="countup" data-target="50" data-suffix="+">0+</strong><span>Cross-border Partnerships</span></div></div>
-      <div class="stat"><div class="stat-ico">↗</div><div><strong class="countup" data-target="66" data-suffix="M+ THB">0M+ THB</strong><span>Revenue Generated</span></div></div>
+      <div class="stat"><div class="stat-ico">✦</div><div><strong class="countup" data-prefix="THB " data-target="250" data-suffix="M+">THB 0M+</strong><span>GMV Run-Rate Achieved</span></div></div>
+      <div class="stat"><div class="stat-ico">▣</div><div><strong class="countup" data-prefix="$" data-target="8" data-suffix="M">$0M</strong><span>Raised in 24 Hours</span></div></div>
+      <div class="stat"><div class="stat-ico">◎</div><div><strong class="countup" data-prefix="+" data-target="43" data-suffix="%">+0%</strong><span>ARPPU Increase</span></div></div>
+      <div class="stat"><div class="stat-ico">↗</div><div><strong class="countup" data-target="10" data-suffix="+">0+</strong><span>Years Experience</span></div></div>
     </div>
   </section>
 
@@ -823,10 +823,10 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
   <section class="card mb14 dark-sec">
     <div class="section-head" style="padding-bottom:18px;"><span class="sub sub-rule">Key Achievements</span><h2>IMPACT THAT MATTERS</h2></div>
     <div class="ach-grid">
-      <div class="ach-card fade-in"><strong>66M+ THB</strong><p>Revenue within 3 months of platform launch.</p></div>
-      <div class="ach-card fade-in" style="transition-delay:0.08s;"><strong>38%</strong><p>Monthly retention rate — sustained in early lifecycle.</p></div>
-      <div class="ach-card fade-in" style="transition-delay:0.16s;"><strong>299,423</strong><p>Peak concurrent users in the first launch month.</p></div>
-      <div class="ach-card fade-in" style="transition-delay:0.24s;"><strong>26% MoM</strong><p>Month-over-month new user growth post-launch.</p></div>
+      <div class="ach-card fade-in"><strong>THB 250M+</strong><p>GMV run-rate achieved through platform restructuring.</p></div>
+      <div class="ach-card fade-in" style="transition-delay:0.08s;"><strong>$8M</strong><p>Raised in 24 hours through token economy strategy.</p></div>
+      <div class="ach-card fade-in" style="transition-delay:0.16s;"><strong>+43%</strong><p>ARPPU increase through monetization architecture.</p></div>
+      <div class="ach-card fade-in" style="transition-delay:0.24s;"><strong>10+</strong><p>Years experience across growth, platforms, and capital decisions.</p></div>
     </div>
   </section>
 
@@ -857,10 +857,10 @@ h3{font-size:1.07rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;marg
           <div class="about-proof">
             <h3>Selected Outcomes</h3>
             <ul>
-              <li>THB 66M revenue generated within 3 months</li>
+              <li>THB 250M+ GMV run-rate achieved</li>
               <li>$8M raised within 24 hours (Web3 / GameFi)</li>
-              <li>299K peak concurrent users (PCU)</li>
-              <li>Strong monetization metrics across ARPPU, retention, and pay rate</li>
+              <li>+43% ARPPU increase through monetization architecture</li>
+              <li>10+ years across platform growth, partnerships, and capital decisions</li>
             </ul>
           </div>
         </div>
@@ -1047,8 +1047,8 @@ document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
 
 // Counter
 function countUp(el){
-  const t=parseInt(el.dataset.target),s=el.dataset.suffix||"",d=1800,st=performance.now();
-  function step(now){const p=Math.min((now-st)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t)+s;if(p<1)requestAnimationFrame(step);else el.textContent=t+s;}
+  const t=parseInt(el.dataset.target),s=el.dataset.suffix||"",pfx=el.dataset.prefix||"",d=1800,st=performance.now();
+  function step(now){const p=Math.min((now-st)/d,1),e=1-Math.pow(1-p,3);el.textContent=pfx+Math.floor(e*t)+s;if(p<1)requestAnimationFrame(step);else el.textContent=pfx+t+s;}
   requestAnimationFrame(step);
 }
 new IntersectionObserver(e=>{
