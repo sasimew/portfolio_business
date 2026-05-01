@@ -130,6 +130,7 @@ img{display:block;max-width:100%}
 .btn-secondary{background:rgba(255,255,255,0.62);border-color:rgba(26,25,21,0.13);color:var(--text2)}
 .btn-secondary:hover{border-color:rgba(200,37,58,0.25);color:var(--accent);box-shadow:var(--shadow)}
 .icon-btn{width:42px;height:42px;padding:0;border-radius:50%;font-size:1rem}
+.menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--text);font-size:1rem;cursor:pointer;place-items:center;box-shadow:var(--shadow-sm)}
 .mobile-toggle{display:none}
 
 /* CORE */
@@ -668,8 +669,8 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
    RESPONSIVE
    ============================================================ */
 @media(max-width:980px){
-  .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
-  .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
+  .nav{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);flex-direction:column;align-items:flex-start;padding:14px;border-radius:18px;background:rgba(242,240,236,0.97);backdrop-filter:blur(20px);border:1px solid var(--line);gap:8px;box-shadow:var(--shadow-md)}
+  .nav.open{display:flex}.nav a{text-align:center}.menu-btn{display:grid}.mobile-toggle{display:grid}
   .hero{grid-template-columns:1fr;min-height:auto;padding:48px 28px}
   .hero-visual{min-height:280px;order:-1}
   .vis-main{max-width:340px;margin:0 auto}
@@ -701,6 +702,74 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
   .fbase{padding:14px 22px;flex-direction:column;align-items:flex-start}
   .footer-metric{min-width:100%}
 }
+
+
+/* Shared home topbar/footer normalization */
+.topbar-outer{position:sticky;top:14px;z-index:200;padding:0 0 22px;}
+.topbar{border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 14px 11px 22px;background:rgba(242,240,236,0.88);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(255,255,255,0.78);box-shadow:0 4px 24px rgba(84,84,84,0.07),inset 0 1px 0 rgba(255,255,255,0.95);}
+.brand{font-family:"Bebas Neue",sans-serif;font-size:1.65rem;letter-spacing:0.04em;line-height:1;color:#747474;}
+.brand span{color:var(--accent);}
+.nav{display:flex;align-items:center;gap:4px;}
+.nav a{padding:7px 14px;border-radius:999px;font-size:0.87rem;font-weight:600;color:var(--muted);transition:all 0.2s;letter-spacing:0.01em;}
+.nav a:hover,.nav a.active{color:var(--text);background:rgba(26,25,21,0.07);}
+.nav a.active{color:var(--accent);background:rgba(26,25,21,0.07);}
+.nav-actions{display:flex;align-items:center;gap:8px;}
+.btn.desktop-cta{min-width:158px;padding-left:26px;padding-right:28px;line-height:1.1;overflow:visible;}
+.menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--text);font-size:1rem;cursor:pointer;place-items:center;box-shadow:var(--shadow-sm);}
+.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16);}
+.footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px;}
+.footer-col{min-width:0;}
+.footer-positioning{padding-right:4px;}
+.footer-kicker{display:inline-flex;align-items:center;gap:12px;color:#ef4d62;font-size:0.68rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:13px;}
+.footer-kicker::after{content:"";width:34px;height:1px;background:#ef4d62;}
+.footer h2{font-family:"Bebas Neue",sans-serif;color:#f7f4ee;max-width:420px;margin-bottom:14px;font-size:clamp(2rem,2.7vw,2.85rem);line-height:0.95;letter-spacing:0.035em;text-transform:uppercase;}
+.footer h3{display:inline-flex;align-items:center;gap:14px;color:#f7f4ee;font-size:1.06rem;line-height:1.2;margin-bottom:18px;letter-spacing:0.04em;text-transform:uppercase;}
+.footer h3::after{content:"";width:34px;height:1px;background:#ef4d62;}
+.footer p{color:rgba(247,244,238,0.62);line-height:1.64;font-size:0.9rem;}
+.fcopy-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px;max-width:390px;}
+.footer-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 16px;border-radius:999px;border:1px solid transparent;font:800 0.8rem/1 "Outfit",sans-serif;letter-spacing:0.035em;text-transform:uppercase;white-space:nowrap;transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease,background 0.22s ease,color 0.22s ease;}
+.footer-btn:hover{transform:translateY(-2px);}
+.footer-btn-primary{background:#c8253a;color:#fff;box-shadow:0 16px 38px rgba(200,37,58,0.22);}
+.footer-btn-secondary{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.26);color:#f7f4ee;}
+.footer-btn-secondary:hover{border-color:rgba(239,77,98,0.55);color:#fff;}
+.footer-list{display:grid;gap:10px;list-style:none;margin-top:10px;padding-left:0;}
+.footer-list li{color:rgba(247,244,238,0.72);line-height:1.42;font-size:0.88rem;padding-left:17px;position:relative;}
+.footer-list li::before{content:"";position:absolute;left:0;top:0.58em;width:6px;height:6px;border-radius:50%;background:#ef4d62;}
+.selective-line{margin-top:26px;font-weight:800;color:rgba(247,244,238,0.82)!important;}
+.contact-list{display:grid;gap:0;}
+.contact-item{display:grid;grid-template-columns:36px 1fr;gap:13px;align-items:center;padding:0 0 12px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.10);}
+.contact-item:last-child{margin-bottom:0;}
+.contact-ico{width:36px;height:36px;border-radius:50%;border:1px solid rgba(239,77,98,0.6);display:grid;place-items:center;color:#ef4d62;}
+.contact-ico svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.contact-item div span{display:block;color:#ef4d62;font-size:0.66rem;font-weight:900;letter-spacing:0.13em;text-transform:uppercase;margin-bottom:5px;}
+.contact-item a,.contact-item p{color:rgba(247,244,238,0.84);font-weight:700;line-height:1.35;font-size:0.9rem;margin:0;}
+.contact-item a:hover{color:#fff;}
+.linkedin-link{color:#ef4d62!important;}
+.fbase{border-top:1px solid rgba(255,255,255,0.10);padding:20px 58px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;color:rgba(247,244,238,0.52);font-size:0.86rem;}
+.footer .brand{color:#fff;}
+.footer .brand span{color:#ef4d62;}
+.flinks{display:flex;align-items:center;justify-content:flex-end;gap:22px;}
+.flinks a{color:rgba(247,244,238,0.58);font-weight:700;}
+.flinks a:hover{color:#fff;}
+.linkedin-mark{width:30px;height:30px;border:1px solid rgba(255,255,255,0.38);border-radius:50%;display:grid;place-items:center;color:#0a66c2!important;font-weight:900;font-size:0.8rem;}
+@media(max-width:900px){
+  .topbar{padding:10px 13px 10px 18px;}
+  .nav{display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);background:rgba(242,240,236,0.97);backdrop-filter:blur(20px);border-radius:18px;border:1px solid var(--line);padding:14px;flex-direction:column;align-items:flex-start;gap:8px;box-shadow:var(--shadow-md);}
+  .nav.open{display:flex;}
+  .menu-btn{display:grid;}
+  .desktop-cta{display:none;}
+  .footer-inner{grid-template-columns:1fr;gap:30px;}
+  .fcopy-btns{grid-template-columns:1fr;max-width:none;}
+  .fbase{grid-template-columns:1fr;}
+  .flinks{justify-content:flex-start;}
+}
+@media(max-width:560px){
+  .footer{border-radius:24px;}
+  .footer-inner{padding:32px;gap:28px;}
+  .fbase{padding:20px 32px;}
+  .topbar-outer{top:8px;}
+}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
@@ -727,20 +796,20 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
 
   <!-- ===== NAV ===== -->
   <div class="topbar-outer">
-    <header class="topbar">
-      <a class="brand" href="home.html">SASI<span>.ASIA</span></a>
-      <nav class="nav" id="nav">
-        <a href="home.html">Home</a>
-        <a href="home.html#portfolio-page">About</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="services.html">Advisory</a>
-        <a class="active" href="insights.html">Insights</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-primary desktop-cta" href="contact.html">Contact Me →</a>
-        <button class="btn btn-secondary icon-btn mobile-toggle" id="menuBtn" type="button" aria-label="Open menu">☰</button>
-      </div>
-    </header>
+    <header class="topbar" style="position:relative;">
+    <a href="home.html#home" class="brand" data-page-link="home">SASI<span>.ASIA</span></a>
+    <nav class="nav" id="navMenu">
+      <a href="home.html#home" data-page-link="home">Home</a>
+      <a href="home.html#portfolio-page" data-page-link="portfolio-page">About</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="services.html">Advisory</a>
+      <a href="insights.html" class="active">Insights</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-red desktop-cta" href="contact.html">Contact Me →</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
   </div>
 
   <main>
@@ -1086,39 +1155,40 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <!-- Footer Body -->
     <div class="footer-inner">
-      <div class="fcol">
-        <div class="fcol-label">Strategic Advisor</div>
-        <h2>LET'S BUILD SOMETHING VALUABLE TOGETHER</h2>
-        <p>Available for strategic advisory, board-level consultation, capital strategy, and high-impact business transformation across growth and digital ecosystems.</p>
-        <div class="fcol-btns">
-          <a class="btn btn-primary" href="mailto:sasi.bu.bd@gmail.com">Contact Me -></a>
-          <a class="btn btn-secondary" href="case-studies.html">View Case Studies</a>
+      <div class="footer-col footer-positioning">
+        <span class="footer-kicker">Strategic Advisor</span>
+        <h2>Let's Build Something Valuable Together</h2>
+        <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization, and capital strategy.</p>
+        <div class="fcopy-btns">
+          <a class="footer-btn footer-btn-primary" href="contact.html">Contact Me</a>
+          <a class="footer-btn footer-btn-secondary" href="case-studies.html">View Case Studies</a>
         </div>
       </div>
-      <div class="fcol">
-        <div class="fcol-label">Engagement</div>
-        <div class="citem"><span class="cico">→</span><a href="services.html">Advisory Services</a></div>
-        <div class="citem"><span class="cico">→</span><a href="case-studies.html">Case Studies</a></div>
-        <div class="citem"><span class="cico">→</span><a href="insights.html">Insights</a></div>
-        <div class="citem"><span class="cico">in</span><a href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+      <div class="footer-col">
+        <h3>Engagement</h3>
+        <ul class="footer-list">
+          <li>Strategic advisory</li>
+          <li>Capital strategy</li>
+          <li>Platform growth</li>
+          <li>Partnerships &amp; expansion</li>
+        </ul>
+        <p class="selective-line">Selective engagements focused on high-impact decisions.</p>
       </div>
-      <div class="fcol">
-        <div class="fcol-label">Contact</div>
-        <div class="citem"><span class="cico">✉</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div>
-        <div class="citem"><span class="cico">☎</span><a href="tel:+66962614499">+66 96 261 4499</a></div>
-        <div class="citem"><span class="cico">⌂</span><span>Bangkok, Thailand</span></div>
-        <div class="citem"><span class="cico">in</span><a href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="contact-list">
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><span>Email</span><a href="mailto:sasi.bu.bd@gmail.com">sasi.bu.bd@gmail.com</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><span>Phone</span><a href="tel:+66962614499">+66 96 261 4499</a></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><span>Location</span><p>Bangkok, Thailand</p></div></div>
+          <div class="contact-item"><span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></span><div><span>LinkedIn</span><a class="linkedin-link" href="https://linkedin.com/in/sasi-mew" target="_blank" rel="noopener">linkedin.com/in/sasi-mew</a></div></div>
+        </div>
       </div>
     </div>
     <div class="fbase">
       <div class="brand">SASI<span>.ASIA</span></div>
       <div>© 2025 sasi.asia. All rights reserved.</div>
-      <div class="flinks">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
+      <div class="flinks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a class="linkedin-mark" href="https://www.linkedin.com/in/sasi-mew/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
     </div>
   </footer>
 
@@ -1127,8 +1197,8 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
 <script>
 /* NAV toggle */
 const menuBtn=document.getElementById("menuBtn");
-const nav=document.getElementById("nav");
-if(menuBtn){menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));}
+const navMenu=document.getElementById("navMenu");
+if(menuBtn&&navMenu){menuBtn.addEventListener("click",()=>navMenu.classList.toggle("open"));}
 
 /* Reveal on scroll */
 const observer=new IntersectionObserver(entries=>{
