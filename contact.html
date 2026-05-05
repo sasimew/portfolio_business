@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Sasion Nanthaphiriyakit | SASI.ASIA</title>
 <meta name="description" content="Start a strategic conversation with Sasion Nanthaphiriyakit on growth, capital strategy, and high-impact business decisions.">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-sasi.png">
+<link rel="apple-touch-icon" href="assets/favicon-sasi.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -165,6 +167,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
 .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
 .form-label{font-size:0.68rem;font-weight:900;letter-spacing:0.11em;text-transform:uppercase;color:var(--text2)}
+.form-field-hint{font-size:0.76rem;line-height:1.45;color:rgba(116,116,116,0.82);margin-top:2px}
 .form-input,.form-textarea{
   width:100%;padding:12px 16px;border-radius:14px;
   border:1px solid rgba(84,84,84,0.13);
@@ -192,6 +195,8 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
 .form-success{display:none;align-items:center;gap:11px;padding:13px 16px;border-radius:14px;background:rgba(200,37,58,0.06);border:1px solid rgba(200,37,58,0.18);margin-top:12px}
 .form-success.show{display:flex}
 .form-success p{font-size:0.83rem;color:var(--accent);font-weight:700;line-height:1.4}
+.form-success.is-error{background:rgba(26,25,21,0.04);border-color:rgba(26,25,21,0.12)}
+.form-success.is-error p{color:var(--text)}
 
 /* SIDEBAR */
 .form-sidebar{display:flex;flex-direction:column;gap:14px}
@@ -262,7 +267,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
 .ch-btn:hover{background:var(--accent2);transform:translateY(-1px)}
 
 /* ── FOOTER ── */
-.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16)}
+.footer{background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.14),transparent 30%),linear-gradient(135deg,#3f3d38 0%,#36332f 56%,#2c2a27 100%);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16)}
 .footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px}
 .footer-col{min-width:0}
 .footer-kicker{display:inline-flex;align-items:center;gap:12px;color:#ef4d62;font-size:0.68rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:13px}
@@ -313,6 +318,11 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
   .hero{padding:32px 14px 26px}
   .hero-h1{font-size:2.9rem}
   .form-card{padding:28px 20px 26px}
+  .form-title{font-size:1.95rem}
+  .form-subtitle{font-size:0.92rem;line-height:1.6}
+  .form-label{font-size:0.64rem}
+  .form-input,.form-textarea{font-size:0.94rem;padding:13px 14px}
+  .form-field-hint{font-size:0.72rem}
   .form-row-2{grid-template-columns:1fr}
   .channels-row{grid-template-columns:1fr}
   .footer{border-radius:24px}.footer-inner{padding:32px;gap:28px}.fbase{padding:20px 32px}
@@ -331,7 +341,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
 .nav-actions{display:flex;align-items:center;gap:8px;}
 .btn.desktop-cta{min-width:158px;padding-left:26px;padding-right:28px;line-height:1.1;overflow:visible;}
 .menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--text);font-size:1rem;cursor:pointer;place-items:center;box-shadow:var(--shadow-sm);}
-.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16);}
+.footer{background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.14),transparent 30%),linear-gradient(135deg,#3f3d38 0%,#36332f 56%,#2c2a27 100%);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16);}
 .footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px;}
 .footer-col{min-width:0;}
 .footer-positioning{padding-right:4px;}
@@ -385,6 +395,14 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
   .topbar-outer{top:8px;}
 }
 
+
+.section.glass.hero,.hero.glass.section,section.section.glass.hero{margin-top:0 !important}
+
+/* Scroll to top button */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--accent,#c8253a);color:#fff;border:none;font-size:1.3rem;font-weight:900;cursor:pointer;box-shadow:0 12px 28px rgba(200,37,58,0.32),0 4px 12px rgba(0,0,0,0.08);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity 0.25s ease,visibility 0.25s ease,transform 0.25s ease,background 0.22s;z-index:500;display:grid;place-items:center;line-height:1}
+.scroll-top:hover{background:#e32330;transform:translateY(0) scale(1.05)}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+@media(max-width:640px){.scroll-top{bottom:18px;right:18px;width:42px;height:42px;font-size:1.15rem}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
@@ -415,7 +433,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
       <a href="insights.html">Insights</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-red desktop-cta" href="contact.html">Contact Me →</a>
+      <a class="btn btn-red desktop-cta" href="contact.html" data-cta="contact" data-location="navbar">Contact Me →</a>
       <button class="menu-btn" id="menuBtn">☰</button>
     </div>
   </header>
@@ -445,6 +463,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
           <p class="form-subtitle">A few details is enough — I'll respond personally.</p>
 
           <form id="contactForm" novalidate>
+            <input type="hidden" name="ga_client_id" value="">
 
             <!-- Priority field — visually larger -->
             <div class="form-group form-priority">
@@ -462,6 +481,19 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="femail">Email Address</label>
                 <input class="form-input" type="email" id="femail" name="email" placeholder="you@company.com" autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="fcountrycode">Country / Dial Code</label>
+                <input class="form-input" type="text" id="fcountrycode" name="countryCode" placeholder="TH +66" autocomplete="tel-country-code" inputmode="text">
+                <span class="form-field-hint">Example: TH +66</span>
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="ftel">Telephone</label>
+                <input class="form-input" type="tel" id="ftel" name="tel" placeholder="xxxxxxxxx" autocomplete="tel-national" inputmode="tel">
+                <span class="form-field-hint">Optional, but helpful for urgent follow-up.</span>
               </div>
             </div>
 
@@ -571,8 +603,8 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
         <h2>Let's Build Something Valuable Together</h2>
         <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization, and capital strategy.</p>
         <div class="fcopy-btns">
-          <a class="footer-btn footer-btn-primary" href="contact.html">Contact Me</a>
-          <a class="footer-btn footer-btn-secondary" href="case-studies.html">View Case Studies</a>
+          <a class="footer-btn footer-btn-primary" href="contact.html" data-cta="contact" data-location="footer">Contact Me</a>
+          <a class="footer-btn footer-btn-secondary" href="case-studies.html" data-cta="case_studies" data-location="footer">View Case Studies</a>
         </div>
       </div>
       <div class="footer-col">
@@ -614,28 +646,86 @@ const ob=new IntersectionObserver(e=>{
 },{threshold:0.08});
 document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
 
-/* Form submit → mailto with pre-filled data */
-const form=document.getElementById("contactForm"),succ=document.getElementById("formSuccess");
-if(form){
-  form.addEventListener("submit",e=>{
-    e.preventDefault();
-    const pri=form.querySelector("#fpriority").value.trim();
-    const n=form.querySelector("#fname").value.trim();
-    const em=form.querySelector("#femail").value.trim();
-    const br=form.querySelector("#fbrief").value.trim();
-    if(!n||!em)return;
-    const subject=encodeURIComponent("Strategy Inquiry — "+(n||"unnamed"));
-    const body=encodeURIComponent(
-      "Working on: "+(pri||"—")+"\n"+
-      "Name: "+n+"\n\n"+
-      (br||"")
-    );
-    window.location.href="mailto:sasi.bu.bd@gmail.com?subject="+subject+"&body="+body;
+(function(){
+  const form = document.getElementById("contactForm");
+  const succ = document.getElementById("formSuccess");
+  if(!form || !succ) return;
+
+  const submitBtn = form.querySelector(".form-cta");
+  const defaultBtnLabel = submitBtn ? submitBtn.textContent : "";
+
+  function showMessage(message, isError){
+    const textNode = succ.querySelector("p");
     succ.classList.add("show");
-    const btn=form.querySelector(".form-cta");
-    btn.textContent="Sent ✓";btn.style.background="#1a8a40";
+    succ.classList.toggle("is-error", !!isError);
+    if(textNode) textNode.textContent = message;
+  }
+
+  function setSubmitting(isSubmitting){
+    if(!submitBtn) return;
+    submitBtn.disabled = isSubmitting;
+    if(isSubmitting){
+      submitBtn.textContent = "Sending...";
+    }
+    submitBtn.style.opacity = isSubmitting ? "0.75" : "1";
+    submitBtn.style.cursor = isSubmitting ? "wait" : "";
+  }
+
+  form.addEventListener("submit", async function(e){
+    e.preventDefault();
+    succ.classList.remove("show", "is-error");
+
+    const payload = {
+      priority: form.querySelector("#fpriority").value.trim(),
+      name: form.querySelector("#fname").value.trim(),
+      email: form.querySelector("#femail").value.trim(),
+      countryCode: form.querySelector("#fcountrycode").value.trim(),
+      tel: form.querySelector("#ftel").value.trim(),
+      brief: form.querySelector("#fbrief").value.trim(),
+      gaClientId: (form.querySelector('input[name="ga_client_id"]') || {}).value || "",
+      sourcePage: window.location.href
+    };
+
+    if(!payload.name || !payload.email || !payload.brief){
+      showMessage("Please add your name, email, and a short brief before submitting.", true);
+      return;
+    }
+
+    setSubmitting(true);
+    try{
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json().catch(function(){ return {}; });
+      if(!res.ok || data.status !== "ok"){
+        throw new Error(data.message || "Unable to submit your inquiry right now.");
+      }
+
+      form.reset();
+      const clientIdInput = form.querySelector('input[name="ga_client_id"]');
+      if(clientIdInput && window._gaClientId) clientIdInput.value = window._gaClientId;
+      if(submitBtn){
+        submitBtn.textContent = "Sent ✓";
+        submitBtn.style.background = "#1a8a40";
+        setTimeout(function(){
+          submitBtn.textContent = defaultBtnLabel;
+          submitBtn.style.background = "";
+        }, 2400);
+      }
+      showMessage("Your inquiry has been sent. I'll respond personally within 24–48 hours.");
+    }catch(err){
+      if(submitBtn){
+        submitBtn.textContent = defaultBtnLabel;
+        submitBtn.style.background = "";
+      }
+      showMessage(err.message || "Unable to submit your inquiry right now. Please email me directly instead.", true);
+    }finally{
+      setSubmitting(false);
+    }
   });
-}
+})();
 
 /* Auto-focus priority field on desktop */
 if(window.innerWidth>768){
@@ -643,158 +733,189 @@ if(window.innerWidth>768){
   if(pf)setTimeout(()=>pf.focus(),400);
 }
 </script>
+
+<!-- GA4 Custom Tracking -->
 <script>
-  // GA4 Event Tracking for sasi.asia
-  // Measurement ID: G-S0N3M3191G
+(function(){
+  'use strict';
+  const GA_ID = 'G-S0N3M3191G';
+  const DEBUG = (location.hostname === 'localhost' || location.hostname.startsWith('127.') || location.search.includes('ga_debug=1'));
 
-  window.addEventListener("DOMContentLoaded", function () {
-    function trackEvent(eventName, params = {}) {
-      if (typeof gtag === "function") {
-        gtag("event", eventName, {
-          website: "sasi.asia",
-          page_path: window.location.pathname,
-          page_title: document.title,
-          ...params,
-        });
+  function fire(name, params){
+    if(typeof gtag !== 'function') return;
+    params = params || {};
+    gtag('event', name, params);
+    if(DEBUG) console.log('[GA4]', name, params);
+  }
+
+  /* 1. CLIENT ID */
+  function captureClientId(){
+    if(typeof gtag !== 'function') return;
+    try{
+      gtag('get', GA_ID, 'client_id', function(clientId){
+        if(DEBUG) console.log('[GA4] client_id:', clientId);
+        document.querySelectorAll('input[name="ga_client_id"]').forEach(function(el){ el.value = clientId || ''; });
+        window._gaClientId = clientId;
+      });
+    }catch(e){ if(DEBUG) console.warn('[GA4] client_id error', e); }
+  }
+
+  /* 2. CTA TRACKING */
+  function bindCtaClicks(){
+    document.querySelectorAll('[data-cta]').forEach(function(el){
+      if(el._gaBound) return;
+      el._gaBound = true;
+      el.addEventListener('click', function(){
+        const cta = el.dataset.cta || '';
+        const loc = el.dataset.location || '';
+        const txt = (el.innerText || el.textContent || '').trim().slice(0, 100);
+        if(cta === 'email' || (el.href && el.href.indexOf('mailto:') === 0)){
+          fire('click_email', { email: (el.href||'').replace('mailto:',''), cta_location: loc });
+        }
+        fire('click_contact_cta', { cta_type: cta, cta_location: loc, cta_text: txt });
+      });
+    });
+  }
+
+  /* 3. CARD TRACKING */
+  function bindCardClicks(){
+    document.querySelectorAll('[data-card-type]').forEach(function(el){
+      if(el._gaCardBound) return;
+      el._gaCardBound = true;
+      el.addEventListener('click', function(){
+        const type = el.dataset.cardType || '';
+        const name = el.dataset.cardName || '';
+        const evt  = type === 'case_study' ? 'click_case_card' : (type === 'service' ? 'click_service_card' : 'click_card');
+        fire(evt, { card_type: type, card_name: name });
+      });
+    });
+  }
+
+  /* 4. MAILTO FALLBACK */
+  function bindMailto(){
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el){
+      if(el._gaMailBound) return;
+      el._gaMailBound = true;
+      el.addEventListener('click', function(){
+        if(!el.dataset.cta){
+          fire('click_email', { email: el.href.replace('mailto:',''), cta_location: 'inline' });
+        }
+      });
+    });
+  }
+
+  /* 5. SCROLL DEPTH */
+  const scrollThresholds = [25, 50, 75, 90];
+  const firedScroll = {};
+  let scrollTimer = null;
+  function checkScrollDepth(){
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    if(docH <= 0) return;
+    const pct = Math.min(100, Math.round((window.scrollY / docH) * 100));
+    scrollThresholds.forEach(function(t){
+      if(pct >= t && !firedScroll[t]){
+        firedScroll[t] = true;
+        fire('scroll_depth', { percent: t });
       }
+    });
+  }
+  function onScroll(){
+    if(scrollTimer) return;
+    scrollTimer = setTimeout(function(){ scrollTimer = null; checkScrollDepth(); }, 250);
+  }
+
+  /* 6. SECTION VIEW */
+  const firedSections = {};
+  function bindSectionViews(){
+    if(!('IntersectionObserver' in window)) return;
+    const sections = document.querySelectorAll('section[id], main section[class]');
+    if(!sections.length) return;
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && e.intersectionRatio >= 0.5){
+          const id = e.target.id || (e.target.className||'').split(' ').slice(-1)[0] || 'unknown';
+          if(firedSections[id]) return;
+          firedSections[id] = true;
+          fire('view_section', { section_id: id });
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* 7. ENGAGED TIME */
+  const engagedThresholds = [30, 60, 120];
+  const firedEngaged = {};
+  let engagedSeconds = 0;
+  let isVisible = !document.hidden;
+  document.addEventListener('visibilitychange', function(){ isVisible = !document.hidden; });
+  setInterval(function(){
+    if(!isVisible) return;
+    engagedSeconds += 1;
+    engagedThresholds.forEach(function(t){
+      if(engagedSeconds === t && !firedEngaged[t]){
+        firedEngaged[t] = true;
+        fire('engaged_time', { time_seconds: t });
+      }
+    });
+  }, 1000);
+
+  /* 8. FORM SUBMIT */
+  function nearestSectionId(el){
+    let n = el;
+    while(n && n !== document.body){
+      if(n.id) return n.id;
+      if(n.tagName === 'SECTION') return (n.className||'').split(' ')[0] || 'section';
+      n = n.parentElement;
     }
-
-    // 1. Track CTA clicks
-    document.querySelectorAll("a, button").forEach(function (el) {
-      el.addEventListener("click", function () {
-        const text = (el.innerText || el.getAttribute("aria-label") || "").trim();
-        const href = el.getAttribute("href") || "";
-
-        if (
-          text.toLowerCase().includes("contact") ||
-          text.toLowerCase().includes("email") ||
-          text.toLowerCase().includes("consult") ||
-          text.includes("ติดต่อ") ||
-          text.includes("ปรึกษา") ||
-          href.includes("mailto:")
-        ) {
-          trackEvent("click_contact_cta", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("#portfolio-page")) {
-          trackEvent("click_portfolio", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("#services")) {
-          trackEvent("click_services", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("linkedin.com")) {
-          trackEvent("click_linkedin", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-      });
-    });
-
-    // 2. Track scroll depth
-    const scrollMarks = [25, 50, 75, 90];
-    const trackedScroll = {};
-
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 100;
-
-      scrollMarks.forEach(function (mark) {
-        if (scrollPercent >= mark && !trackedScroll[mark]) {
-          trackedScroll[mark] = true;
-          trackEvent("scroll_depth", {
-            percent_scrolled: mark,
-          });
-        }
-      });
-    });
-
-    // 3. Track section views
-    const sections = document.querySelectorAll("section[id], div[id]");
-
-    const sectionObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-
-            if (!entry.target.dataset.gaTracked) {
-              entry.target.dataset.gaTracked = "true";
-
-              trackEvent("view_section", {
-                section_id: sectionId,
-              });
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    sections.forEach(function (section) {
-      sectionObserver.observe(section);
-    });
-
-    // 4. Track case study / portfolio card clicks
-    document.querySelectorAll("[data-case], .case-card, .portfolio-card").forEach(function (card) {
-      card.addEventListener("click", function () {
-        trackEvent("click_case_study", {
-          case_name:
-            card.getAttribute("data-case") ||
-            card.innerText.trim().slice(0, 80),
+    return 'unknown';
+  }
+  function bindForms(){
+    document.querySelectorAll('form').forEach(function(f){
+      if(f._gaFormBound) return;
+      f._gaFormBound = true;
+      f.addEventListener('submit', function(){
+        fire('generate_lead', {
+          form_id: f.id || f.getAttribute('name') || 'form',
+          cta_location: nearestSectionId(f)
         });
       });
     });
+  }
 
-    // 5. Track email clicks
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
-      el.addEventListener("click", function () {
-        trackEvent("click_email", {
-          email_link: el.getAttribute("href"),
-        });
-      });
-    });
+  function init(){
+    captureClientId();
+    bindCtaClicks();
+    bindCardClicks();
+    bindMailto();
+    bindSectionViews();
+    bindForms();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    if(DEBUG) console.log('[GA4] tracking initialized — DEBUG mode ON');
+  }
 
-    // 6. Track external links
-    document.querySelectorAll('a[href^="http"]').forEach(function (el) {
-      el.addEventListener("click", function () {
-        const href = el.getAttribute("href");
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  setTimeout(bindCtaClicks, 1500);
+  setTimeout(bindCardClicks, 1500);
+  setTimeout(bindForms, 1500);
+})();
+</script>
 
-        if (!href.includes("sasi.asia")) {
-          trackEvent("click_external_link", {
-            external_url: href,
-          });
-        }
-      });
-    });
-
-    // 7. Track time on page
-    setTimeout(function () {
-      trackEvent("engaged_30_seconds", {
-        engagement_time: "30_seconds",
-      });
-    }, 30000);
-
-    setTimeout(function () {
-      trackEvent("engaged_60_seconds", {
-        engagement_time: "60_seconds",
-      });
-    }, 60000);
-  });
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script>
+/* Scroll to top */
+(function(){
+  var btn = document.getElementById('scrollTop');
+  if(!btn) return;
+  function toggle(){ btn.classList.toggle('visible', window.scrollY > 400); }
+  window.addEventListener('scroll', toggle, { passive: true });
+  btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  toggle();
+})();
 </script>
 </body>
 </html>
