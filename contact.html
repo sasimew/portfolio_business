@@ -168,6 +168,8 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
 .form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
 .form-label{font-size:0.68rem;font-weight:900;letter-spacing:0.11em;text-transform:uppercase;color:var(--text2)}
 .form-field-hint{font-size:0.76rem;line-height:1.45;color:rgba(116,116,116,0.82);margin-top:2px}
+.form-error{display:none;font-size:0.76rem;line-height:1.45;color:var(--accent);font-weight:700;margin-top:2px}
+.form-error.show{display:block}
 .form-input,.form-textarea{
   width:100%;padding:12px 16px;border-radius:14px;
   border:1px solid rgba(84,84,84,0.13);
@@ -175,8 +177,10 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
   font:500 0.9rem/1.4 "Outfit",sans-serif;color:var(--text);
   outline:none;transition:border-color 0.22s,box-shadow 0.22s;
 }
+.form-select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(84,84,84,0.86) 50%),linear-gradient(135deg,rgba(84,84,84,0.86) 50%,transparent 50%);background-position:calc(100% - 22px) calc(50% - 3px),calc(100% - 16px) calc(50% - 3px);background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:44px}
 .form-input::placeholder,.form-textarea::placeholder{color:rgba(116,116,116,0.42)}
 .form-input:focus,.form-textarea:focus{border-color:rgba(200,37,58,0.45);box-shadow:0 0 0 3px rgba(200,37,58,0.08)}
+.form-input.is-invalid,.form-textarea.is-invalid,.form-select.is-invalid{border-color:rgba(200,37,58,0.58);box-shadow:0 0 0 3px rgba(200,37,58,0.1)}
 .form-textarea{resize:vertical;min-height:110px;line-height:1.6}
 
 /* Big CTA button */
@@ -197,6 +201,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
 .form-success p{font-size:0.83rem;color:var(--accent);font-weight:700;line-height:1.4}
 .form-success.is-error{background:rgba(26,25,21,0.04);border-color:rgba(26,25,21,0.12)}
 .form-success.is-error p{color:var(--text)}
+.form-success.is-error svg{color:var(--accent)!important}
 
 /* SIDEBAR */
 .form-sidebar{display:flex;flex-direction:column;gap:14px}
@@ -471,29 +476,45 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
               <input class="form-input" type="text" id="fpriority" name="priority"
                 placeholder="e.g. scaling platform, fundraising, entering SEA, fixing monetization"
                 autocomplete="off">
+              <span class="form-error" data-error-for="fpriority"></span>
             </div>
 
             <div class="form-row-2">
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="fname">Your Name</label>
                 <input class="form-input" type="text" id="fname" name="name" placeholder="Sasion Nanthaphiriyakit" autocomplete="name">
+                <span class="form-error" data-error-for="fname"></span>
               </div>
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="femail">Email Address</label>
                 <input class="form-input" type="email" id="femail" name="email" placeholder="you@company.com" autocomplete="email">
+                <span class="form-error" data-error-for="femail"></span>
               </div>
             </div>
 
             <div class="form-row-2">
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="fcountrycode">Country / Dial Code</label>
-                <input class="form-input" type="text" id="fcountrycode" name="countryCode" placeholder="TH +66" autocomplete="tel-country-code" inputmode="text">
-                <span class="form-field-hint">Example: TH +66</span>
+                <select class="form-input form-select" id="fcountrycode" name="countryCode" autocomplete="country-name">
+                  <option value="TH +66" selected>Thailand (+66)</option>
+                  <option value="SG +65">Singapore (+65)</option>
+                  <option value="MY +60">Malaysia (+60)</option>
+                  <option value="VN +84">Vietnam (+84)</option>
+                  <option value="ID +62">Indonesia (+62)</option>
+                  <option value="PH +63">Philippines (+63)</option>
+                  <option value="HK +852">Hong Kong (+852)</option>
+                  <option value="AE +971">UAE (+971)</option>
+                  <option value="UK +44">United Kingdom (+44)</option>
+                  <option value="US +1">United States (+1)</option>
+                </select>
+                <span class="form-field-hint">Default: TH +66</span>
+                <span class="form-error" data-error-for="fcountrycode"></span>
               </div>
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="ftel">Telephone</label>
-                <input class="form-input" type="tel" id="ftel" name="tel" placeholder="xxxxxxxxx" autocomplete="tel-national" inputmode="tel">
-                <span class="form-field-hint">Optional, but helpful for urgent follow-up.</span>
+                <input class="form-input" type="tel" id="ftel" name="tel" placeholder="0962614499" autocomplete="tel-national" inputmode="numeric" pattern="[0-9 ]*">
+                <span class="form-field-hint">Numbers only, 7-15 digits.</span>
+                <span class="form-error" data-error-for="ftel"></span>
               </div>
             </div>
 
@@ -501,6 +522,7 @@ h1,h2{font-family:"Bebas Neue",sans-serif;letter-spacing:0.025em;line-height:0.9
               <label class="form-label" for="fbrief">Project Brief</label>
               <textarea class="form-textarea" id="fbrief" name="brief"
                 placeholder="Describe the decision you're facing or the outcome you're trying to reach in 2–3 sentences."></textarea>
+              <span class="form-error" data-error-for="fbrief"></span>
             </div>
 
             <button class="form-cta" type="submit">Start the Conversation →</button>
@@ -653,6 +675,37 @@ document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
 
   const submitBtn = form.querySelector(".form-cta");
   const defaultBtnLabel = submitBtn ? submitBtn.textContent : "";
+  const fieldErrors = {};
+  form.querySelectorAll("[data-error-for]").forEach(function(node){
+    fieldErrors[node.dataset.errorFor] = node;
+  });
+
+  function sanitizePhone(value){
+    return (value || "").replace(/[^\d]/g, "");
+  }
+
+  function setFieldError(fieldId, message){
+    const field = form.querySelector("#" + fieldId);
+    const errorNode = fieldErrors[fieldId];
+    if(field){
+      field.classList.toggle("is-invalid", !!message);
+      if(message){
+        field.setAttribute("aria-invalid", "true");
+      }else{
+        field.removeAttribute("aria-invalid");
+      }
+    }
+    if(errorNode){
+      errorNode.textContent = message ? "X " + message : "";
+      errorNode.classList.toggle("show", !!message);
+    }
+  }
+
+  function clearFieldErrors(){
+    Object.keys(fieldErrors).forEach(function(fieldId){
+      setFieldError(fieldId, "");
+    });
+  }
 
   function showMessage(message, isError){
     const textNode = succ.querySelector("p");
@@ -671,9 +724,23 @@ document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
     submitBtn.style.cursor = isSubmitting ? "wait" : "";
   }
 
+  const telField = form.querySelector("#ftel");
+  if(telField){
+    telField.addEventListener("input", function(){
+      const cleaned = sanitizePhone(telField.value);
+      if(cleaned !== telField.value){
+        telField.value = cleaned;
+      }
+      if(cleaned){
+        setFieldError("ftel", "");
+      }
+    });
+  }
+
   form.addEventListener("submit", async function(e){
     e.preventDefault();
     succ.classList.remove("show", "is-error");
+    clearFieldErrors();
 
     const payload = {
       priority: form.querySelector("#fpriority").value.trim(),
@@ -686,8 +753,41 @@ document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
       sourcePage: window.location.href
     };
 
-    if(!payload.name || !payload.email || !payload.brief){
-      showMessage("Please add your name, email, and a short brief before submitting.", true);
+    const phoneDigits = sanitizePhone(payload.tel);
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email);
+    let hasErrors = false;
+
+    if(!payload.priority){
+      setFieldError("fpriority", "Please tell me what you're working on.");
+      hasErrors = true;
+    }
+    if(!payload.name){
+      setFieldError("fname", "Please enter your name.");
+      hasErrors = true;
+    }
+    if(!payload.email){
+      setFieldError("femail", "Please enter your email address.");
+      hasErrors = true;
+    }else if(!emailOk){
+      setFieldError("femail", "Please enter a valid email address.");
+      hasErrors = true;
+    }
+    if(payload.tel && (phoneDigits.length < 7 || phoneDigits.length > 15)){
+      setFieldError("ftel", "Telephone must be between 7 and 15 digits.");
+      hasErrors = true;
+    }
+    if(!payload.brief){
+      setFieldError("fbrief", "Please add a short project brief.");
+      hasErrors = true;
+    }else if(payload.brief.length < 10){
+      setFieldError("fbrief", "Please give a little more context so I can respond well.");
+      hasErrors = true;
+    }
+
+    payload.tel = phoneDigits;
+
+    if(hasErrors){
+      showMessage("X Please correct the highlighted fields and try again.", true);
       return;
     }
 
@@ -704,6 +804,8 @@ document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
       }
 
       form.reset();
+      const countryField = form.querySelector("#fcountrycode");
+      if(countryField) countryField.value = "TH +66";
       const clientIdInput = form.querySelector('input[name="ga_client_id"]');
       if(clientIdInput && window._gaClientId) clientIdInput.value = window._gaClientId;
       if(submitBtn){
@@ -720,7 +822,7 @@ document.querySelectorAll(".reveal").forEach(el=>ob.observe(el));
         submitBtn.textContent = defaultBtnLabel;
         submitBtn.style.background = "";
       }
-      showMessage(err.message || "Unable to submit your inquiry right now. Please email me directly instead.", true);
+      showMessage("X " + (err.message || "Unable to submit your inquiry right now. Please email me directly instead."), true);
     }finally{
       setSubmitting(false);
     }
