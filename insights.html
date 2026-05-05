@@ -613,8 +613,7 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
    FOOTER
    ============================================================ */
 .footer{
-  background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),
-            linear-gradient(135deg,#14130f,#251510);
+  background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.14),transparent 30%),linear-gradient(135deg,#3f3d38 0%,#36332f 56%,#2c2a27 100%);
   border:1px solid rgba(255,255,255,0.06);
   border-radius:var(--radius);
   overflow:hidden;
@@ -716,7 +715,7 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
 .nav-actions{display:flex;align-items:center;gap:8px;}
 .btn.desktop-cta{min-width:158px;padding-left:26px;padding-right:28px;line-height:1.1;overflow:visible;}
 .menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--text);font-size:1rem;cursor:pointer;place-items:center;box-shadow:var(--shadow-sm);}
-.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16);}
+.footer{background:radial-gradient(circle at 82% 10%,rgba(200,37,58,0.14),transparent 30%),linear-gradient(135deg,#3f3d38 0%,#36332f 56%,#2c2a27 100%);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16);}
 .footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px;}
 .footer-col{min-width:0;}
 .footer-positioning{padding-right:4px;}
@@ -770,6 +769,185 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
   .topbar-outer{top:8px;}
 }
 
+
+.section.glass.hero,.hero.glass.section,section.section.glass.hero{margin-top:0 !important}
+
+/* Scroll to top button */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--accent,#c8253a);color:#fff;border:none;font-size:1.3rem;font-weight:900;cursor:pointer;box-shadow:0 12px 28px rgba(200,37,58,0.32),0 4px 12px rgba(0,0,0,0.08);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity 0.25s ease,visibility 0.25s ease,transform 0.25s ease,background 0.22s;z-index:500;display:grid;place-items:center;line-height:1}
+.scroll-top:hover{background:#e32330;transform:translateY(0) scale(1.05)}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+@media(max-width:640px){.scroll-top{bottom:18px;right:18px;width:42px;height:42px;font-size:1.15rem}}
+
+/* Insights — center sections at 1220px */
+section.section.glass,
+section.section.glass.cta-banner{
+  width:1220px !important;
+  max-width:calc(100% - 32px);
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding-left:52px !important;
+  padding-right:52px !important;
+  box-sizing:border-box;
+}
+.footer{
+  width:1220px !important;
+  max-width:calc(100% - 32px);
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* ─────────────────────────────────────────────
+   MARKET INTELLIGENCE RADAR
+   ───────────────────────────────────────────── */
+.mir-section{padding:56px 48px 52px}
+.mir-head{text-align:center;margin-bottom:32px}
+.mir-head .eyebrow{justify-content:center;display:inline-flex}
+.mir-head .eyebrow::before{content:"";width:46px;height:1px;background:var(--accent);margin-right:0}
+.mir-head h2{margin-bottom:14px}
+.mir-head p{max-width:680px;margin:0 auto;color:var(--muted);font-size:0.94rem;line-height:1.68}
+
+/* Featured 2-col layout */
+.mir-featured-grid{display:grid;grid-template-columns:1.32fr 1fr;gap:18px;margin-bottom:24px}
+
+/* Featured large card */
+.mir-featured{
+  background:rgba(255,255,255,0.78);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.82);
+  border-radius:24px;
+  padding:32px 30px;
+  position:relative;overflow:hidden;
+  box-shadow:0 18px 45px rgba(26,25,21,0.06),inset 0 1px 0 rgba(255,255,255,0.85);
+  transition:transform 0.32s ease,box-shadow 0.32s ease,border-color 0.32s ease;
+  display:flex;flex-direction:column;gap:14px;cursor:pointer;text-decoration:none;color:inherit;
+}
+.mir-featured::before{content:"";position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(200,37,58,0.10),transparent 70%);pointer-events:none}
+.mir-featured::after{content:"";position:absolute;inset:0;border-radius:24px;border:1px solid rgba(200,37,58,0.08);pointer-events:none}
+.mir-featured:hover{transform:translateY(-4px);border-color:rgba(200,37,58,0.22);box-shadow:0 26px 64px rgba(200,37,58,0.10),0 12px 28px rgba(26,25,21,0.06)}
+.mir-tag-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.mir-live{display:inline-flex;align-items:center;justify-content:center;padding:5px 10px;border-radius:999px;background:rgba(200,37,58,0.12);border:1px solid rgba(200,37,58,0.18);color:var(--accent);font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase}
+.mir-tag{font-size:0.62rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);background:rgba(200,37,58,0.08);border:1px solid rgba(200,37,58,0.16);padding:5px 11px;border-radius:999px}
+.mir-source{font-size:0.72rem;color:var(--muted);font-weight:700;letter-spacing:0.04em}
+.mir-tag-row .mir-source::before{content:"·";margin:0 6px;color:rgba(116,116,116,0.4)}
+.mir-date{font-size:0.7rem;color:rgba(116,116,116,0.65);margin-left:auto;font-weight:600}
+.mir-featured h3{font-family:"Bebas Neue",sans-serif;font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1.05;color:#545454;letter-spacing:0.015em;position:relative;z-index:1}
+.mir-featured-desc{font-size:0.92rem;color:var(--muted);line-height:1.62;position:relative;z-index:1}
+.mir-why{
+  font-size:0.84rem;font-weight:700;color:#545454;line-height:1.55;
+  padding:14px 16px;background:rgba(247,243,238,0.74);border-left:3px solid var(--accent);
+  border-radius:14px;position:relative;z-index:1;
+}
+.mir-why-label{display:block;font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.mir-why-copy{display:block}
+.mir-readlink{font-size:0.82rem;font-weight:800;color:var(--accent);letter-spacing:0.02em;display:inline-flex;align-items:center;gap:5px;position:relative;z-index:1;transition:gap 0.22s}
+.mir-readlink:hover{gap:9px}
+
+/* Right mini cards */
+.mir-mini-stack{display:flex;flex-direction:column;gap:14px}
+.mir-mini{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.78);
+  border-radius:20px;
+  padding:18px 20px;
+  display:flex;flex-direction:column;gap:8px;
+  cursor:pointer;text-decoration:none;color:inherit;
+  transition:transform 0.28s ease,border-color 0.28s ease,box-shadow 0.28s ease;
+  flex:1;
+}
+.mir-mini:hover{transform:translateY(-3px);border-color:rgba(200,37,58,0.22);box-shadow:0 16px 38px rgba(200,37,58,0.08)}
+.mir-mini-tag-row{display:flex;align-items:center;gap:8px;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:800}
+.mir-mini-tag{color:var(--accent)}
+.mir-mini-source{color:var(--muted);font-weight:600;font-size:0.66rem}
+.mir-mini-tag-row .mir-mini-source::before{content:"·";margin:0 5px;opacity:0.5}
+.mir-mini h4{font-family:"Outfit",sans-serif;font-size:0.92rem;font-weight:800;color:#545454;line-height:1.36;margin:0}
+.mir-mini-date{font-size:0.66rem;color:rgba(116,116,116,0.65);font-weight:600;margin-top:auto}
+
+/* Category chips */
+.mir-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 24px}
+.mir-chip{
+  padding:8px 18px;border-radius:999px;
+  background:rgba(255,255,255,0.62);
+  border:1px solid rgba(26,25,21,0.10);
+  font:600 0.78rem/1 "Outfit",sans-serif;color:var(--text);
+  cursor:pointer;transition:all 0.22s;letter-spacing:0.01em;
+}
+.mir-chip:hover{border-color:rgba(200,37,58,0.32);color:var(--accent);background:rgba(200,37,58,0.05)}
+.mir-chip.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 6px 18px rgba(200,37,58,0.24)}
+
+/* News grid */
+.mir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mir-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.78);
+  border-radius:20px;
+  padding:22px 20px;
+  display:flex;flex-direction:column;gap:10px;
+  cursor:pointer;text-decoration:none;color:inherit;
+  transition:transform 0.28s ease,border-color 0.28s ease,box-shadow 0.28s ease;
+  min-height:200px;
+}
+.mir-card:hover{transform:translateY(-4px);border-color:rgba(200,37,58,0.22);box-shadow:0 18px 42px rgba(200,37,58,0.08),0 6px 16px rgba(26,25,21,0.05)}
+.mir-card-tag-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.mir-card h4{font-family:"Outfit",sans-serif;font-size:0.95rem;font-weight:800;color:#545454;line-height:1.36;margin:0}
+.mir-card-desc{font-size:0.82rem;color:var(--muted);line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.mir-card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;border-top:1px solid rgba(26,25,21,0.06)}
+.mir-card-date{font-size:0.7rem;color:rgba(116,116,116,0.65);font-weight:600}
+.mir-card-readmore{font-size:0.74rem;font-weight:800;color:var(--accent);letter-spacing:0.02em}
+
+/* States */
+.mir-state{
+  text-align:center;padding:60px 24px;color:var(--muted);
+  font-size:0.92rem;line-height:1.6;
+  background:rgba(255,255,255,0.5);border:1px solid rgba(26,25,21,0.07);
+  border-radius:20px;font-style:italic;
+}
+.mir-state.error{color:var(--accent);font-weight:700;font-style:normal}
+.mir-grid .mir-state{grid-column:1/-1}
+
+/* Loading skeleton */
+.mir-skeleton{
+  background:linear-gradient(90deg,rgba(200,200,200,0.1),rgba(200,200,200,0.25),rgba(200,200,200,0.1));
+  background-size:200% 100%;
+  animation:mirShimmer 1.4s linear infinite;
+  border-radius:8px;
+}
+@keyframes mirShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* Responsive */
+@media(max-width:980px){
+  .mir-section{padding:48px 28px 44px}
+  .mir-featured-grid{grid-template-columns:1fr}
+  .mir-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .mir-section{padding:36px 20px 32px}
+  .mir-featured{padding:24px 22px}
+  .mir-tag-row{align-items:flex-start}
+  .mir-date{margin-left:0;width:100%}
+  .mir-grid{grid-template-columns:1fr}
+}
+
+/* Engage eyebrow — leading red line (centered) */
+.cta-banner .eyebrow::before{
+  content:"";width:46px;height:1px;background:var(--accent);
+}
+
+/* Filter-section tucked inside section-head */
+.section-head.center > .filter-section{
+  margin-top:18px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+.section-head.center > .filter-section .filter-wrap{
+  justify-content:center;
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
@@ -806,7 +984,7 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
       <a href="insights.html" class="active">Insights</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-red desktop-cta" href="contact.html">Contact Me →</a>
+      <a class="btn btn-red desktop-cta" href="contact.html" data-cta="contact" data-location="navbar">Contact Me →</a>
       <button class="menu-btn" id="menuBtn">☰</button>
     </div>
   </header>
@@ -897,19 +1075,53 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
       </div>
     </section>
 
-    <!-- ===== CATEGORY FILTER ===== -->
-    <div class="filter-section reveal">
-      <div class="filter-wrap">
-        <button class="filter-chip active" data-filter="all">All Insights</button>
-        <button class="filter-chip" data-filter="growth">Growth Strategy</button>
-        <button class="filter-chip" data-filter="platform">Platform Economics</button>
-        <button class="filter-chip" data-filter="ai">AI &amp; Automation</button>
-        <button class="filter-chip" data-filter="monetization">Monetization</button>
-        <button class="filter-chip" data-filter="web3">Web3</button>
-        <button class="filter-chip" data-filter="capital">Capital Strategy</button>
-        <button class="filter-chip" data-filter="partnerships">Strategic Partnerships</button>
+
+    <!-- ===== MARKET INTELLIGENCE RADAR ===== -->
+    <section class="section glass mir-section reveal" id="market-intelligence">
+      <div class="mir-head">
+        <span class="eyebrow">Market Intelligence</span>
+        <h2>AI, Blockchain &amp; <span class="red">Business Tech Signals</span></h2>
+        <p>Curated news signals across AI, digital assets, platform economics, and business technology — selected for strategic relevance, not noise.</p>
       </div>
-    </div>
+
+      <!-- Featured 2-col -->
+      <div class="mir-featured-grid">
+        <a class="mir-featured" id="mirFeatured" href="#" target="_blank" rel="noopener">
+          <div class="mir-tag-row">
+            <span class="mir-live">Live Signal</span>
+            <span class="mir-tag" data-bind="category">Loading...</span>
+            <span class="mir-source" data-bind="source">—</span>
+            <span class="mir-date" data-bind="date">—</span>
+          </div>
+          <h3 data-bind="title">Loading market signals...</h3>
+          <p class="mir-featured-desc" data-bind="description">Connecting to NewsAPI for the latest market intelligence...</p>
+          <div class="mir-why">
+            <span class="mir-why-label">Why it matters</span>
+            <span class="mir-why-copy" data-bind="why">Featured signals are surfaced based on strategic relevance to growth, capital, and platform decisions.</span>
+          </div>
+          <span class="mir-readlink">Read Source →</span>
+        </a>
+        <div class="mir-mini-stack" id="mirMiniStack">
+          <div class="mir-state">Loading market signals...</div>
+        </div>
+      </div>
+
+      <!-- Category chips -->
+      <div class="mir-chips" id="mirChips">
+        <button class="mir-chip active" data-mir-filter="all">All</button>
+        <button class="mir-chip" data-mir-filter="business_tech">Business Tech</button>
+        <button class="mir-chip" data-mir-filter="ai">AI</button>
+        <button class="mir-chip" data-mir-filter="openai">OpenAI</button>
+        <button class="mir-chip" data-mir-filter="anthropic">Anthropic</button>
+        <button class="mir-chip" data-mir-filter="bitcoin">Bitcoin</button>
+        <button class="mir-chip" data-mir-filter="blockchain">Blockchain</button>
+      </div>
+
+      <!-- News grid -->
+      <div class="mir-grid" id="mirGrid">
+        <div class="mir-state" style="grid-column:1/-1">Loading market signals...</div>
+      </div>
+    </section>
 
     <!-- ===== LINKEDIN EMBEDS GRID ===== -->
     <section class="section">
@@ -917,6 +1129,20 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
         <span class="eyebrow">LinkedIn Insights</span>
         <h2>Latest Thinking from <span class="red">LinkedIn & Beyond</span></h2>
         <p>Selected posts and articles on strategy, platform growth, monetization, AI, fundraising, and digital business execution.</p>
+
+        <!-- ===== CATEGORY FILTER ===== -->
+        <div class="filter-section reveal">
+          <div class="filter-wrap">
+            <button class="filter-chip active" data-filter="all">All Insights</button>
+            <button class="filter-chip" data-filter="growth">Growth Strategy</button>
+            <button class="filter-chip" data-filter="platform">Platform Economics</button>
+            <button class="filter-chip" data-filter="ai">AI &amp; Automation</button>
+            <button class="filter-chip" data-filter="monetization">Monetization</button>
+            <button class="filter-chip" data-filter="web3">Web3</button>
+            <button class="filter-chip" data-filter="capital">Capital Strategy</button>
+            <button class="filter-chip" data-filter="partnerships">Strategic Partnerships</button>
+          </div>
+        </div>
       </div>
 
 
@@ -1154,15 +1380,15 @@ h2{font-size:clamp(2.4rem,4.2vw,4.4rem)}
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer">
+  <footer class="footer" style="border-bottom-width:0px !important;margin-bottom:64px !important;">
     <div class="footer-inner">
       <div class="footer-col footer-positioning">
         <span class="footer-kicker">Strategic Advisor</span>
         <h2>Let's Build Something Valuable Together</h2>
         <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization, and capital strategy.</p>
         <div class="fcopy-btns">
-          <a class="footer-btn footer-btn-primary" href="contact.html">Contact Me</a>
-          <a class="footer-btn footer-btn-secondary" href="case-studies.html">View Case Studies</a>
+          <a class="footer-btn footer-btn-primary" href="contact.html" data-cta="contact" data-location="footer">Contact Me</a>
+          <a class="footer-btn footer-btn-secondary" href="case-studies.html" data-cta="case_studies" data-location="footer">View Case Studies</a>
         </div>
       </div>
       <div class="footer-col">
@@ -1243,158 +1469,485 @@ chips.forEach(chip=>{
   });
 });
 </script>
-<script>
-  // GA4 Event Tracking for sasi.asia
-  // Measurement ID: G-S0N3M3191G
 
-  window.addEventListener("DOMContentLoaded", function () {
-    function trackEvent(eventName, params = {}) {
-      if (typeof gtag === "function") {
-        gtag("event", eventName, {
-          website: "sasi.asia",
-          page_path: window.location.pathname,
-          page_title: document.title,
-          ...params,
-        });
+<!-- GA4 Custom Tracking -->
+<script>
+(function(){
+  'use strict';
+  const GA_ID = 'G-S0N3M3191G';
+  const DEBUG = (location.hostname === 'localhost' || location.hostname.startsWith('127.') || location.search.includes('ga_debug=1'));
+
+  function fire(name, params){
+    if(typeof gtag !== 'function') return;
+    params = params || {};
+    gtag('event', name, params);
+    if(DEBUG) console.log('[GA4]', name, params);
+  }
+
+  /* 1. CLIENT ID */
+  function captureClientId(){
+    if(typeof gtag !== 'function') return;
+    try{
+      gtag('get', GA_ID, 'client_id', function(clientId){
+        if(DEBUG) console.log('[GA4] client_id:', clientId);
+        document.querySelectorAll('input[name="ga_client_id"]').forEach(function(el){ el.value = clientId || ''; });
+        window._gaClientId = clientId;
+      });
+    }catch(e){ if(DEBUG) console.warn('[GA4] client_id error', e); }
+  }
+
+  /* 2. CTA TRACKING */
+  function bindCtaClicks(){
+    document.querySelectorAll('[data-cta]').forEach(function(el){
+      if(el._gaBound) return;
+      el._gaBound = true;
+      el.addEventListener('click', function(){
+        const cta = el.dataset.cta || '';
+        const loc = el.dataset.location || '';
+        const txt = (el.innerText || el.textContent || '').trim().slice(0, 100);
+        if(cta === 'email' || (el.href && el.href.indexOf('mailto:') === 0)){
+          fire('click_email', { email: (el.href||'').replace('mailto:',''), cta_location: loc });
+        }
+        fire('click_contact_cta', { cta_type: cta, cta_location: loc, cta_text: txt });
+      });
+    });
+  }
+
+  /* 3. CARD TRACKING */
+  function bindCardClicks(){
+    document.querySelectorAll('[data-card-type]').forEach(function(el){
+      if(el._gaCardBound) return;
+      el._gaCardBound = true;
+      el.addEventListener('click', function(){
+        const type = el.dataset.cardType || '';
+        const name = el.dataset.cardName || '';
+        const evt  = type === 'case_study' ? 'click_case_card' : (type === 'service' ? 'click_service_card' : 'click_card');
+        fire(evt, { card_type: type, card_name: name });
+      });
+    });
+  }
+
+  /* 4. MAILTO FALLBACK */
+  function bindMailto(){
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el){
+      if(el._gaMailBound) return;
+      el._gaMailBound = true;
+      el.addEventListener('click', function(){
+        if(!el.dataset.cta){
+          fire('click_email', { email: el.href.replace('mailto:',''), cta_location: 'inline' });
+        }
+      });
+    });
+  }
+
+  /* 5. SCROLL DEPTH */
+  const scrollThresholds = [25, 50, 75, 90];
+  const firedScroll = {};
+  let scrollTimer = null;
+  function checkScrollDepth(){
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    if(docH <= 0) return;
+    const pct = Math.min(100, Math.round((window.scrollY / docH) * 100));
+    scrollThresholds.forEach(function(t){
+      if(pct >= t && !firedScroll[t]){
+        firedScroll[t] = true;
+        fire('scroll_depth', { percent: t });
       }
+    });
+  }
+  function onScroll(){
+    if(scrollTimer) return;
+    scrollTimer = setTimeout(function(){ scrollTimer = null; checkScrollDepth(); }, 250);
+  }
+
+  /* 6. SECTION VIEW */
+  const firedSections = {};
+  function bindSectionViews(){
+    if(!('IntersectionObserver' in window)) return;
+    const sections = document.querySelectorAll('section[id], main section[class]');
+    if(!sections.length) return;
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && e.intersectionRatio >= 0.5){
+          const id = e.target.id || (e.target.className||'').split(' ').slice(-1)[0] || 'unknown';
+          if(firedSections[id]) return;
+          firedSections[id] = true;
+          fire('view_section', { section_id: id });
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* 7. ENGAGED TIME */
+  const engagedThresholds = [30, 60, 120];
+  const firedEngaged = {};
+  let engagedSeconds = 0;
+  let isVisible = !document.hidden;
+  document.addEventListener('visibilitychange', function(){ isVisible = !document.hidden; });
+  setInterval(function(){
+    if(!isVisible) return;
+    engagedSeconds += 1;
+    engagedThresholds.forEach(function(t){
+      if(engagedSeconds === t && !firedEngaged[t]){
+        firedEngaged[t] = true;
+        fire('engaged_time', { time_seconds: t });
+      }
+    });
+  }, 1000);
+
+  /* 8. FORM SUBMIT */
+  function nearestSectionId(el){
+    let n = el;
+    while(n && n !== document.body){
+      if(n.id) return n.id;
+      if(n.tagName === 'SECTION') return (n.className||'').split(' ')[0] || 'section';
+      n = n.parentElement;
+    }
+    return 'unknown';
+  }
+  function bindForms(){
+    document.querySelectorAll('form').forEach(function(f){
+      if(f._gaFormBound) return;
+      f._gaFormBound = true;
+      f.addEventListener('submit', function(){
+        fire('generate_lead', {
+          form_id: f.id || f.getAttribute('name') || 'form',
+          cta_location: nearestSectionId(f)
+        });
+      });
+    });
+  }
+
+  function init(){
+    captureClientId();
+    bindCtaClicks();
+    bindCardClicks();
+    bindMailto();
+    bindSectionViews();
+    bindForms();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    if(DEBUG) console.log('[GA4] tracking initialized — DEBUG mode ON');
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  setTimeout(bindCtaClicks, 1500);
+  setTimeout(bindCardClicks, 1500);
+  setTimeout(bindForms, 1500);
+})();
+</script>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script>
+/* Scroll to top */
+(function(){
+  var btn = document.getElementById('scrollTop');
+  if(!btn) return;
+  function toggle(){ btn.classList.toggle('visible', window.scrollY > 400); }
+  window.addEventListener('scroll', toggle, { passive: true });
+  btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  toggle();
+})();
+</script>
+
+<!-- ===== MARKET INTELLIGENCE RADAR — JS ===== -->
+<script>
+(function(){
+  'use strict';
+
+  const NEWS_API_ENDPOINT = '/api/news';
+  const MIR_EMPTY_MESSAGE = 'No relevant signals found for this category.';
+  const MIR_ERROR_MESSAGE = 'Unable to load live news right now. Please try again later.';
+  const MIR_LOADING_MESSAGE = 'Loading market signals...';
+  const MIR_FALLBACK_SUMMARY = 'No summary available from source.';
+
+  function categorizeMirArticle(article){
+    const text = ((article.title || '') + ' ' + (article.description || '')).toLowerCase();
+    if(/\bopenai\b|\bchatgpt\b|\bgpt(?:-\d+)?\b/.test(text)) return { key:'openai', label:'OpenAI' };
+    if(/\banthropic\b|\bclaude\b/.test(text)) return { key:'anthropic', label:'Anthropic' };
+    if(/\bbitcoin\b|\bbtc\b/.test(text)) return { key:'bitcoin', label:'Bitcoin' };
+    if(/blockchain|crypto|token|digital asset|web3|ethereum/.test(text)) return { key:'blockchain', label:'Blockchain' };
+    if(/\bai\b|artificial intelligence|machine learning|llm|large language model|generative ai/.test(text)) return { key:'ai', label:'AI' };
+    return { key:'business_tech', label:'Business Tech' };
+  }
+
+  function formatMirDate(iso){
+    if(!iso) return '';
+    try{
+      const date = new Date(iso);
+      if(Number.isNaN(date.getTime())) return '';
+      return date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+    }catch(e){
+      return '';
+    }
+  }
+
+  function getMirWhyItMatters(categoryKey){
+    const messages = {
+      openai:'Competitive moves from frontier AI labs reshape platform and product strategy.',
+      anthropic:'Enterprise AI safety and reliability decisions impact deployment economics.',
+      bitcoin:'Macro signals across digital assets influence capital flows and treasury strategy.',
+      blockchain:'Infrastructure shifts in token economies open new platform monetization paths.',
+      ai:'AI deployment patterns reshape unit economics and competitive positioning.',
+      business_tech:'Operating signals that shape growth, monetization, and capital decisions.'
+    };
+    return messages[categoryKey] || messages.business_tech;
+  }
+
+  function escapeHtml(value){
+    return String(value || '').replace(/[&<>"']/g, function(char){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char];
+    });
+  }
+
+  function sanitizeUrl(rawUrl){
+    if(!rawUrl) return '#';
+    try{
+      const parsed = new URL(rawUrl, window.location.origin);
+      if(parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return '#';
+      return parsed.href;
+    }catch(e){
+      return '#';
+    }
+  }
+
+  function normalizeMirArticle(article){
+    const sourceName = article && article.source && article.source.name ? String(article.source.name).trim() : '';
+    const title = article && article.title ? String(article.title).trim() : '';
+    const description = article && article.description ? String(article.description).trim() : '';
+    return {
+      source: { name: sourceName },
+      title: title,
+      description: description || MIR_FALLBACK_SUMMARY,
+      url: sanitizeUrl(article && article.url ? String(article.url).trim() : ''),
+      publishedAt: article && article.publishedAt ? article.publishedAt : ''
+    };
+  }
+
+  function isRenderableMirArticle(article){
+    if(!article || !article.title || !article.source || !article.source.name) return false;
+    if(article.url === '#') return false;
+    return article.title.toLowerCase().indexOf('[removed]') === -1;
+  }
+
+  function createMirState(message, isError){
+    return '<div class="mir-state' + (isError ? ' error' : '') + '">' + escapeHtml(message) + '</div>';
+  }
+
+  function trackMirArticleClick(element){
+    if(typeof gtag !== 'function' || !element) return;
+    gtag('event', 'click_news_article', {
+      news_category: element.dataset.newsCategory || '',
+      news_source: element.dataset.newsSource || '',
+      news_title: element.dataset.newsTitle || '',
+      news_position: element.dataset.newsPosition || ''
+    });
+  }
+
+  let mirArticles = [];
+  let currentMirFilter = 'all';
+
+  const mirFeatured = document.getElementById('mirFeatured');
+  const mirMiniStack = document.getElementById('mirMiniStack');
+  const mirGrid = document.getElementById('mirGrid');
+  const mirChips = document.getElementById('mirChips');
+
+  function renderMirFeaturedState(title, description, whyCopy){
+    if(!mirFeatured) return;
+    mirFeatured.setAttribute('href', '#');
+    mirFeatured.dataset.newsCategory = '';
+    mirFeatured.dataset.newsSource = '';
+    mirFeatured.dataset.newsTitle = title || '';
+    mirFeatured.dataset.newsPosition = 'featured';
+    mirFeatured.querySelector('[data-bind="category"]').textContent = 'Market Intelligence';
+    mirFeatured.querySelector('[data-bind="source"]').textContent = 'SASI.ASIA';
+    mirFeatured.querySelector('[data-bind="date"]').textContent = '';
+    mirFeatured.querySelector('[data-bind="title"]').textContent = title;
+    mirFeatured.querySelector('[data-bind="description"]').textContent = description;
+    mirFeatured.querySelector('[data-bind="why"]').textContent = whyCopy;
+  }
+
+  function renderMirFeatured(article){
+    if(!mirFeatured || !article) return;
+    const category = categorizeMirArticle(article);
+    mirFeatured.setAttribute('href', article.url);
+    mirFeatured.dataset.newsCategory = category.label;
+    mirFeatured.dataset.newsSource = article.source.name;
+    mirFeatured.dataset.newsTitle = article.title;
+    mirFeatured.dataset.newsPosition = 'featured';
+    mirFeatured.querySelector('[data-bind="category"]').textContent = category.label;
+    mirFeatured.querySelector('[data-bind="source"]').textContent = article.source.name;
+    mirFeatured.querySelector('[data-bind="date"]').textContent = formatMirDate(article.publishedAt);
+    mirFeatured.querySelector('[data-bind="title"]').textContent = article.title;
+    mirFeatured.querySelector('[data-bind="description"]').textContent = article.description || MIR_FALLBACK_SUMMARY;
+    mirFeatured.querySelector('[data-bind="why"]').textContent = getMirWhyItMatters(category.key);
+  }
+
+  function renderMirMiniStack(articles){
+    if(!mirMiniStack) return;
+    if(!articles.length){
+      mirMiniStack.innerHTML = createMirState(MIR_EMPTY_MESSAGE, false);
+      return;
+    }
+    mirMiniStack.innerHTML = articles.slice(0, 3).map(function(article, index){
+      const category = categorizeMirArticle(article);
+      return `<a class="mir-mini" href="${escapeHtml(article.url)}" target="_blank" rel="noopener"
+        data-news-category="${escapeHtml(category.label)}"
+        data-news-source="${escapeHtml(article.source.name)}"
+        data-news-title="${escapeHtml(article.title)}"
+        data-news-position="mini-${index + 1}">
+        <div class="mir-mini-tag-row">
+          <span class="mir-mini-tag">${escapeHtml(category.label)}</span>
+          <span class="mir-mini-source">${escapeHtml(article.source.name)}</span>
+        </div>
+        <h4>${escapeHtml(article.title)}</h4>
+        <span class="mir-mini-date">${escapeHtml(formatMirDate(article.publishedAt))}</span>
+      </a>`;
+    }).join('');
+  }
+
+  function renderMirGrid(articles){
+    if(!mirGrid) return;
+    if(!articles.length){
+      mirGrid.innerHTML = createMirState(MIR_EMPTY_MESSAGE, false);
+      return;
+    }
+    mirGrid.innerHTML = articles.slice(0, 6).map(function(article, index){
+      const category = categorizeMirArticle(article);
+      return `<a class="mir-card" href="${escapeHtml(article.url)}" target="_blank" rel="noopener"
+        data-news-category="${escapeHtml(category.label)}"
+        data-news-source="${escapeHtml(article.source.name)}"
+        data-news-title="${escapeHtml(article.title)}"
+        data-news-position="grid-${index + 1}">
+        <div class="mir-card-tag-row">
+          <span class="mir-tag">${escapeHtml(category.label)}</span>
+          <span class="mir-source">${escapeHtml(article.source.name)}</span>
+        </div>
+        <h4>${escapeHtml(article.title)}</h4>
+        <p class="mir-card-desc">${escapeHtml(article.description || MIR_FALLBACK_SUMMARY)}</p>
+        <div class="mir-card-foot">
+          <span class="mir-card-date">${escapeHtml(formatMirDate(article.publishedAt))}</span>
+          <span class="mir-card-readmore">Read more →</span>
+        </div>
+      </a>`;
+    }).join('');
+  }
+
+  function showMirError(message){
+    renderMirFeaturedState(
+      'Live market signals are temporarily unavailable.',
+      message,
+      'The section will recover automatically once the backend proxy can refresh the news feed.'
+    );
+    if(mirMiniStack) mirMiniStack.innerHTML = createMirState(message, true);
+    if(mirGrid) mirGrid.innerHTML = createMirState(message, true);
+  }
+
+  function renderMirEmptyState(){
+    renderMirFeaturedState(
+      'No relevant live signals in this category right now.',
+      MIR_EMPTY_MESSAGE,
+      'Try another filter to view adjacent strategic signals across AI, blockchain, and business technology.'
+    );
+    if(mirMiniStack) mirMiniStack.innerHTML = createMirState(MIR_EMPTY_MESSAGE, false);
+    if(mirGrid) mirGrid.innerHTML = createMirState(MIR_EMPTY_MESSAGE, false);
+  }
+
+  function applyMirFilter(filterKey){
+    currentMirFilter = filterKey || 'all';
+    const filteredArticles = currentMirFilter === 'all'
+      ? mirArticles.slice()
+      : mirArticles.filter(function(article){
+          return categorizeMirArticle(article).key === currentMirFilter;
+        });
+
+    if(!filteredArticles.length){
+      renderMirEmptyState();
+      return;
     }
 
-    // 1. Track CTA clicks
-    document.querySelectorAll("a, button").forEach(function (el) {
-      el.addEventListener("click", function () {
-        const text = (el.innerText || el.getAttribute("aria-label") || "").trim();
-        const href = el.getAttribute("href") || "";
+    renderMirFeatured(filteredArticles[0]);
+    renderMirMiniStack(filteredArticles.slice(1, 4));
+    renderMirGrid(filteredArticles.slice(4, 10));
+  }
 
-        if (
-          text.toLowerCase().includes("contact") ||
-          text.toLowerCase().includes("email") ||
-          text.toLowerCase().includes("consult") ||
-          text.includes("ติดต่อ") ||
-          text.includes("ปรึกษา") ||
-          href.includes("mailto:")
-        ) {
-          trackEvent("click_contact_cta", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
+  function bindMirEvents(){
+    if(mirFeatured){
+      mirFeatured.addEventListener('click', function(){
+        trackMirArticleClick(mirFeatured);
+      });
+    }
 
-        if (href.includes("#portfolio-page")) {
-          trackEvent("click_portfolio", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("#services")) {
-          trackEvent("click_services", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("linkedin.com")) {
-          trackEvent("click_linkedin", {
-            cta_text: text,
-            cta_url: href,
-          });
+    [mirMiniStack, mirGrid].forEach(function(container){
+      if(!container) return;
+      container.addEventListener('click', function(event){
+        const articleLink = event.target.closest('[data-news-title]');
+        if(articleLink && container.contains(articleLink)){
+          trackMirArticleClick(articleLink);
         }
       });
     });
 
-    // 2. Track scroll depth
-    const scrollMarks = [25, 50, 75, 90];
-    const trackedScroll = {};
-
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 100;
-
-      scrollMarks.forEach(function (mark) {
-        if (scrollPercent >= mark && !trackedScroll[mark]) {
-          trackedScroll[mark] = true;
-          trackEvent("scroll_depth", {
-            percent_scrolled: mark,
-          });
-        }
-      });
-    });
-
-    // 3. Track section views
-    const sections = document.querySelectorAll("section[id], div[id]");
-
-    const sectionObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-
-            if (!entry.target.dataset.gaTracked) {
-              entry.target.dataset.gaTracked = "true";
-
-              trackEvent("view_section", {
-                section_id: sectionId,
-              });
-            }
-          }
+    if(mirChips){
+      mirChips.addEventListener('click', function(event){
+        const chip = event.target.closest('[data-mir-filter]');
+        if(!chip || !mirChips.contains(chip)) return;
+        const filterKey = chip.dataset.mirFilter || 'all';
+        mirChips.querySelectorAll('[data-mir-filter]').forEach(function(item){
+          item.classList.toggle('active', item === chip);
         });
-      },
-      {
-        threshold: 0.5,
+        applyMirFilter(filterKey);
+        if(typeof gtag === 'function'){
+          gtag('event', 'filter_news', { filter_category: filterKey });
+        }
+      });
+    }
+  }
+
+  async function fetchMarketNews(){
+    try{
+      /* Local preview needs the backend proxy running for /api/news. */
+      const response = await fetch(NEWS_API_ENDPOINT, { headers:{ 'Accept':'application/json' } });
+      const data = await response.json();
+      if(!response.ok || !data || data.status !== 'ok' || !Array.isArray(data.articles)){
+        throw new Error('Unable to load market signals');
       }
-    );
 
-    sections.forEach(function (section) {
-      sectionObserver.observe(section);
-    });
+      mirArticles = data.articles
+        .map(normalizeMirArticle)
+        .filter(isRenderableMirArticle)
+        .sort(function(a, b){
+          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+        })
+        .slice(0, 12);
 
-    // 4. Track case study / portfolio card clicks
-    document.querySelectorAll("[data-case], .case-card, .portfolio-card").forEach(function (card) {
-      card.addEventListener("click", function () {
-        trackEvent("click_case_study", {
-          case_name:
-            card.getAttribute("data-case") ||
-            card.innerText.trim().slice(0, 80),
-        });
-      });
-    });
+      if(!mirArticles.length){
+        renderMirEmptyState();
+        return;
+      }
 
-    // 5. Track email clicks
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
-      el.addEventListener("click", function () {
-        trackEvent("click_email", {
-          email_link: el.getAttribute("href"),
-        });
-      });
-    });
+      applyMirFilter(currentMirFilter);
+    }catch(err){
+      console.warn('[MIR] fetch error:', err);
+      showMirError(MIR_ERROR_MESSAGE);
+    }
+  }
 
-    // 6. Track external links
-    document.querySelectorAll('a[href^="http"]').forEach(function (el) {
-      el.addEventListener("click", function () {
-        const href = el.getAttribute("href");
+  bindMirEvents();
+  if(mirMiniStack) mirMiniStack.innerHTML = createMirState(MIR_LOADING_MESSAGE, false);
+  if(mirGrid) mirGrid.innerHTML = createMirState(MIR_LOADING_MESSAGE, false);
 
-        if (!href.includes("sasi.asia")) {
-          trackEvent("click_external_link", {
-            external_url: href,
-          });
-        }
-      });
-    });
-
-    // 7. Track time on page
-    setTimeout(function () {
-      trackEvent("engaged_30_seconds", {
-        engagement_time: "30_seconds",
-      });
-    }, 30000);
-
-    setTimeout(function () {
-      trackEvent("engaged_60_seconds", {
-        engagement_time: "60_seconds",
-      });
-    }, 60000);
-  });
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', fetchMarketNews, { once:true });
+  }else{
+    fetchMarketNews();
+  }
+})();
 </script>
+
 </body>
 </html>

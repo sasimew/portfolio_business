@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advisory | Sasion Nanthaphiriyakit | SASI.ASIA</title>
 <meta name="description" content="Strategic advisory by Sasion Nanthaphiriyakit for platform growth, capital strategy, monetization, partnerships, token economy, and business transformation.">
+
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S0N3M3191G', { 'debug_mode': false });
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -162,12 +173,11 @@ img{display:block;max-width:100%}
   transition:transform 0.24s ease,box-shadow 0.24s ease,background 0.24s ease,border-color 0.24s ease,color 0.24s ease;
 }
 .btn:hover{transform:translateY(-2px)}
-.btn-primary,.btn-red{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
-.btn-primary:hover,.btn-red:hover{background:var(--accent2);box-shadow:0 20px 46px rgba(200,37,58,0.28)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow-red)}
+.btn-primary:hover{background:var(--accent2);box-shadow:0 20px 46px rgba(200,37,58,0.28)}
 .btn-secondary{background:rgba(255,255,255,0.62);border-color:rgba(26,25,21,0.13);color:var(--text2)}
 .btn-secondary:hover{border-color:rgba(200,37,58,0.25);color:var(--accent);box-shadow:var(--shadow)}
 .icon-btn{width:42px;height:42px;padding:0;border-radius:50%;font-size:1rem}
-.menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--text);font-size:1rem;cursor:pointer;place-items:center;box-shadow:var(--shadow-sm)}
 .mobile-toggle{display:none}
 .section{margin-top:18px;border-radius:var(--radius);overflow:hidden}
 .eyebrow{
@@ -203,7 +213,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .hero-title{max-width:760px}
 .hero-visual{position:relative;width:min(calc(100% + 88px),1320px);min-height:0;display:grid;place-items:center;margin:8px -44px 10px;overflow:visible}
-.transformation-flow{width:100%;display:grid;grid-template-columns:minmax(180px,0.7fr) minmax(950px,1.7fr) minmax(180px,0.7fr);align-items:center;gap:0;position:relative;overflow:visible}
+.transformation-flow{width:100%;display:grid;grid-template-columns:minmax(180px,0.7fr) minmax(860px,1.4fr) minmax(180px,0.7fr);align-items:center;gap:0;position:relative;overflow:visible}
 .transform-card{position:relative;text-align:left;border-radius:18px;padding:16px 16px;background:rgba(255,255,255,0.32);border:1px solid rgba(255,255,255,0.55);box-shadow:0 8px 24px rgba(74,72,66,0.05);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);transition:transform 0.28s ease,box-shadow 0.28s ease,border-color 0.28s ease,opacity 0.28s ease;z-index:3}
 .transform-card.fix{opacity:1;background:rgba(247,245,241,0.28);margin-right:-48px}
 .transform-card.get{background:rgba(255,255,255,0.35);border-color:rgba(229,57,53,0.15);box-shadow:0 10px 30px rgba(74,72,66,0.05);margin-left:-48px}
@@ -470,8 +480,8 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 
 .reveal{opacity:0;transform:translateY(40px) scale(0.985);transition:opacity 0.7s ease,transform 0.7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--reveal-delay,0ms)}.reveal.in{opacity:1;transform:translateY(0) scale(1)}
 @media (max-width:980px){
-  .nav{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);flex-direction:column;align-items:flex-start;padding:14px;border-radius:18px;background:rgba(242,240,236,0.97);backdrop-filter:blur(20px);border:1px solid var(--line);gap:8px;box-shadow:var(--shadow-md)}
-  .nav.open{display:flex}.nav a{text-align:center}.menu-btn{display:grid}.mobile-toggle{display:grid}
+  .nav{display:none;position:absolute;left:16px;right:16px;top:74px;flex-direction:column;align-items:stretch;padding:12px;border-radius:22px;background:rgba(255,255,255,0.94);box-shadow:var(--shadow-md)}
+  .nav.open{display:flex}.nav a{text-align:center}.mobile-toggle{display:grid}
   .hero{padding:54px 28px}.hero-visual{min-height:0}.services-grid,.result-grid,.situations-grid,.eco-grid,.mandates-grid{grid-template-columns:repeat(2,1fr)}
   .transformation-flow{grid-template-columns:1fr;max-width:760px;margin:0 auto}.flow-arrow{position:relative;left:auto;top:auto;transform:none;margin:-6px auto;rotate:90deg}.transform-card{max-width:none}
   .service-card.featured{grid-column:span 2}.why-engage,.mandate-card.featured{grid-template-columns:1fr}.mandate-card.featured{grid-column:auto}.advisory-process .process-grid{grid-template-columns:1fr}
@@ -630,84 +640,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
   .sim-pill{font-size:0.78rem;padding:8px 14px}
 }
 
-
-
-/* Shared home topbar/footer normalization */
-.topbar-outer{position:sticky;top:14px;z-index:200;padding:0 0 22px;}
-.topbar{border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 14px 11px 22px;background:rgba(242,240,236,0.88);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(255,255,255,0.78);box-shadow:0 4px 24px rgba(84,84,84,0.07),inset 0 1px 0 rgba(255,255,255,0.95);}
-.brand{font-family:"Bebas Neue",sans-serif;font-size:1.65rem;letter-spacing:0.04em;line-height:1;color:#747474;}
-.brand span{color:var(--accent);}
-.nav{display:flex;align-items:center;gap:4px;}
-.nav a{padding:7px 14px;border-radius:999px;font-size:0.87rem;font-weight:600;color:var(--muted);transition:all 0.2s;letter-spacing:0.01em;}
-.nav a:hover,.nav a.active{color:var(--text);background:rgba(26,25,21,0.07);}
-.nav a.active{color:var(--accent);background:rgba(26,25,21,0.07);}
-.nav-actions{display:flex;align-items:center;gap:8px;}
-.btn.desktop-cta{min-width:158px;padding-left:26px;padding-right:28px;line-height:1.1;overflow:visible;}
-.menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--text);font-size:1rem;cursor:pointer;place-items:center;box-shadow:var(--shadow-sm);}
-.footer{background:radial-gradient(circle at 80% 18%,rgba(200,37,58,0.22),transparent 28%),linear-gradient(135deg,#14130f,#251510);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-top:14px;box-shadow:0 22px 58px rgba(0,0,0,0.16);}
-.footer-inner{display:grid;grid-template-columns:1.16fr 0.92fr 0.92fr;gap:56px;padding:46px 58px 36px;}
-.footer-col{min-width:0;}
-.footer-positioning{padding-right:4px;}
-.footer-kicker{display:inline-flex;align-items:center;gap:12px;color:#ef4d62;font-size:0.68rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:13px;}
-.footer-kicker::after{content:"";width:34px;height:1px;background:#ef4d62;}
-.footer h2{font-family:"Bebas Neue",sans-serif;color:#f7f4ee;max-width:420px;margin-bottom:14px;font-size:clamp(2rem,2.7vw,2.85rem);line-height:0.95;letter-spacing:0.035em;text-transform:uppercase;}
-.footer h3{display:inline-flex;align-items:center;gap:14px;color:#f7f4ee;font-size:1.06rem;line-height:1.2;margin-bottom:18px;letter-spacing:0.04em;text-transform:uppercase;}
-.footer h3::after{content:"";width:34px;height:1px;background:#ef4d62;}
-.footer p{color:rgba(247,244,238,0.62);line-height:1.64;font-size:0.9rem;}
-.fcopy-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px;max-width:390px;}
-.footer-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 16px;border-radius:999px;border:1px solid transparent;font:800 0.8rem/1 "Outfit",sans-serif;letter-spacing:0.035em;text-transform:uppercase;white-space:nowrap;transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease,background 0.22s ease,color 0.22s ease;}
-.footer-btn:hover{transform:translateY(-2px);}
-.footer-btn-primary{background:#c8253a;color:#fff;box-shadow:0 16px 38px rgba(200,37,58,0.22);}
-.footer-btn-secondary{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.26);color:#f7f4ee;}
-.footer-btn-secondary:hover{border-color:rgba(239,77,98,0.55);color:#fff;}
-.footer-list{display:grid;gap:10px;list-style:none;margin-top:10px;padding-left:0;}
-.footer-list li{color:rgba(247,244,238,0.72);line-height:1.42;font-size:0.88rem;padding-left:17px;position:relative;}
-.footer-list li::before{content:"";position:absolute;left:0;top:0.58em;width:6px;height:6px;border-radius:50%;background:#ef4d62;}
-.selective-line{margin-top:26px;font-weight:800;color:rgba(247,244,238,0.82)!important;}
-.contact-list{display:grid;gap:0;}
-.contact-item{display:grid;grid-template-columns:36px 1fr;gap:13px;align-items:center;padding:0 0 12px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.10);}
-.contact-item:last-child{margin-bottom:0;}
-.contact-ico{width:36px;height:36px;border-radius:50%;border:1px solid rgba(239,77,98,0.6);display:grid;place-items:center;color:#ef4d62;}
-.contact-ico svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-.contact-item div span{display:block;color:#ef4d62;font-size:0.66rem;font-weight:900;letter-spacing:0.13em;text-transform:uppercase;margin-bottom:5px;}
-.contact-item a,.contact-item p{color:rgba(247,244,238,0.84);font-weight:700;line-height:1.35;font-size:0.9rem;margin:0;}
-.contact-item a:hover{color:#fff;}
-.linkedin-link{color:#ef4d62!important;}
-.fbase{border-top:1px solid rgba(255,255,255,0.10);padding:20px 58px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;color:rgba(247,244,238,0.52);font-size:0.86rem;}
-.footer .brand{color:#fff;}
-.footer .brand span{color:#ef4d62;}
-.flinks{display:flex;align-items:center;justify-content:flex-end;gap:22px;}
-.flinks a{color:rgba(247,244,238,0.58);font-weight:700;}
-.flinks a:hover{color:#fff;}
-.linkedin-mark{width:30px;height:30px;border:1px solid rgba(255,255,255,0.38);border-radius:50%;display:grid;place-items:center;color:#0a66c2!important;font-weight:900;font-size:0.8rem;}
-@media(max-width:900px){
-  .topbar{padding:10px 13px 10px 18px;}
-  .nav{display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);background:rgba(242,240,236,0.97);backdrop-filter:blur(20px);border-radius:18px;border:1px solid var(--line);padding:14px;flex-direction:column;align-items:flex-start;gap:8px;box-shadow:var(--shadow-md);}
-  .nav.open{display:flex;}
-  .menu-btn{display:grid;}
-  .desktop-cta{display:none;}
-  .footer-inner{grid-template-columns:1fr;gap:30px;}
-  .fcopy-btns{grid-template-columns:1fr;max-width:none;}
-  .fbase{grid-template-columns:1fr;}
-  .flinks{justify-content:flex-start;}
-}
-@media(max-width:560px){
-  .footer{border-radius:24px;}
-  .footer-inner{padding:32px;gap:28px;}
-  .fbase{padding:20px 32px;}
-  .topbar-outer{top:8px;}
-}
-
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N3M3191G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S0N3M3191G');
-</script>
 </head>
 <body>
 <div class="bg-ring-wrap">
@@ -721,20 +654,20 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 
 <div class="page">
   <div class="topbar-outer">
-    <header class="topbar" style="position:relative;">
-    <a href="home.html#home" class="brand" data-page-link="home">SASI<span>.ASIA</span></a>
-    <nav class="nav" id="navMenu">
-      <a href="home.html#home" data-page-link="home">Home</a>
-      <a href="home.html#portfolio-page" data-page-link="portfolio-page">About</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="services.html" class="active">Advisory</a>
-      <a href="insights.html">Insights</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="btn btn-red desktop-cta" href="contact.html">Contact Me →</a>
-      <button class="menu-btn" id="menuBtn">☰</button>
-    </div>
-  </header>
+    <header class="topbar">
+      <a class="brand" href="home.html#home">SASI<span>.ASIA</span></a>
+      <nav class="nav" id="nav">
+        <a href="home.html#home">Home</a>
+        <a href="home.html#portfolio-page">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a class="active" href="services.html">Advisory</a>
+        <a href="insights.html">Insights</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary desktop-cta" href="contact.html" data-cta="contact" data-location="navbar">Contact Me →</a>
+        <button class="btn btn-secondary icon-btn mobile-toggle" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
   </div>
 
   <main>
@@ -774,8 +707,8 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         </div>
         <p>I work with founders, executives, and investors on high-impact decisions across business model design, monetization, capital strategy, and market expansion. My focus is turning complex situations into clear strategic direction with measurable impact on revenue, valuation, and long-term growth.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Discuss Your Strategy →</a>
-          <a class="btn btn-secondary" href="case-studies.html">View Selected Work</a>
+          <a class="btn btn-primary" href="contact.html" data-cta="contact" data-location="hero">Discuss Your Strategy →</a>
+          <a class="btn btn-secondary" href="case-studies.html" data-cta="case_studies" data-location="hero">View Selected Work</a>
         </div>
       </div>
     </section>
@@ -909,8 +842,8 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
             <p class="sim-popup-note">This is a directional view — not a full strategy.</p>
             <p class="sim-popup-sub">For a tailored approach aligned with your business context, we can discuss further.</p>
             <div class="sim-popup-btns">
-              <a class="btn btn-primary" href="contact.html">Discuss Your Strategy →</a>
-              <a class="btn btn-secondary" href="case-studies.html">View Case Studies</a>
+              <a class="btn btn-primary" href="contact.html" data-cta="contact" data-location="advisory_popup">Discuss Your Strategy →</a>
+              <a class="btn btn-secondary" href="case-studies.html" data-cta="case_studies" data-location="advisory_popup">View Case Studies</a>
             </div>
           </div>
         </div><!-- /sim-right -->
@@ -953,7 +886,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         </div>
       </div>
       <div class="mandates-grid">
-        <div class="mandate-card mandate-featured reveal">
+        <div class="mandate-card mandate-featured reveal" data-card-type="case_study" data-card-name="repositioned_platform_250m">
           <div class="mandate-header"><div class="mandate-num featured-num">★</div><div><div class="mandate-type-label">Strategic Transformation</div><div class="mandate-kicker">Platform Scaling</div><h3 class="mandate-title">Repositioned Platform to THB 250M+ Run-Rate</h3></div></div>
           <p class="mandate-context">Mature platform with strong user base but revenue model misaligned with growth trajectory — requiring full monetization architecture redesign.</p>
           <div class="mandate-featured-body">
@@ -961,25 +894,25 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
             <div class="mandate-outcome"><span class="mandate-label">Outcome</span><div class="outcome-metrics outcome-metrics-row"><span class="metric metric-highlight"><strong>THB 250M+</strong> projected run-rate</span><span class="metric metric-highlight"><strong>+43%</strong> ARPPU increase</span><span class="metric metric-highlight"><strong>38%</strong> retention stabilization</span></div></div>
           </div>
         </div>
-        <div class="mandate-card reveal">
+        <div class="mandate-card reveal" data-card-type="case_study" data-card-name="platform_monetization_growth">
           <div class="mandate-header"><div class="mandate-num">01</div><div><div class="mandate-type-label">Growth Strategy</div><div class="mandate-kicker">Platform Growth</div><h3 class="mandate-title">Platform Monetization &amp; Growth Scaling</h3></div></div>
           <p class="mandate-context">Early-stage platform with strong traction but weak monetization structure and declining unit economics.</p>
           <div class="mandate-scope"><span class="mandate-label">Scope</span><ul><li>Redesigned business model and monetization system</li><li>Aligned pricing structure with user behavior</li><li>Optimized conversion and transaction flow</li></ul></div>
           <div class="mandate-outcome"><span class="mandate-label">Outcome</span><div class="outcome-metrics"><span class="metric"><strong>THB 66M</strong> revenue within 3 months</span><span class="metric"><strong>299K</strong> peak concurrent users</span><span class="metric">Improved ARPPU and retention</span></div></div>
         </div>
-        <div class="mandate-card reveal">
+        <div class="mandate-card reveal" data-card-type="case_study" data-card-name="web3_capital_strategy">
           <div class="mandate-header"><div class="mandate-num">02</div><div><div class="mandate-type-label">Capital Raise</div><div class="mandate-kicker">Capital Strategy</div><h3 class="mandate-title">Web3 Capital Strategy &amp; Fundraising</h3></div></div>
           <p class="mandate-context">GameFi project preparing for token launch with weak investor narrative and misaligned tokenomics.</p>
           <div class="mandate-scope"><span class="mandate-label">Scope</span><ul><li>Designed tokenomics aligned with real demand</li><li>Built investor narrative and capital positioning</li><li>Structured ICO launch strategy and execution</li></ul></div>
           <div class="mandate-outcome"><span class="mandate-label">Outcome</span><div class="outcome-metrics"><span class="metric"><strong>$8M</strong> raised within 24 hours</span><span class="metric">Strong early investor participation</span><span class="metric">Long-term ecosystem alignment</span></div></div>
         </div>
-        <div class="mandate-card reveal">
+        <div class="mandate-card reveal" data-card-type="case_study" data-card-name="game_ecosystem_sea_expansion">
           <div class="mandate-header"><div class="mandate-num">03</div><div><div class="mandate-type-label">Market Expansion</div><div class="mandate-kicker">Regional Strategy</div><h3 class="mandate-title">Game Ecosystem Strategy &amp; Regional Expansion (SEA)</h3></div></div>
           <p class="mandate-context">Global platform expanding into fragmented Southeast Asia game ecosystem requiring structured market entry.</p>
           <div class="mandate-scope"><span class="mandate-label">Scope</span><ul><li>Designed market entry strategy for gaming ecosystem across SEA</li><li>Structured cross-border partnerships and distribution</li><li>Built scalable regional ecosystem framework</li></ul></div>
           <div class="mandate-outcome"><span class="mandate-label">Outcome</span><div class="outcome-metrics"><span class="metric">Multi-market expansion capability established</span><span class="metric">Strong regional positioning</span><span class="metric">Partnership-driven growth model</span></div></div>
         </div>
-        <div class="mandate-card reveal">
+        <div class="mandate-card reveal" data-card-type="case_study" data-card-name="cross_border_game_execution">
           <div class="mandate-header"><div class="mandate-num">04</div><div><div class="mandate-type-label">Ecosystem Execution</div><div class="mandate-kicker">Cross-Border Operations</div><h3 class="mandate-title">Cross-Border Game Ecosystem Execution</h3></div></div>
           <p class="mandate-context">Telecom-driven gaming initiative requiring multi-country coordination and ecosystem activation.</p>
           <div class="mandate-scope"><span class="mandate-label">Scope</span><ul><li>Coordinated multi-stakeholder execution across markets</li><li>Structured event and ecosystem activation strategy</li><li>Designed cross-border engagement framework</li></ul></div>
@@ -1016,7 +949,7 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
             <article class="result-card reveal"><div class="result-kicker">Capital Strategy</div><h3>$8M GameFi Capital Raise</h3><p>Structured tokenomics supporting $8M raise in 24 hours with long-term ecosystem sustainability.</p><div class="tags"><span class="tag">Web3</span><span class="tag">GameFi</span></div><a class="card-link" href="case-studies.html">View Case Study <span class="arrow">→</span></a></article>
             <article class="result-card reveal"><div class="result-kicker">Strategic Expansion</div><h3>Cross-Border Partnerships</h3><p>Built partnership and licensing logic across regional ecosystems, studios, and commercial channels.</p><div class="tags"><span class="tag">SEA</span><span class="tag">Partnerships</span></div><a class="card-link" href="case-studies.html">View Selected Work <span class="arrow">→</span></a></article>
           </div>
-          <div class="center-action"><a class="btn btn-secondary" href="case-studies.html">Explore Case Studies</a></div>
+          <div class="center-action"><a class="btn btn-secondary" href="case-studies.html" data-cta="case_studies" data-location="advisory_grid">Explore Case Studies</a></div>
         </div>
       </div>
     </section>
@@ -1029,9 +962,9 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         <p class="cta-body-bold">This is not a generic consultation — but a focused discussion to assess whether there is meaningful strategic leverage to unlock.</p>
         <span class="cta-trust">Selective engagements. High-impact decisions only.</span>
         <div class="cta-actions">
-          <a class="cta-primary-btn" href="contact.html">Book an Initial Strategy Call →</a>
+          <a class="cta-primary-btn" href="contact.html" data-cta="contact" data-location="cta_banner">Book an Initial Strategy Call →</a>
           <div class="cta-secondary-wrap">
-            <a class="cta-secondary-btn" href="mailto:sasi.bu.bd@gmail.com?subject=Strategy%20Situation%20Brief">Or email your situation directly →</a>
+            <a class="cta-secondary-btn" href="mailto:sasi.bu.bd@gmail.com?subject=Strategy%20Situation%20Brief" data-cta="email" data-location="cta_banner">Or email your situation directly →</a>
             <p class="cta-email-note">Share a brief outline of your situation — I'll respond with an initial perspective.</p>
           </div>
         </div>
@@ -1046,8 +979,8 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
         <h2>Let's Build Something Valuable Together</h2>
         <p>Advising founders, executives, and investors on high-impact decisions across growth, monetization, and capital strategy.</p>
         <div class="fcopy-btns">
-          <a class="footer-btn footer-btn-primary" href="contact.html">Contact Me</a>
-          <a class="footer-btn footer-btn-secondary" href="case-studies.html">View Case Studies</a>
+          <a class="footer-btn footer-btn-primary" data-cta="contact" data-location="footer" href="contact.html">Contact Me</a>
+          <a class="footer-btn footer-btn-secondary" data-cta="case_studies" data-location="footer" href="case-studies.html">View Case Studies</a>
         </div>
       </div>
       <div class="footer-col">
@@ -1080,8 +1013,8 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 
 <script>
 const menuBtn=document.getElementById("menuBtn");
-const navMenu=document.getElementById("navMenu");
-if(menuBtn&&navMenu){menuBtn.addEventListener("click",()=>navMenu.classList.toggle("open"));}
+const nav=document.getElementById("nav");
+if(menuBtn){menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));}
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
@@ -1378,158 +1311,187 @@ if(dot){
 })();
 </script>
 
+<!-- GA4 Custom Tracking -->
 <script>
-  // GA4 Event Tracking for sasi.asia
-  // Measurement ID: G-S0N3M3191G
+(function(){
+  'use strict';
 
-  window.addEventListener("DOMContentLoaded", function () {
-    function trackEvent(eventName, params = {}) {
-      if (typeof gtag === "function") {
-        gtag("event", eventName, {
-          website: "sasi.asia",
-          page_path: window.location.pathname,
-          page_title: document.title,
-          ...params,
+  /* ── Config ────────────────────────────────────────── */
+  const GA_ID = 'G-S0N3M3191G';
+  const DEBUG = (location.hostname === 'localhost' || location.hostname.startsWith('127.') || location.search.includes('ga_debug=1'));
+
+  function fire(name, params){
+    if(typeof gtag !== 'function') return;
+    params = params || {};
+    gtag('event', name, params);
+    if(DEBUG) console.log('[GA4]', name, params);
+  }
+
+  /* ── 1. CLIENT ID CAPTURE ─────────────────────────── */
+  function captureClientId(){
+    if(typeof gtag !== 'function') return;
+    try{
+      gtag('get', GA_ID, 'client_id', function(clientId){
+        if(DEBUG) console.log('[GA4] client_id:', clientId);
+        // Store on hidden inputs in any contact form
+        document.querySelectorAll('input[name="ga_client_id"]').forEach(function(el){
+          el.value = clientId || '';
         });
+        // Also store in window for downstream use
+        window._gaClientId = clientId;
+      });
+    }catch(e){ if(DEBUG) console.warn('[GA4] client_id error', e); }
+  }
+
+  /* ── 2. CTA TRACKING ──────────────────────────────── */
+  function bindCtaClicks(){
+    document.querySelectorAll('[data-cta]').forEach(function(el){
+      if(el._gaBound) return;
+      el._gaBound = true;
+      el.addEventListener('click', function(){
+        const cta = el.dataset.cta || '';
+        const loc = el.dataset.location || '';
+        const txt = (el.innerText || el.textContent || '').trim().slice(0, 100);
+        // Email gets dual fire: click_email + click_contact_cta
+        if(cta === 'email' || (el.href && el.href.indexOf('mailto:') === 0)){
+          fire('click_email', { email: el.href.replace('mailto:',''), cta_location: loc });
+        }
+        fire('click_contact_cta', { cta_type: cta, cta_location: loc, cta_text: txt });
+      });
+    });
+  }
+
+  /* ── 3. CARD TRACKING (service / case_study) ──────── */
+  function bindCardClicks(){
+    document.querySelectorAll('[data-card-type]').forEach(function(el){
+      if(el._gaBound) return;
+      el._gaBound = true;
+      el.addEventListener('click', function(){
+        const type = el.dataset.cardType || '';
+        const name = el.dataset.cardName || '';
+        const evt  = type === 'case_study' ? 'click_case_card' : (type === 'service' ? 'click_service_card' : 'click_card');
+        fire(evt, { card_type: type, card_name: name });
+      });
+    });
+  }
+
+  /* ── 4. MAILTO TRACKING (catches any unannotated mailto) ── */
+  function bindMailto(){
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el){
+      if(el._gaMailBound) return;
+      el._gaMailBound = true;
+      el.addEventListener('click', function(){
+        if(!el.dataset.cta){
+          fire('click_email', { email: el.href.replace('mailto:',''), cta_location: 'inline' });
+        }
+      });
+    });
+  }
+
+  /* ── 5. SCROLL DEPTH ──────────────────────────────── */
+  const scrollThresholds = [25, 50, 75, 90];
+  const firedScroll = {};
+  let scrollTimer = null;
+
+  function checkScrollDepth(){
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    if(docH <= 0) return;
+    const pct = Math.min(100, Math.round((window.scrollY / docH) * 100));
+    scrollThresholds.forEach(function(t){
+      if(pct >= t && !firedScroll[t]){
+        firedScroll[t] = true;
+        fire('scroll_depth', { percent: t });
       }
+    });
+  }
+  function onScroll(){
+    if(scrollTimer) return;
+    scrollTimer = setTimeout(function(){ scrollTimer = null; checkScrollDepth(); }, 250);
+  }
+
+  /* ── 6. SECTION VIEW (IntersectionObserver) ───────── */
+  const firedSections = {};
+  function bindSectionViews(){
+    if(!('IntersectionObserver' in window)) return;
+    const sections = document.querySelectorAll('section[id], main section[class]');
+    if(!sections.length) return;
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && e.intersectionRatio >= 0.5){
+          const id = e.target.id || (e.target.className||'').split(' ').slice(-1)[0] || 'unknown';
+          if(firedSections[id]) return;
+          firedSections[id] = true;
+          fire('view_section', { section_id: id });
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* ── 7. ENGAGED TIME ──────────────────────────────── */
+  const engagedThresholds = [30, 60, 120];
+  const firedEngaged = {};
+  let engagedSeconds = 0;
+  let isVisible = !document.hidden;
+  document.addEventListener('visibilitychange', function(){ isVisible = !document.hidden; });
+  setInterval(function(){
+    if(!isVisible) return;
+    engagedSeconds += 1;
+    engagedThresholds.forEach(function(t){
+      if(engagedSeconds === t && !firedEngaged[t]){
+        firedEngaged[t] = true;
+        fire('engaged_time', { time_seconds: t });
+      }
+    });
+  }, 1000);
+
+  /* ── 8. FORM SUBMIT (LEAD) ────────────────────────── */
+  function nearestSectionId(el){
+    let n = el;
+    while(n && n !== document.body){
+      if(n.id) return n.id;
+      if(n.tagName === 'SECTION') return (n.className||'').split(' ')[0] || 'section';
+      n = n.parentElement;
     }
-
-    // 1. Track CTA clicks
-    document.querySelectorAll("a, button").forEach(function (el) {
-      el.addEventListener("click", function () {
-        const text = (el.innerText || el.getAttribute("aria-label") || "").trim();
-        const href = el.getAttribute("href") || "";
-
-        if (
-          text.toLowerCase().includes("contact") ||
-          text.toLowerCase().includes("email") ||
-          text.toLowerCase().includes("consult") ||
-          text.includes("ติดต่อ") ||
-          text.includes("ปรึกษา") ||
-          href.includes("mailto:")
-        ) {
-          trackEvent("click_contact_cta", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("#portfolio-page")) {
-          trackEvent("click_portfolio", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("#services")) {
-          trackEvent("click_services", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-
-        if (href.includes("linkedin.com")) {
-          trackEvent("click_linkedin", {
-            cta_text: text,
-            cta_url: href,
-          });
-        }
-      });
-    });
-
-    // 2. Track scroll depth
-    const scrollMarks = [25, 50, 75, 90];
-    const trackedScroll = {};
-
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 100;
-
-      scrollMarks.forEach(function (mark) {
-        if (scrollPercent >= mark && !trackedScroll[mark]) {
-          trackedScroll[mark] = true;
-          trackEvent("scroll_depth", {
-            percent_scrolled: mark,
-          });
-        }
-      });
-    });
-
-    // 3. Track section views
-    const sections = document.querySelectorAll("section[id], div[id]");
-
-    const sectionObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-
-            if (!entry.target.dataset.gaTracked) {
-              entry.target.dataset.gaTracked = "true";
-
-              trackEvent("view_section", {
-                section_id: sectionId,
-              });
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    sections.forEach(function (section) {
-      sectionObserver.observe(section);
-    });
-
-    // 4. Track case study / portfolio card clicks
-    document.querySelectorAll("[data-case], .case-card, .portfolio-card").forEach(function (card) {
-      card.addEventListener("click", function () {
-        trackEvent("click_case_study", {
-          case_name:
-            card.getAttribute("data-case") ||
-            card.innerText.trim().slice(0, 80),
+    return 'unknown';
+  }
+  function bindForms(){
+    document.querySelectorAll('form').forEach(function(f){
+      if(f._gaFormBound) return;
+      f._gaFormBound = true;
+      f.addEventListener('submit', function(){
+        fire('generate_lead', {
+          form_id: f.id || f.getAttribute('name') || 'form',
+          cta_location: nearestSectionId(f)
         });
       });
     });
+  }
 
-    // 5. Track email clicks
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
-      el.addEventListener("click", function () {
-        trackEvent("click_email", {
-          email_link: el.getAttribute("href"),
-        });
-      });
-    });
+  /* ── INIT ─────────────────────────────────────────── */
+  function init(){
+    captureClientId();
+    bindCtaClicks();
+    bindCardClicks();
+    bindMailto();
+    bindSectionViews();
+    bindForms();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    if(DEBUG) console.log('[GA4] tracking initialized — DEBUG mode ON');
+  }
 
-    // 6. Track external links
-    document.querySelectorAll('a[href^="http"]').forEach(function (el) {
-      el.addEventListener("click", function () {
-        const href = el.getAttribute("href");
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
-        if (!href.includes("sasi.asia")) {
-          trackEvent("click_external_link", {
-            external_url: href,
-          });
-        }
-      });
-    });
+  /* Re-bind on dynamic content (popup, sim section etc.) */
+  setTimeout(bindCtaClicks, 1500);
+  setTimeout(bindCardClicks, 1500);
 
-    // 7. Track time on page
-    setTimeout(function () {
-      trackEvent("engaged_30_seconds", {
-        engagement_time: "30_seconds",
-      });
-    }, 30000);
-
-    setTimeout(function () {
-      trackEvent("engaged_60_seconds", {
-        engagement_time: "60_seconds",
-      });
-    }, 60000);
-  });
+})();
 </script>
+
 </body>
 </html>
