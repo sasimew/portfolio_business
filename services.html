@@ -520,18 +520,16 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .mandate-scope,.mandate-outcome{display:flex;flex-direction:column;gap:9px}
 .mandate-label{font-size:0.60rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)}
 .mandate-scope ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
-.mandate-scope ul li{font-size:0.82rem;line-height:1.5;color:var(--text2);padding-left:0;position:relative;display:flex;align-items:flex-start;gap:8px}
+.mandate-scope ul li{font-size:0.82rem;line-height:1.5;color:var(--text2);padding-left:0;position:relative;display:flex;align-items:flex-start;gap:10px}
 .mandate-scope ul li::before{
-  content:"● →";
+  content:"";
   flex-shrink:0;
-  color:var(--accent);
-  font-size:0.62rem;
-  margin-top:0.28em;
-  line-height:1;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-top:0.42rem;
   position:static;
-  white-space:nowrap;
-  letter-spacing:-0.02em;
-  font-weight:700;
 }
 .outcome-metrics{display:flex;flex-direction:column;gap:6px}
 .metric{font-size:0.82rem;line-height:1.48;color:var(--text2);padding:7px 12px;background:#fff;border-radius:10px;border:1px solid rgba(26,25,21,0.07)}
@@ -547,6 +545,21 @@ h2{font-size:clamp(2.55rem,4.6vw,4.75rem)}
 .outcome-metrics-row{display:grid !important;grid-template-columns:1fr !important;gap:8px !important}
 .metric-highlight{border-color:rgba(200,37,58,0.16) !important;background:rgba(200,37,58,0.05) !important}
 .metric-highlight strong{font-size:1.05rem}
+
+@media (max-width:640px){
+  .mandates-statement{margin:0 0 20px;padding:18px 18px 20px;font-size:0.94rem;line-height:1.58}
+  .mandate-card{padding:20px;gap:14px}
+  .mandate-header{gap:12px}
+  .mandate-num{width:38px;height:38px;border-radius:10px;font-size:0.72rem}
+  .featured-num{width:42px !important;height:42px !important;font-size:1rem !important}
+  .mandate-title{font-size:0.98rem;line-height:1.28}
+  .mandate-context{font-size:0.8rem;line-height:1.52;padding:11px 12px}
+  .mandate-featured-body{grid-template-columns:1fr;gap:16px}
+  .mandate-scope ul{gap:8px}
+  .mandate-scope ul li{font-size:0.79rem;line-height:1.5;gap:9px}
+  .mandate-scope ul li::before{width:5px;height:5px;margin-top:0.4rem}
+  .metric{font-size:0.79rem;line-height:1.45;padding:7px 10px}
+}
 
 /* ── ECOSYSTEM EXPOSURE ─────────────────────────────────── */
 .eco-section{background:rgba(255,255,255,0.72);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);border:1px solid rgba(255,255,255,0.82);box-shadow:0 12px 40px rgba(26,25,21,0.04),inset 0 1px 0 rgba(255,255,255,0.9)}
